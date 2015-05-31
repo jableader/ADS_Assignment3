@@ -3,7 +3,7 @@
  
 cpldfit:  version P.58f                             Xilinx Inc.
                                   Fitter Report
-Design Name: TopLevel                            Date:  5-31-2015,  3:19PM
+Design Name: TopLevel                            Date:  5-31-2015,  5:09PM
 Device Used: XC9572XL-5-PC44
 Fitting Status: Successful
 
@@ -11,18 +11,18 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-41 /72  ( 57%) 125 /360  ( 35%) 91 /216 ( 42%)   26 /72  ( 36%) 22 /34  ( 65%)
+39 /72  ( 54%) 119 /360  ( 33%) 78 /216 ( 36%)   24 /72  ( 33%) 22 /34  ( 65%)
 
 ** Function Block Resources **
 
 Function    Mcells      FB Inps     Pterms      IO          
 Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
-FB1          14/18       21/54       55/90       5/ 9
-FB2           9/18       24/54       22/90       8/ 9
-FB3           4/18       23/54       11/90       5/ 9
-FB4          14/18       23/54       37/90       4/ 7
+FB1          14/18       19/54       54/90       5/ 9
+FB2           9/18       20/54       22/90       8/ 9
+FB3           3/18       18/54        9/90       5/ 9
+FB4          13/18       21/54       34/90       4/ 7
              -----       -----       -----      -----    
-             41/72       91/216     125/360     22/34 
+             39/72       78/216     119/360     22/34 
 
 * - Resource is exhausted
 
@@ -47,7 +47,7 @@ GSR           :    0           0    |
 
 ** Power Data **
 
-There are 41 macrocells in high performance mode (MCHP).
+There are 39 macrocells in high performance mode (MCHP).
 There are 0 macrocells in low power mode (MCLP).
 End of Mapped Resource Summary
 **************************  Errors and Warnings  ***************************
@@ -63,67 +63,65 @@ INFO:Cpld - Inferring BUFG constraint for signal 'clock' based upon the LOC
 
 ** 14 Outputs **
 
-Signal                   Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
-Name                     Pts   Inps          No.  Type    Use     Mode Rate State
-ssdSegmentSelect<4>      7     13    FB1_2   1    I/O     O       STD  FAST 
-ssdSegmentSelect<5>      7     13    FB1_5   2    I/O     O       STD  FAST 
-ssdSegmentSelect<6>      8     13    FB1_6   3    I/O     O       STD  FAST 
-ssdSegmentSelect<7>      2     5     FB1_8   4    I/O     O       STD  FAST 
-ssdUnitSelect<3>         1     3     FB2_2   35   I/O     O       STD  FAST 
-ssdUnitSelect<2>         1     3     FB2_5   36   I/O     O       STD  FAST 
-ssdUnitSelect<1>         1     3     FB2_6   37   I/O     O       STD  FAST 
-ssdUnitSelect<0>         1     3     FB2_8   38   I/O     O       STD  FAST 
-ssdSegmentSelect<0>      4     13    FB2_11  40   GTS/I/O O       STD  FAST 
-ssdSegmentSelect<1>      4     13    FB2_14  42   GTS/I/O O       STD  FAST 
-ssdSegmentSelect<2>      3     13    FB2_15  43   I/O     O       STD  FAST 
-ssdSegmentSelect<3>      5     13    FB2_17  44   I/O     O       STD  FAST 
-ssdUnitSelect<5>         2     3     FB4_15  33   I/O     O       STD  FAST 
-ssdUnitSelect<4>         1     3     FB4_17  34   I/O     O       STD  FAST 
+Signal                  Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                    Pts   Inps          No.  Type    Use     Mode Rate State
+ssdSegmentSelect<4>     7     13    FB1_2   1    I/O     O       STD  FAST 
+ssdSegmentSelect<5>     7     12    FB1_5   2    I/O     O       STD  FAST 
+ssdSegmentSelect<6>     7     12    FB1_6   3    I/O     O       STD  FAST 
+ssdSegmentSelect<7>     2     5     FB1_8   4    I/O     O       STD  FAST 
+ssdUnitSelect<3>        1     3     FB2_2   35   I/O     O       STD  FAST 
+ssdUnitSelect<2>        1     3     FB2_5   36   I/O     O       STD  FAST 
+ssdUnitSelect<1>        1     3     FB2_6   37   I/O     O       STD  FAST 
+ssdUnitSelect<0>        1     3     FB2_8   38   I/O     O       STD  FAST 
+ssdSegmentSelect<0>     4     12    FB2_11  40   GTS/I/O O       STD  FAST 
+ssdSegmentSelect<1>     4     11    FB2_14  42   GTS/I/O O       STD  FAST 
+ssdSegmentSelect<2>     3     10    FB2_15  43   I/O     O       STD  FAST 
+ssdSegmentSelect<3>     5     12    FB2_17  44   I/O     O       STD  FAST 
+ssdUnitSelect<5>        2     3     FB4_15  33   I/O     O       STD  FAST 
+ssdUnitSelect<4>        1     3     FB4_17  34   I/O     O       STD  FAST 
 
-** 27 Buried Nodes **
+** 25 Buried Nodes **
 
-Signal                   Total Total Loc     Pwr  Reg Init
-Name                     Pts   Inps          Mode State
-c3/itemToUse<0>          0     0     FB1_1   STD  RESET
-c3/itemToUse<2>          2     3     FB1_10  STD  RESET
-c3/itemToUse<1>          2     3     FB1_11  STD  RESET
-c1/debouncers/count<2>   2     3     FB1_12  STD  RESET
-c1/debouncers/count<1>   2     2     FB1_13  STD  RESET
-totalTensSoFar<0>        4     7     FB1_14  STD  RESET
-totalTensSoFar<1>        5     8     FB1_15  STD  RESET
-totalTensSoFar<3>        6     10    FB1_16  STD  RESET
-totalTensSoFar<2>        6     9     FB1_17  STD  RESET
-c1/debouncers/count<6>   2     7     FB1_18  STD  RESET
-c1/debouncers/count<10>  2     11    FB2_18  STD  RESET
-$OpTx$FX_DC$86__$INT     2     7     FB3_15  STD  
-c1/debouncedCoins<5>     3     16    FB3_16  STD  RESET
-c1/debouncedCoins<4>     3     16    FB3_17  STD  RESET
-c1/debouncedCoins<3>     3     16    FB3_18  STD  RESET
-c1/debouncers/isActive   2     13    FB4_5   STD  RESET
-c1/debouncers/count<0>   2     13    FB4_6   STD  RESET
-c1/debouncers/count<9>   3     13    FB4_7   STD  RESET
-c1/debouncers/count<8>   3     13    FB4_8   STD  RESET
-c1/debouncers/count<7>   3     13    FB4_9   STD  RESET
-c1/debouncers/count<5>   3     13    FB4_10  STD  RESET
-c1/debouncers/count<4>   3     13    FB4_11  STD  RESET
-c1/debouncers/count<3>   3     13    FB4_12  STD  RESET
-c1/debouncers/count<11>  3     13    FB4_13  STD  RESET
-c1/debouncedCoins<2>     3     16    FB4_14  STD  RESET
-c1/debouncedCoins<1>     3     16    FB4_16  STD  RESET
-c1/debouncedCoins<0>     3     16    FB4_18  STD  RESET
+Signal                  Total Total Loc     Pwr  Reg Init
+Name                    Pts   Inps          Mode State
+c3/itemToUse<0>         0     0     FB1_1   STD  RESET
+c3/itemToUse<2>         2     3     FB1_10  STD  RESET
+c3/itemToUse<1>         2     3     FB1_11  STD  RESET
+c1/debouncers/count<2>  2     3     FB1_12  STD  RESET
+c1/debouncers/count<1>  2     2     FB1_13  STD  RESET
+totalTensSoFar<0>       4     4     FB1_14  STD  RESET
+totalTensSoFar<1>       5     5     FB1_15  STD  RESET
+totalTensSoFar<3>       6     7     FB1_16  STD  RESET
+totalTensSoFar<2>       6     6     FB1_17  STD  RESET
+c1/debouncers/count<4>  2     5     FB1_18  STD  RESET
+$OpTx$FX_DC$76__$INT    2     7     FB2_18  STD  
+icTens<2>               3     14    FB3_16  STD  RESET
+icOnes<1>               3     14    FB3_17  STD  RESET
+c1/debouncedCoins<5>    3     14    FB3_18  STD  RESET
+c1/debouncers/isActive  2     11    FB4_6   STD  RESET
+c1/debouncers/count<0>  2     11    FB4_7   STD  RESET
+c1/debouncers/count<9>  3     11    FB4_8   STD  RESET
+c1/debouncers/count<8>  3     11    FB4_9   STD  RESET
+c1/debouncers/count<7>  3     11    FB4_10  STD  RESET
+c1/debouncers/count<6>  3     11    FB4_11  STD  RESET
+c1/debouncers/count<5>  3     11    FB4_12  STD  RESET
+c1/debouncers/count<3>  3     11    FB4_13  STD  RESET
+c1/debouncedCoins<4>    3     14    FB4_14  STD  RESET
+c1/debouncedCoins<3>    3     14    FB4_16  STD  RESET
+c1/debouncedCoins<1>    3     14    FB4_18  STD  RESET
 
 ** 8 Inputs **
 
-Signal                   Loc     Pin  Pin     Pin     
-Name                             No.  Type    Use     
-clock                    FB1_9   5    GCK/I/O GCK
-buttons<0>               FB3_11  18   I/O     I
-buttons<1>               FB3_14  19   I/O     I
-buttons<2>               FB3_15  20   I/O     I
-buttons<4>               FB3_16  24   I/O     I
-buttons<3>               FB3_17  22   I/O     I
-buttons<5>               FB4_2   25   I/O     I
-reset                    FB4_5   26   I/O     I
+Signal                  Loc     Pin  Pin     Pin     
+Name                            No.  Type    Use     
+clock                   FB1_9   5    GCK/I/O GCK
+buttons<0>              FB3_11  18   I/O     I
+buttons<1>              FB3_14  19   I/O     I
+buttons<2>              FB3_15  20   I/O     I
+buttons<4>              FB3_16  24   I/O     I
+buttons<3>              FB3_17  22   I/O     I
+buttons<5>              FB4_2   25   I/O     I
+reset                   FB4_5   26   I/O     I
 
 Legend:
 Pin No. - ~ - User Assigned
@@ -141,8 +139,8 @@ Pin Type/Use - I  - Input             GCK - Global Clock
 X            - Signal used as input to the macrocell logic.
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
-Number of function block inputs used/remaining:               21/33
-Number of signals used by logic mapping into function block:  21
+Number of function block inputs used/remaining:               19/35
+Number of signals used by logic mapping into function block:  19
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 c3/itemToUse<0>       0       0   \/1   4     FB1_1         (b)     (b)
@@ -150,8 +148,8 @@ ssdSegmentSelect<4>   7       2<-   0   0     FB1_2   1     I/O     O
 (unused)              0       0   /\1   4     FB1_3         (b)     (b)
 (unused)              0       0   \/2   3     FB1_4         (b)     (b)
 ssdSegmentSelect<5>   7       2<-   0   0     FB1_5   2     I/O     O
-ssdSegmentSelect<6>   8       3<-   0   0     FB1_6   3     I/O     O
-(unused)              0       0   /\3   2     FB1_7         (b)     (b)
+ssdSegmentSelect<6>   7       2<-   0   0     FB1_6   3     I/O     O
+(unused)              0       0   /\2   3     FB1_7         (b)     (b)
 ssdSegmentSelect<7>   2       0     0   3     FB1_8   4     I/O     O
 (unused)              0       0     0   5     FB1_9   5     GCK/I/O GCK
 c3/itemToUse<2>       2       0     0   3     FB1_10        (b)     (b)
@@ -164,42 +162,42 @@ totalTensSoFar<0>     4       0     0   1     FB1_14  7     GCK/I/O (b)
 totalTensSoFar<1>     5       0     0   0     FB1_15  8     I/O     (b)
 totalTensSoFar<3>     6       1<-   0   0     FB1_16        (b)     (b)
 totalTensSoFar<2>     6       2<- /\1   0     FB1_17  9     I/O     (b)
-c1/debouncers/count<6>
+c1/debouncers/count<4>
                       2       0   /\2   1     FB1_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: $OpTx$FX_DC$86__$INT   8: c1/debouncers/count<0>  15: c3/itemToUse<1> 
-  2: c1/debouncedCoins<0>   9: c1/debouncers/count<1>  16: c3/itemToUse<2> 
-  3: c1/debouncedCoins<1>  10: c1/debouncers/count<2>  17: reset 
-  4: c1/debouncedCoins<2>  11: c1/debouncers/count<3>  18: totalTensSoFar<0> 
-  5: c1/debouncedCoins<3>  12: c1/debouncers/count<4>  19: totalTensSoFar<1> 
-  6: c1/debouncedCoins<4>  13: c1/debouncers/count<5>  20: totalTensSoFar<2> 
-  7: c1/debouncedCoins<5>  14: c3/itemToUse<0>         21: totalTensSoFar<3> 
+  1: $OpTx$FX_DC$76__$INT     8: c1/debouncers/count<2>  14: icTens<2> 
+  2: c1/debouncedCoins<1>     9: c1/debouncers/count<3>  15: reset 
+  3: c1/debouncedCoins<3>    10: c3/itemToUse<0>         16: totalTensSoFar<0> 
+  4: c1/debouncedCoins<4>    11: c3/itemToUse<1>         17: totalTensSoFar<1> 
+  5: c1/debouncedCoins<5>    12: c3/itemToUse<2>         18: totalTensSoFar<2> 
+  6: c1/debouncers/count<0>  13: icOnes<1>               19: totalTensSoFar<3> 
+  7: c1/debouncers/count<1> 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
 c3/itemToUse<0>      ........................................ 0
-ssdSegmentSelect<4>  .XXXXXX......XXX.XXXX................... 13
-ssdSegmentSelect<5>  .XXXXXX......XXX.XXXX................... 13
-ssdSegmentSelect<6>  .XXXXXX......XXX.XXXX................... 13
-ssdSegmentSelect<7>  .XX..........XXX........................ 5
-c3/itemToUse<2>      .............XXX........................ 3
-c3/itemToUse<1>      .............XXX........................ 3
+ssdSegmentSelect<4>  .XXXX....XXXXX.XXXX..................... 13
+ssdSegmentSelect<5>  .XXX.....XXXXX.XXXX..................... 12
+ssdSegmentSelect<6>  .XX.X....XXXXX.XXXX..................... 12
+ssdSegmentSelect<7>  .X.......XXXX........................... 5
+c3/itemToUse<2>      .........XXX............................ 3
+c3/itemToUse<1>      .........XXX............................ 3
 c1/debouncers/count<2> 
-                     X......XX............................... 3
+                     X....XX................................. 3
 c1/debouncers/count<1> 
-                     X......X................................ 2
-totalTensSoFar<0>    .XXXXXX.........X....................... 7
-totalTensSoFar<1>    .XXXXXX.........XX...................... 8
-totalTensSoFar<3>    .XXXXXX.........XXXX.................... 10
-totalTensSoFar<2>    .XXXXXX.........XXX..................... 9
-c1/debouncers/count<6> 
-                     X......XXXXXX........................... 7
+                     X....X.................................. 2
+totalTensSoFar<0>    ..XX.........XX......................... 4
+totalTensSoFar<1>    ..XX.........XXX........................ 5
+totalTensSoFar<3>    ..XX.........XXXXX...................... 7
+totalTensSoFar<2>    ..XX.........XXXX....................... 6
+c1/debouncers/count<4> 
+                     X....XXXX............................... 5
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB2  ***********************************
-Number of function block inputs used/remaining:               24/30
-Number of signals used by logic mapping into function block:  24
+Number of function block inputs used/remaining:               20/34
+Number of signals used by logic mapping into function block:  20
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB2_1         (b)     
@@ -219,36 +217,35 @@ ssdSegmentSelect<1>   4       0     0   1     FB2_14  42    GTS/I/O O
 ssdSegmentSelect<2>   3       0     0   2     FB2_15  43    I/O     O
 (unused)              0       0     0   5     FB2_16        (b)     
 ssdSegmentSelect<3>   5       0     0   0     FB2_17  44    I/O     O
-c1/debouncers/count<10>
+$OpTx$FX_DC$76__$INT
                       2       0     0   3     FB2_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: $OpTx$FX_DC$86__$INT     9: c1/debouncers/count<1>  17: c1/debouncers/count<9> 
-  2: c1/debouncedCoins<0>    10: c1/debouncers/count<2>  18: c3/itemToUse<0> 
-  3: c1/debouncedCoins<1>    11: c1/debouncers/count<3>  19: c3/itemToUse<1> 
-  4: c1/debouncedCoins<2>    12: c1/debouncers/count<4>  20: c3/itemToUse<2> 
-  5: c1/debouncedCoins<3>    13: c1/debouncers/count<5>  21: totalTensSoFar<0> 
-  6: c1/debouncedCoins<4>    14: c1/debouncers/count<6>  22: totalTensSoFar<1> 
-  7: c1/debouncedCoins<5>    15: c1/debouncers/count<7>  23: totalTensSoFar<2> 
-  8: c1/debouncers/count<0>  16: c1/debouncers/count<8>  24: totalTensSoFar<3> 
+  1: buttons<0>             8: c1/debouncedCoins<3>    15: icOnes<1> 
+  2: buttons<1>             9: c1/debouncedCoins<4>    16: icTens<2> 
+  3: buttons<2>            10: c1/debouncedCoins<5>    17: totalTensSoFar<0> 
+  4: buttons<3>            11: c1/debouncers/isActive  18: totalTensSoFar<1> 
+  5: buttons<4>            12: c3/itemToUse<0>         19: totalTensSoFar<2> 
+  6: buttons<5>            13: c3/itemToUse<1>         20: totalTensSoFar<3> 
+  7: c1/debouncedCoins<1>  14: c3/itemToUse<2>        
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-ssdUnitSelect<3>     .................XXX.................... 3
-ssdUnitSelect<2>     .................XXX.................... 3
-ssdUnitSelect<1>     .................XXX.................... 3
-ssdUnitSelect<0>     .................XXX.................... 3
-ssdSegmentSelect<0>  .XXXXXX..........XXXXXXX................ 13
-ssdSegmentSelect<1>  .XXXXXX..........XXXXXXX................ 13
-ssdSegmentSelect<2>  .XXXXXX..........XXXXXXX................ 13
-ssdSegmentSelect<3>  .XXXXXX..........XXXXXXX................ 13
-c1/debouncers/count<10> 
-                     X......XXXXXXXXXX....................... 11
+ssdUnitSelect<3>     ...........XXX.......................... 3
+ssdUnitSelect<2>     ...........XXX.......................... 3
+ssdUnitSelect<1>     ...........XXX.......................... 3
+ssdUnitSelect<0>     ...........XXX.......................... 3
+ssdSegmentSelect<0>  ......XXX..XXXXXXXXX.................... 12
+ssdSegmentSelect<1>  ......X..X.XXXXXXXXX.................... 11
+ssdSegmentSelect<2>  .......X...XXXXXXXXX.................... 10
+ssdSegmentSelect<3>  ......XXX..XXXXXXXXX.................... 12
+$OpTx$FX_DC$76__$INT 
+                     XXXXXX....X............................. 7
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB3  ***********************************
-Number of function block inputs used/remaining:               23/31
-Number of signals used by logic mapping into function block:  23
+Number of function block inputs used/remaining:               18/36
+Number of signals used by logic mapping into function block:  18
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB3_1         (b)     
@@ -265,111 +262,98 @@ Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB3_12        (b)     
 (unused)              0       0     0   5     FB3_13        (b)     
 (unused)              0       0     0   5     FB3_14  19    I/O     I
-$OpTx$FX_DC$86__$INT
-                      2       0     0   3     FB3_15  20    I/O     I
+(unused)              0       0     0   5     FB3_15  20    I/O     I
+icTens<2>             3       0     0   2     FB3_16  24    I/O     I
+icOnes<1>             3       0     0   2     FB3_17  22    I/O     I
 c1/debouncedCoins<5>
-                      3       0     0   2     FB3_16  24    I/O     I
-c1/debouncedCoins<4>
-                      3       0     0   2     FB3_17  22    I/O     I
-c1/debouncedCoins<3>
                       3       0     0   2     FB3_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: $OpTx$FX_DC$86__$INT   9: c1/debouncedCoins<4>     17: c1/debouncers/count<4> 
-  2: buttons<0>            10: c1/debouncedCoins<5>     18: c1/debouncers/count<5> 
-  3: buttons<1>            11: c1/debouncers/count<0>   19: c1/debouncers/count<6> 
-  4: buttons<2>            12: c1/debouncers/count<10>  20: c1/debouncers/count<7> 
-  5: buttons<3>            13: c1/debouncers/count<11>  21: c1/debouncers/count<8> 
-  6: buttons<4>            14: c1/debouncers/count<1>   22: c1/debouncers/count<9> 
-  7: buttons<5>            15: c1/debouncers/count<2>   23: c1/debouncers/isActive 
-  8: c1/debouncedCoins<3>  16: c1/debouncers/count<3>  
+  1: $OpTx$FX_DC$76__$INT     7: c1/debouncers/count<1>  13: c1/debouncers/count<7> 
+  2: buttons<0>               8: c1/debouncers/count<2>  14: c1/debouncers/count<8> 
+  3: buttons<2>               9: c1/debouncers/count<3>  15: c1/debouncers/count<9> 
+  4: buttons<5>              10: c1/debouncers/count<4>  16: c1/debouncers/isActive 
+  5: c1/debouncedCoins<5>    11: c1/debouncers/count<5>  17: icOnes<1> 
+  6: c1/debouncers/count<0>  12: c1/debouncers/count<6>  18: icTens<2> 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-$OpTx$FX_DC$86__$INT 
-                     .XXXXXX...............X................. 7
+icTens<2>            X.X..XXXXXXXXXXX.X...................... 14
+icOnes<1>            XX...XXXXXXXXXXXX....................... 14
 c1/debouncedCoins<5> 
-                     X.....X..XXXXXXXXXXXXXX................. 16
-c1/debouncedCoins<4> 
-                     X....X..X.XXXXXXXXXXXXX................. 16
-c1/debouncedCoins<3> 
-                     X...X..X..XXXXXXXXXXXXX................. 16
+                     X..XXXXXXXXXXXXX........................ 14
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB4  ***********************************
-Number of function block inputs used/remaining:               23/31
-Number of signals used by logic mapping into function block:  23
+Number of function block inputs used/remaining:               21/33
+Number of signals used by logic mapping into function block:  21
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB4_1         (b)     
 (unused)              0       0     0   5     FB4_2   25    I/O     I
 (unused)              0       0     0   5     FB4_3         (b)     
 (unused)              0       0     0   5     FB4_4         (b)     
+(unused)              0       0     0   5     FB4_5   26    I/O     I
 c1/debouncers/isActive
-                      2       0     0   3     FB4_5   26    I/O     I
-c1/debouncers/count<0>
                       2       0     0   3     FB4_6         (b)     (b)
+c1/debouncers/count<0>
+                      2       0     0   3     FB4_7         (b)     (b)
 c1/debouncers/count<9>
-                      3       0     0   2     FB4_7         (b)     (b)
-c1/debouncers/count<8>
                       3       0     0   2     FB4_8   27    I/O     (b)
-c1/debouncers/count<7>
+c1/debouncers/count<8>
                       3       0     0   2     FB4_9         (b)     (b)
-c1/debouncers/count<5>
+c1/debouncers/count<7>
                       3       0     0   2     FB4_10        (b)     (b)
-c1/debouncers/count<4>
+c1/debouncers/count<6>
                       3       0     0   2     FB4_11  28    I/O     (b)
-c1/debouncers/count<3>
+c1/debouncers/count<5>
                       3       0     0   2     FB4_12        (b)     (b)
-c1/debouncers/count<11>
+c1/debouncers/count<3>
                       3       0     0   2     FB4_13        (b)     (b)
-c1/debouncedCoins<2>
+c1/debouncedCoins<4>
                       3       0     0   2     FB4_14  29    I/O     (b)
 ssdUnitSelect<5>      2       0     0   3     FB4_15  33    I/O     O
-c1/debouncedCoins<1>
+c1/debouncedCoins<3>
                       3       0     0   2     FB4_16        (b)     (b)
 ssdUnitSelect<4>      1       0     0   4     FB4_17  34    I/O     O
-c1/debouncedCoins<0>
+c1/debouncedCoins<1>
                       3       0     0   2     FB4_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: $OpTx$FX_DC$86__$INT     9: c1/debouncers/count<10>  17: c1/debouncers/count<7> 
-  2: buttons<0>              10: c1/debouncers/count<11>  18: c1/debouncers/count<8> 
-  3: buttons<1>              11: c1/debouncers/count<1>   19: c1/debouncers/count<9> 
-  4: buttons<2>              12: c1/debouncers/count<2>   20: c1/debouncers/isActive 
-  5: c1/debouncedCoins<0>    13: c1/debouncers/count<3>   21: c3/itemToUse<0> 
-  6: c1/debouncedCoins<1>    14: c1/debouncers/count<4>   22: c3/itemToUse<1> 
-  7: c1/debouncedCoins<2>    15: c1/debouncers/count<5>   23: c3/itemToUse<2> 
-  8: c1/debouncers/count<0>  16: c1/debouncers/count<6>  
+  1: $OpTx$FX_DC$76__$INT   8: c1/debouncers/count<0>  15: c1/debouncers/count<7> 
+  2: buttons<1>             9: c1/debouncers/count<1>  16: c1/debouncers/count<8> 
+  3: buttons<3>            10: c1/debouncers/count<2>  17: c1/debouncers/count<9> 
+  4: buttons<4>            11: c1/debouncers/count<3>  18: c1/debouncers/isActive 
+  5: c1/debouncedCoins<1>  12: c1/debouncers/count<4>  19: c3/itemToUse<0> 
+  6: c1/debouncedCoins<3>  13: c1/debouncers/count<5>  20: c3/itemToUse<1> 
+  7: c1/debouncedCoins<4>  14: c1/debouncers/count<6>  21: c3/itemToUse<2> 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
 c1/debouncers/isActive 
-                     X......XXXXXXXXXXXX..................... 13
+                     X......XXXXXXXXXX....................... 11
 c1/debouncers/count<0> 
-                     X......XXXXXXXXXXXX..................... 13
+                     X......XXXXXXXXXX....................... 11
 c1/debouncers/count<9> 
-                     X......XXXXXXXXXXXX..................... 13
+                     X......XXXXXXXXXX....................... 11
 c1/debouncers/count<8> 
-                     X......XXXXXXXXXXXX..................... 13
+                     X......XXXXXXXXXX....................... 11
 c1/debouncers/count<7> 
-                     X......XXXXXXXXXXXX..................... 13
+                     X......XXXXXXXXXX....................... 11
+c1/debouncers/count<6> 
+                     X......XXXXXXXXXX....................... 11
 c1/debouncers/count<5> 
-                     X......XXXXXXXXXXXX..................... 13
-c1/debouncers/count<4> 
-                     X......XXXXXXXXXXXX..................... 13
+                     X......XXXXXXXXXX....................... 11
 c1/debouncers/count<3> 
-                     X......XXXXXXXXXXXX..................... 13
-c1/debouncers/count<11> 
-                     X......XXXXXXXXXXXX..................... 13
-c1/debouncedCoins<2> 
-                     X..X..XXXXXXXXXXXXXX.................... 16
-ssdUnitSelect<5>     ....................XXX................. 3
+                     X......XXXXXXXXXX....................... 11
+c1/debouncedCoins<4> 
+                     X..X..XXXXXXXXXXXX...................... 14
+ssdUnitSelect<5>     ..................XXX................... 3
+c1/debouncedCoins<3> 
+                     X.X..X.XXXXXXXXXXX...................... 14
+ssdUnitSelect<4>     ..................XXX................... 3
 c1/debouncedCoins<1> 
-                     X.X..X.XXXXXXXXXXXXX.................... 16
-ssdUnitSelect<4>     ....................XXX................. 3
-c1/debouncedCoins<0> 
-                     XX..X..XXXXXXXXXXXXX.................... 16
+                     XX..X..XXXXXXXXXXX...................... 14
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *******************************  Equations  ********************************
@@ -377,7 +361,7 @@ c1/debouncedCoins<0>
 ********** Mapped Logic **********
 
 
-$OpTx$FX_DC$86__$INT <= ((c1/debouncers/isActive)
+$OpTx$FX_DC$76__$INT <= ((c1/debouncers/isActive)
 	OR (buttons(5) AND buttons(4) AND buttons(3) AND 
 	buttons(2) AND buttons(1) AND buttons(0)));
 
@@ -387,158 +371,111 @@ $OpTx$FX_DC$86__$INT <= ((c1/debouncers/isActive)
 
 
 
-FTCPE_c1/debouncedCoins0: FTCPE port map (c1/debouncedCoins(0),c1/debouncedCoins_T(0),clock,c1/debouncedCoins_CLR(0),c1/debouncedCoins_PRE(0));
-c1/debouncedCoins_T(0) <= (c1/debouncedCoins(0) AND NOT c1/debouncers/count(0) AND 
-	NOT c1/debouncers/count(10) AND NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND 
-	c1/debouncers/count(3) AND c1/debouncers/count(4) AND c1/debouncers/count(5) AND 
-	NOT c1/debouncers/count(6) AND c1/debouncers/count(7) AND c1/debouncers/count(8) AND 
-	c1/debouncers/count(9) AND c1/debouncers/count(11));
-c1/debouncedCoins_CLR(0) <= (buttons(0) AND NOT $OpTx$FX_DC$86__$INT);
-c1/debouncedCoins_PRE(0) <= (NOT buttons(0) AND NOT c1/debouncers/isActive);
-
 FTCPE_c1/debouncedCoins1: FTCPE port map (c1/debouncedCoins(1),c1/debouncedCoins_T(1),clock,c1/debouncedCoins_CLR(1),c1/debouncedCoins_PRE(1));
 c1/debouncedCoins_T(1) <= (c1/debouncedCoins(1) AND NOT c1/debouncers/count(0) AND 
-	NOT c1/debouncers/count(10) AND NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND 
-	c1/debouncers/count(3) AND c1/debouncers/count(4) AND c1/debouncers/count(5) AND 
-	NOT c1/debouncers/count(6) AND c1/debouncers/count(7) AND c1/debouncers/count(8) AND 
-	c1/debouncers/count(9) AND c1/debouncers/count(11));
-c1/debouncedCoins_CLR(1) <= (buttons(1) AND NOT $OpTx$FX_DC$86__$INT);
+	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
+	NOT c1/debouncers/count(4) AND c1/debouncers/count(5) AND c1/debouncers/count(6) AND 
+	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9));
+c1/debouncedCoins_CLR(1) <= (buttons(1) AND NOT $OpTx$FX_DC$76__$INT);
 c1/debouncedCoins_PRE(1) <= (NOT buttons(1) AND NOT c1/debouncers/isActive);
-
-FTCPE_c1/debouncedCoins2: FTCPE port map (c1/debouncedCoins(2),c1/debouncedCoins_T(2),clock,c1/debouncedCoins_CLR(2),c1/debouncedCoins_PRE(2));
-c1/debouncedCoins_T(2) <= (c1/debouncedCoins(2) AND NOT c1/debouncers/count(0) AND 
-	NOT c1/debouncers/count(10) AND NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND 
-	c1/debouncers/count(3) AND c1/debouncers/count(4) AND c1/debouncers/count(5) AND 
-	NOT c1/debouncers/count(6) AND c1/debouncers/count(7) AND c1/debouncers/count(8) AND 
-	c1/debouncers/count(9) AND c1/debouncers/count(11));
-c1/debouncedCoins_CLR(2) <= (buttons(2) AND NOT $OpTx$FX_DC$86__$INT);
-c1/debouncedCoins_PRE(2) <= (NOT buttons(2) AND NOT c1/debouncers/isActive);
 
 FTCPE_c1/debouncedCoins3: FTCPE port map (c1/debouncedCoins(3),c1/debouncedCoins_T(3),clock,c1/debouncedCoins_CLR(3),c1/debouncedCoins_PRE(3));
 c1/debouncedCoins_T(3) <= (c1/debouncedCoins(3) AND NOT c1/debouncers/count(0) AND 
-	NOT c1/debouncers/count(10) AND NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND 
-	c1/debouncers/count(3) AND c1/debouncers/count(4) AND c1/debouncers/count(5) AND 
-	NOT c1/debouncers/count(6) AND c1/debouncers/count(7) AND c1/debouncers/count(8) AND 
-	c1/debouncers/count(9) AND c1/debouncers/count(11));
-c1/debouncedCoins_CLR(3) <= (buttons(3) AND NOT $OpTx$FX_DC$86__$INT);
+	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
+	NOT c1/debouncers/count(4) AND c1/debouncers/count(5) AND c1/debouncers/count(6) AND 
+	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9));
+c1/debouncedCoins_CLR(3) <= (buttons(3) AND NOT $OpTx$FX_DC$76__$INT);
 c1/debouncedCoins_PRE(3) <= (NOT buttons(3) AND NOT c1/debouncers/isActive);
 
 FTCPE_c1/debouncedCoins4: FTCPE port map (c1/debouncedCoins(4),c1/debouncedCoins_T(4),clock,c1/debouncedCoins_CLR(4),c1/debouncedCoins_PRE(4));
 c1/debouncedCoins_T(4) <= (c1/debouncedCoins(4) AND NOT c1/debouncers/count(0) AND 
-	NOT c1/debouncers/count(10) AND NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND 
-	c1/debouncers/count(3) AND c1/debouncers/count(4) AND c1/debouncers/count(5) AND 
-	NOT c1/debouncers/count(6) AND c1/debouncers/count(7) AND c1/debouncers/count(8) AND 
-	c1/debouncers/count(9) AND c1/debouncers/count(11));
-c1/debouncedCoins_CLR(4) <= (buttons(4) AND NOT $OpTx$FX_DC$86__$INT);
+	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
+	NOT c1/debouncers/count(4) AND c1/debouncers/count(5) AND c1/debouncers/count(6) AND 
+	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9));
+c1/debouncedCoins_CLR(4) <= (buttons(4) AND NOT $OpTx$FX_DC$76__$INT);
 c1/debouncedCoins_PRE(4) <= (NOT buttons(4) AND NOT c1/debouncers/isActive);
 
 FTCPE_c1/debouncedCoins5: FTCPE port map (c1/debouncedCoins(5),c1/debouncedCoins_T(5),clock,c1/debouncedCoins_CLR(5),c1/debouncedCoins_PRE(5));
 c1/debouncedCoins_T(5) <= (c1/debouncedCoins(5) AND NOT c1/debouncers/count(0) AND 
-	NOT c1/debouncers/count(10) AND NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND 
-	c1/debouncers/count(3) AND c1/debouncers/count(4) AND c1/debouncers/count(5) AND 
-	NOT c1/debouncers/count(6) AND c1/debouncers/count(7) AND c1/debouncers/count(8) AND 
-	c1/debouncers/count(9) AND c1/debouncers/count(11));
-c1/debouncedCoins_CLR(5) <= (buttons(5) AND NOT $OpTx$FX_DC$86__$INT);
+	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
+	NOT c1/debouncers/count(4) AND c1/debouncers/count(5) AND c1/debouncers/count(6) AND 
+	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9));
+c1/debouncedCoins_CLR(5) <= (buttons(5) AND NOT $OpTx$FX_DC$76__$INT);
 c1/debouncedCoins_PRE(5) <= (NOT buttons(5) AND NOT c1/debouncers/isActive);
 
-FTCPE_c1/debouncers/count0: FTCPE port map (c1/debouncers/count(0),c1/debouncers/count_T(0),clock,NOT $OpTx$FX_DC$86__$INT,'0');
-c1/debouncers/count_T(0) <= (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(10) AND 
-	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
-	c1/debouncers/count(4) AND c1/debouncers/count(5) AND NOT c1/debouncers/count(6) AND 
-	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9) AND 
-	c1/debouncers/count(11));
+FTCPE_c1/debouncers/count0: FTCPE port map (c1/debouncers/count(0),c1/debouncers/count_T(0),clock,NOT $OpTx$FX_DC$76__$INT,'0');
+c1/debouncers/count_T(0) <= (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(1) AND 
+	NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND NOT c1/debouncers/count(4) AND 
+	c1/debouncers/count(5) AND c1/debouncers/count(6) AND c1/debouncers/count(7) AND 
+	c1/debouncers/count(8) AND c1/debouncers/count(9));
 
-FTCPE_c1/debouncers/count1: FTCPE port map (c1/debouncers/count(1),c1/debouncers/count(0),clock,NOT $OpTx$FX_DC$86__$INT,'0');
+FTCPE_c1/debouncers/count1: FTCPE port map (c1/debouncers/count(1),c1/debouncers/count(0),clock,NOT $OpTx$FX_DC$76__$INT,'0');
 
-FTCPE_c1/debouncers/count2: FTCPE port map (c1/debouncers/count(2),c1/debouncers/count_T(2),clock,NOT $OpTx$FX_DC$86__$INT,'0');
+FTCPE_c1/debouncers/count2: FTCPE port map (c1/debouncers/count(2),c1/debouncers/count_T(2),clock,NOT $OpTx$FX_DC$76__$INT,'0');
 c1/debouncers/count_T(2) <= (c1/debouncers/count(0) AND c1/debouncers/count(1));
 
-FTCPE_c1/debouncers/count3: FTCPE port map (c1/debouncers/count(3),c1/debouncers/count_T(3),clock,NOT $OpTx$FX_DC$86__$INT,'0');
+FTCPE_c1/debouncers/count3: FTCPE port map (c1/debouncers/count(3),c1/debouncers/count_T(3),clock,NOT $OpTx$FX_DC$76__$INT,'0');
 c1/debouncers/count_T(3) <= ((c1/debouncers/count(0) AND c1/debouncers/count(1) AND 
 	c1/debouncers/count(2))
-	OR (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(10) AND 
-	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
-	c1/debouncers/count(4) AND c1/debouncers/count(5) AND NOT c1/debouncers/count(6) AND 
-	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9) AND 
-	c1/debouncers/count(11)));
+	OR (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(1) AND 
+	NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND NOT c1/debouncers/count(4) AND 
+	c1/debouncers/count(5) AND c1/debouncers/count(6) AND c1/debouncers/count(7) AND 
+	c1/debouncers/count(8) AND c1/debouncers/count(9)));
 
-FTCPE_c1/debouncers/count4: FTCPE port map (c1/debouncers/count(4),c1/debouncers/count_T(4),clock,NOT $OpTx$FX_DC$86__$INT,'0');
-c1/debouncers/count_T(4) <= ((c1/debouncers/count(0) AND c1/debouncers/count(1) AND 
-	c1/debouncers/count(2) AND c1/debouncers/count(3))
-	OR (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(10) AND 
-	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
-	c1/debouncers/count(4) AND c1/debouncers/count(5) AND NOT c1/debouncers/count(6) AND 
-	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9) AND 
-	c1/debouncers/count(11)));
+FTCPE_c1/debouncers/count4: FTCPE port map (c1/debouncers/count(4),c1/debouncers/count_T(4),clock,NOT $OpTx$FX_DC$76__$INT,'0');
+c1/debouncers/count_T(4) <= (c1/debouncers/count(0) AND c1/debouncers/count(1) AND 
+	c1/debouncers/count(2) AND c1/debouncers/count(3));
 
-FTCPE_c1/debouncers/count5: FTCPE port map (c1/debouncers/count(5),c1/debouncers/count_T(5),clock,NOT $OpTx$FX_DC$86__$INT,'0');
+FTCPE_c1/debouncers/count5: FTCPE port map (c1/debouncers/count(5),c1/debouncers/count_T(5),clock,NOT $OpTx$FX_DC$76__$INT,'0');
 c1/debouncers/count_T(5) <= ((c1/debouncers/count(0) AND c1/debouncers/count(1) AND 
 	c1/debouncers/count(2) AND c1/debouncers/count(3) AND c1/debouncers/count(4))
-	OR (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(10) AND 
-	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
-	c1/debouncers/count(4) AND c1/debouncers/count(5) AND NOT c1/debouncers/count(6) AND 
-	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9) AND 
-	c1/debouncers/count(11)));
+	OR (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(1) AND 
+	NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND NOT c1/debouncers/count(4) AND 
+	c1/debouncers/count(5) AND c1/debouncers/count(6) AND c1/debouncers/count(7) AND 
+	c1/debouncers/count(8) AND c1/debouncers/count(9)));
 
-FTCPE_c1/debouncers/count6: FTCPE port map (c1/debouncers/count(6),c1/debouncers/count_T(6),clock,NOT $OpTx$FX_DC$86__$INT,'0');
-c1/debouncers/count_T(6) <= (c1/debouncers/count(0) AND c1/debouncers/count(1) AND 
+FTCPE_c1/debouncers/count6: FTCPE port map (c1/debouncers/count(6),c1/debouncers/count_T(6),clock,NOT $OpTx$FX_DC$76__$INT,'0');
+c1/debouncers/count_T(6) <= ((c1/debouncers/count(0) AND c1/debouncers/count(1) AND 
 	c1/debouncers/count(2) AND c1/debouncers/count(3) AND c1/debouncers/count(4) AND 
-	c1/debouncers/count(5));
+	c1/debouncers/count(5))
+	OR (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(1) AND 
+	NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND NOT c1/debouncers/count(4) AND 
+	c1/debouncers/count(5) AND c1/debouncers/count(6) AND c1/debouncers/count(7) AND 
+	c1/debouncers/count(8) AND c1/debouncers/count(9)));
 
-FTCPE_c1/debouncers/count7: FTCPE port map (c1/debouncers/count(7),c1/debouncers/count_T(7),clock,NOT $OpTx$FX_DC$86__$INT,'0');
+FTCPE_c1/debouncers/count7: FTCPE port map (c1/debouncers/count(7),c1/debouncers/count_T(7),clock,NOT $OpTx$FX_DC$76__$INT,'0');
 c1/debouncers/count_T(7) <= ((c1/debouncers/count(0) AND c1/debouncers/count(1) AND 
 	c1/debouncers/count(2) AND c1/debouncers/count(3) AND c1/debouncers/count(4) AND 
 	c1/debouncers/count(5) AND c1/debouncers/count(6))
-	OR (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(10) AND 
-	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
-	c1/debouncers/count(4) AND c1/debouncers/count(5) AND NOT c1/debouncers/count(6) AND 
-	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9) AND 
-	c1/debouncers/count(11)));
+	OR (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(1) AND 
+	NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND NOT c1/debouncers/count(4) AND 
+	c1/debouncers/count(5) AND c1/debouncers/count(6) AND c1/debouncers/count(7) AND 
+	c1/debouncers/count(8) AND c1/debouncers/count(9)));
 
-FTCPE_c1/debouncers/count8: FTCPE port map (c1/debouncers/count(8),c1/debouncers/count_T(8),clock,NOT $OpTx$FX_DC$86__$INT,'0');
+FTCPE_c1/debouncers/count8: FTCPE port map (c1/debouncers/count(8),c1/debouncers/count_T(8),clock,NOT $OpTx$FX_DC$76__$INT,'0');
 c1/debouncers/count_T(8) <= ((c1/debouncers/count(0) AND c1/debouncers/count(1) AND 
 	c1/debouncers/count(2) AND c1/debouncers/count(3) AND c1/debouncers/count(4) AND 
 	c1/debouncers/count(5) AND c1/debouncers/count(6) AND c1/debouncers/count(7))
-	OR (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(10) AND 
-	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
-	c1/debouncers/count(4) AND c1/debouncers/count(5) AND NOT c1/debouncers/count(6) AND 
-	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9) AND 
-	c1/debouncers/count(11)));
+	OR (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(1) AND 
+	NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND NOT c1/debouncers/count(4) AND 
+	c1/debouncers/count(5) AND c1/debouncers/count(6) AND c1/debouncers/count(7) AND 
+	c1/debouncers/count(8) AND c1/debouncers/count(9)));
 
-FTCPE_c1/debouncers/count9: FTCPE port map (c1/debouncers/count(9),c1/debouncers/count_T(9),clock,NOT $OpTx$FX_DC$86__$INT,'0');
+FTCPE_c1/debouncers/count9: FTCPE port map (c1/debouncers/count(9),c1/debouncers/count_T(9),clock,NOT $OpTx$FX_DC$76__$INT,'0');
 c1/debouncers/count_T(9) <= ((c1/debouncers/count(0) AND c1/debouncers/count(1) AND 
 	c1/debouncers/count(2) AND c1/debouncers/count(3) AND c1/debouncers/count(4) AND 
 	c1/debouncers/count(5) AND c1/debouncers/count(6) AND c1/debouncers/count(7) AND 
 	c1/debouncers/count(8))
-	OR (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(10) AND 
-	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
-	c1/debouncers/count(4) AND c1/debouncers/count(5) AND NOT c1/debouncers/count(6) AND 
-	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9) AND 
-	c1/debouncers/count(11)));
+	OR (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(1) AND 
+	NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND NOT c1/debouncers/count(4) AND 
+	c1/debouncers/count(5) AND c1/debouncers/count(6) AND c1/debouncers/count(7) AND 
+	c1/debouncers/count(8) AND c1/debouncers/count(9)));
 
-FTCPE_c1/debouncers/count10: FTCPE port map (c1/debouncers/count(10),c1/debouncers/count_T(10),clock,NOT $OpTx$FX_DC$86__$INT,'0');
-c1/debouncers/count_T(10) <= (c1/debouncers/count(0) AND c1/debouncers/count(1) AND 
-	c1/debouncers/count(2) AND c1/debouncers/count(3) AND c1/debouncers/count(4) AND 
+FDCPE_c1/debouncers/isActive: FDCPE port map (c1/debouncers/isActive,'0',clock,'0',NOT $OpTx$FX_DC$76__$INT,c1/debouncers/isActive_CE);
+c1/debouncers/isActive_CE <= (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(1) AND 
+	NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND NOT c1/debouncers/count(4) AND 
 	c1/debouncers/count(5) AND c1/debouncers/count(6) AND c1/debouncers/count(7) AND 
 	c1/debouncers/count(8) AND c1/debouncers/count(9));
-
-FTCPE_c1/debouncers/count11: FTCPE port map (c1/debouncers/count(11),c1/debouncers/count_T(11),clock,NOT $OpTx$FX_DC$86__$INT,'0');
-c1/debouncers/count_T(11) <= ((c1/debouncers/count(0) AND c1/debouncers/count(10) AND 
-	c1/debouncers/count(1) AND c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
-	c1/debouncers/count(4) AND c1/debouncers/count(5) AND c1/debouncers/count(6) AND 
-	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9))
-	OR (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(10) AND 
-	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
-	c1/debouncers/count(4) AND c1/debouncers/count(5) AND NOT c1/debouncers/count(6) AND 
-	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9) AND 
-	c1/debouncers/count(11)));
-
-FDCPE_c1/debouncers/isActive: FDCPE port map (c1/debouncers/isActive,'0',clock,'0',NOT $OpTx$FX_DC$86__$INT,c1/debouncers/isActive_CE);
-c1/debouncers/isActive_CE <= (NOT c1/debouncers/count(0) AND NOT c1/debouncers/count(10) AND 
-	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
-	c1/debouncers/count(4) AND c1/debouncers/count(5) AND NOT c1/debouncers/count(6) AND 
-	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9) AND 
-	c1/debouncers/count(11));
 
 FTCPE_c3/itemToUse0: FTCPE port map (c3/itemToUse(0),'1',clock,'0','0');
 
@@ -552,53 +489,64 @@ c3/itemToUse_D(2) <= ((NOT c3/itemToUse(0) AND c3/itemToUse(2))
 	OR (c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
 	c3/itemToUse(1)));
 
+FTCPE_icOnes1: FTCPE port map (icOnes(1),icOnes_T(1),clock,icOnes_CLR(1),icOnes_PRE(1));
+icOnes_T(1) <= (icOnes(1) AND NOT c1/debouncers/count(0) AND 
+	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
+	NOT c1/debouncers/count(4) AND c1/debouncers/count(5) AND c1/debouncers/count(6) AND 
+	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9));
+icOnes_CLR(1) <= (buttons(0) AND NOT $OpTx$FX_DC$76__$INT);
+icOnes_PRE(1) <= (NOT buttons(0) AND NOT c1/debouncers/isActive);
 
-ssdSegmentSelect(0) <= NOT (((NOT totalTensSoFar(1) AND totalTensSoFar(2) AND 
+FTCPE_icTens2: FTCPE port map (icTens(2),icTens_T(2),clock,icTens_CLR(2),icTens_PRE(2));
+icTens_T(2) <= (icTens(2) AND NOT c1/debouncers/count(0) AND 
+	NOT c1/debouncers/count(1) AND NOT c1/debouncers/count(2) AND c1/debouncers/count(3) AND 
+	NOT c1/debouncers/count(4) AND c1/debouncers/count(5) AND c1/debouncers/count(6) AND 
+	c1/debouncers/count(7) AND c1/debouncers/count(8) AND c1/debouncers/count(9));
+icTens_CLR(2) <= (buttons(2) AND NOT $OpTx$FX_DC$76__$INT);
+icTens_PRE(2) <= (NOT buttons(2) AND NOT c1/debouncers/isActive);
+
+
+ssdSegmentSelect(0) <= NOT (((NOT icOnes(1) AND c1/debouncedCoins(1) AND 
+	c3/itemToUse(0) AND NOT c3/itemToUse(2) AND NOT c3/itemToUse(1))
+	OR (NOT icTens(2) AND NOT c1/debouncedCoins(3) AND 
+	c1/debouncedCoins(4) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+	NOT c3/itemToUse(1))
+	OR (NOT totalTensSoFar(1) AND totalTensSoFar(2) AND 
 	NOT totalTensSoFar(0) AND NOT totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
 	NOT c3/itemToUse(2) AND c3/itemToUse(1))
 	OR (NOT totalTensSoFar(1) AND NOT totalTensSoFar(2) AND 
 	totalTensSoFar(0) AND NOT totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
-	NOT c3/itemToUse(2) AND c3/itemToUse(1))
-	OR (c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))));
+	NOT c3/itemToUse(2) AND c3/itemToUse(1))));
 
 
-ssdSegmentSelect(1) <= NOT (((totalTensSoFar(1) AND totalTensSoFar(2) AND 
-	NOT totalTensSoFar(0) AND NOT totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
-	NOT c3/itemToUse(2) AND c3/itemToUse(1))
-	OR (NOT totalTensSoFar(1) AND totalTensSoFar(2) AND 
-	totalTensSoFar(0) AND NOT totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
-	NOT c3/itemToUse(2) AND c3/itemToUse(1))
-	OR (NOT c1/debouncedCoins(1) AND c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+ssdSegmentSelect(1) <= NOT (((icTens(2) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
 	NOT c3/itemToUse(1))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
+	OR (NOT icOnes(1) AND NOT c1/debouncedCoins(1) AND 
 	c1/debouncedCoins(5) AND c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))));
-
-
-ssdSegmentSelect(2) <= NOT (((totalTensSoFar(1) AND NOT totalTensSoFar(2) AND 
+	NOT c3/itemToUse(1))
+	OR (totalTensSoFar(1) AND totalTensSoFar(2) AND 
 	NOT totalTensSoFar(0) AND NOT totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
 	NOT c3/itemToUse(2) AND c3/itemToUse(1))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+	OR (NOT totalTensSoFar(1) AND totalTensSoFar(2) AND 
+	totalTensSoFar(0) AND NOT totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
+	NOT c3/itemToUse(2) AND c3/itemToUse(1))));
+
+
+ssdSegmentSelect(2) <= NOT (((icOnes(1) AND c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
 	NOT c3/itemToUse(1))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))));
+	OR (NOT icTens(2) AND c1/debouncedCoins(3) AND 
+	NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND NOT c3/itemToUse(1))
+	OR (totalTensSoFar(1) AND NOT totalTensSoFar(2) AND 
+	NOT totalTensSoFar(0) AND NOT totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
+	NOT c3/itemToUse(2) AND c3/itemToUse(1))));
 
 
-ssdSegmentSelect(3) <= NOT (((totalTensSoFar(1) AND totalTensSoFar(2) AND 
+ssdSegmentSelect(3) <= NOT (((NOT icOnes(1) AND c1/debouncedCoins(1) AND 
+	c3/itemToUse(0) AND NOT c3/itemToUse(2) AND NOT c3/itemToUse(1))
+	OR (NOT icTens(2) AND NOT c1/debouncedCoins(3) AND 
+	c1/debouncedCoins(4) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+	NOT c3/itemToUse(1))
+	OR (totalTensSoFar(1) AND totalTensSoFar(2) AND 
 	totalTensSoFar(0) AND NOT totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
 	NOT c3/itemToUse(2) AND c3/itemToUse(1))
 	OR (NOT totalTensSoFar(1) AND totalTensSoFar(2) AND 
@@ -606,97 +554,61 @@ ssdSegmentSelect(3) <= NOT (((totalTensSoFar(1) AND totalTensSoFar(2) AND
 	NOT c3/itemToUse(2) AND c3/itemToUse(1))
 	OR (NOT totalTensSoFar(1) AND NOT totalTensSoFar(2) AND 
 	totalTensSoFar(0) AND NOT totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
-	NOT c3/itemToUse(2) AND c3/itemToUse(1))
-	OR (c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))));
+	NOT c3/itemToUse(2) AND c3/itemToUse(1))));
 
 
-ssdSegmentSelect(4) <= NOT (((NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))
-	OR (NOT c1/debouncedCoins(1) AND c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+ssdSegmentSelect(4) <= NOT (((totalTensSoFar(1) AND totalTensSoFar(3) AND 
+	NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND c3/itemToUse(1))
+	OR (NOT c1/debouncedCoins(3) AND c1/debouncedCoins(4) AND 
+	NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND NOT c3/itemToUse(1))
+	OR (icTens(2) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
 	NOT c3/itemToUse(1))
 	OR (totalTensSoFar(0) AND NOT c3/itemToUse(0) AND 
 	NOT c3/itemToUse(2) AND c3/itemToUse(1))
-	OR (totalTensSoFar(1) AND totalTensSoFar(3) AND 
-	NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND c3/itemToUse(1))
+	OR (NOT icOnes(1) AND c1/debouncedCoins(1) AND 
+	c3/itemToUse(0) AND NOT c3/itemToUse(2) AND NOT c3/itemToUse(1))
+	OR (NOT icOnes(1) AND c1/debouncedCoins(5) AND 
+	c3/itemToUse(0) AND NOT c3/itemToUse(2) AND NOT c3/itemToUse(1))
 	OR (NOT totalTensSoFar(1) AND totalTensSoFar(2) AND 
-	NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND c3/itemToUse(1))
-	OR (c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	c1/debouncedCoins(5) AND c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))));
+	NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND c3/itemToUse(1))));
 
 
-ssdSegmentSelect(5) <= NOT (((NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))
-	OR (totalTensSoFar(1) AND NOT totalTensSoFar(2) AND 
-	NOT totalTensSoFar(3) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	c3/itemToUse(1))
-	OR (totalTensSoFar(1) AND totalTensSoFar(0) AND 
+ssdSegmentSelect(5) <= NOT (((totalTensSoFar(1) AND NOT totalTensSoFar(2) AND 
 	NOT totalTensSoFar(3) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
 	c3/itemToUse(1))
 	OR (NOT totalTensSoFar(2) AND totalTensSoFar(0) AND 
 	NOT totalTensSoFar(3) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
 	c3/itemToUse(1))
-	OR (c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+	OR (icOnes(1) AND c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
 	NOT c3/itemToUse(1))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))));
-
-
-ssdSegmentSelect(6) <= ((NOT c1/debouncedCoins(1) AND c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1))
-	OR (totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
-	NOT c3/itemToUse(2) AND c3/itemToUse(1))
-	OR (totalTensSoFar(1) AND NOT totalTensSoFar(2) AND 
-	NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND c3/itemToUse(1))
-	OR (NOT totalTensSoFar(1) AND totalTensSoFar(2) AND 
-	NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND c3/itemToUse(1))
-	OR (totalTensSoFar(2) AND NOT totalTensSoFar(0) AND 
-	NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND c3/itemToUse(1))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	c1/debouncedCoins(5) AND c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
-	NOT c3/itemToUse(1)));
-
-
-ssdSegmentSelect(7) <= ((c1/debouncedCoins(1) AND c3/itemToUse(0) AND 
+	OR (c1/debouncedCoins(1) AND c3/itemToUse(0) AND 
 	NOT c3/itemToUse(2) AND NOT c3/itemToUse(1))
-	OR (c1/debouncedCoins(0) AND c3/itemToUse(0) AND 
+	OR (NOT icTens(2) AND c1/debouncedCoins(3) AND 
+	NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND NOT c3/itemToUse(1))
+	OR (NOT icTens(2) AND c1/debouncedCoins(4) AND 
+	NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND NOT c3/itemToUse(1))
+	OR (totalTensSoFar(1) AND totalTensSoFar(0) AND 
+	NOT totalTensSoFar(3) AND NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+	c3/itemToUse(1))));
+
+
+ssdSegmentSelect(6) <= NOT (((c3/itemToUse(2))
+	OR (NOT icTens(2) AND NOT c1/debouncedCoins(3) AND 
+	NOT c3/itemToUse(0) AND NOT c3/itemToUse(1))
+	OR (NOT totalTensSoFar(1) AND NOT totalTensSoFar(2) AND 
+	NOT totalTensSoFar(3) AND c3/itemToUse(1))
+	OR (c3/itemToUse(0) AND c3/itemToUse(1))
+	OR (NOT icOnes(1) AND c1/debouncedCoins(1) AND 
+	c3/itemToUse(0))
+	OR (NOT icOnes(1) AND NOT c1/debouncedCoins(5) AND 
+	c3/itemToUse(0))
+	OR (totalTensSoFar(1) AND totalTensSoFar(2) AND 
+	totalTensSoFar(0) AND NOT totalTensSoFar(3) AND c3/itemToUse(1))));
+
+
+ssdSegmentSelect(7) <= ((icOnes(1) AND c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+	NOT c3/itemToUse(1))
+	OR (c1/debouncedCoins(1) AND c3/itemToUse(0) AND 
 	NOT c3/itemToUse(2) AND NOT c3/itemToUse(1)));
 
 
@@ -724,59 +636,37 @@ ssdUnitSelect(5) <= ((c3/itemToUse(0) AND c3/itemToUse(2))
 	OR (c3/itemToUse(2) AND c3/itemToUse(1)));
 
 FTCPE_totalTensSoFar0: FTCPE port map (totalTensSoFar(0),totalTensSoFar_T(0),totalTensSoFar_C(0),NOT reset,'0');
-totalTensSoFar_T(0) <= ((NOT c1/debouncedCoins(1) AND c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5)));
-totalTensSoFar_C(0) <= NOT ((NOT c1/debouncedCoins(2) AND NOT c1/debouncedCoins(3) AND 
+totalTensSoFar_T(0) <= ((icTens(2))
+	OR (NOT c1/debouncedCoins(3) AND c1/debouncedCoins(4)));
+totalTensSoFar_C(0) <= NOT ((NOT icTens(2) AND NOT c1/debouncedCoins(3) AND 
 	NOT c1/debouncedCoins(4)));
 
 FTCPE_totalTensSoFar1: FTCPE port map (totalTensSoFar(1),totalTensSoFar_T(1),totalTensSoFar_C(1),NOT reset,'0');
-totalTensSoFar_T(1) <= ((NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5))
-	OR (NOT c1/debouncedCoins(1) AND c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND totalTensSoFar(0))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND totalTensSoFar(0)));
-totalTensSoFar_C(1) <= NOT ((NOT c1/debouncedCoins(2) AND NOT c1/debouncedCoins(3) AND 
+totalTensSoFar_T(1) <= ((icTens(2) AND totalTensSoFar(0))
+	OR (NOT icTens(2) AND c1/debouncedCoins(3))
+	OR (c1/debouncedCoins(4) AND totalTensSoFar(0)));
+totalTensSoFar_C(1) <= NOT ((NOT icTens(2) AND NOT c1/debouncedCoins(3) AND 
 	NOT c1/debouncedCoins(4)));
 
 FTCPE_totalTensSoFar2: FTCPE port map (totalTensSoFar(2),totalTensSoFar_T(2),totalTensSoFar_C(2),NOT reset,'0');
-totalTensSoFar_T(2) <= ((NOT c1/debouncedCoins(1) AND c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND NOT totalTensSoFar(0))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND totalTensSoFar(1) AND totalTensSoFar(0))
-	OR (NOT c1/debouncedCoins(1) AND c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND NOT totalTensSoFar(1))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND totalTensSoFar(1)));
-totalTensSoFar_C(2) <= NOT ((NOT c1/debouncedCoins(2) AND NOT c1/debouncedCoins(3) AND 
+totalTensSoFar_T(2) <= ((icTens(2) AND NOT totalTensSoFar(1))
+	OR (icTens(2) AND NOT totalTensSoFar(0))
+	OR (NOT icTens(2) AND c1/debouncedCoins(3) AND 
+	totalTensSoFar(1))
+	OR (NOT icTens(2) AND c1/debouncedCoins(4) AND 
+	totalTensSoFar(1) AND totalTensSoFar(0)));
+totalTensSoFar_C(2) <= NOT ((NOT icTens(2) AND NOT c1/debouncedCoins(3) AND 
 	NOT c1/debouncedCoins(4)));
 
 FTCPE_totalTensSoFar3: FTCPE port map (totalTensSoFar(3),totalTensSoFar_T(3),totalTensSoFar_C(3),NOT reset,'0');
-totalTensSoFar_T(3) <= ((NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND totalTensSoFar(1) AND totalTensSoFar(2) AND 
+totalTensSoFar_T(3) <= ((c1/debouncedCoins(4) AND totalTensSoFar(1) AND 
+	totalTensSoFar(2) AND totalTensSoFar(0))
+	OR (icTens(2) AND totalTensSoFar(2))
+	OR (icTens(2) AND totalTensSoFar(1) AND 
 	totalTensSoFar(0))
-	OR (NOT c1/debouncedCoins(1) AND c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND totalTensSoFar(2))
-	OR (NOT c1/debouncedCoins(1) AND c1/debouncedCoins(2) AND 
-	NOT c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND totalTensSoFar(1) AND totalTensSoFar(0))
-	OR (NOT c1/debouncedCoins(1) AND NOT c1/debouncedCoins(2) AND 
-	c1/debouncedCoins(3) AND NOT c1/debouncedCoins(4) AND NOT c1/debouncedCoins(0) AND 
-	NOT c1/debouncedCoins(5) AND totalTensSoFar(1) AND totalTensSoFar(2)));
-totalTensSoFar_C(3) <= NOT ((NOT c1/debouncedCoins(2) AND NOT c1/debouncedCoins(3) AND 
+	OR (c1/debouncedCoins(3) AND totalTensSoFar(1) AND 
+	totalTensSoFar(2)));
+totalTensSoFar_C(3) <= NOT ((NOT icTens(2) AND NOT c1/debouncedCoins(3) AND 
 	NOT c1/debouncedCoins(4)));
 
 Register Legend:

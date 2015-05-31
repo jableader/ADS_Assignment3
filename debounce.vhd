@@ -10,13 +10,16 @@ entity threeSecondLatch is
 	port (
 		Clock : in std_logic;
 		Inputs : in std_logic_vector(0 to latchSize);
+		Ready : out std_logic;
 		Outputs : out std_logic_vector(0 to latchSize) := (others => '0')
 	);
+
+	constant millisToLockFor : integer := 1000;
 end entity;
 
 architecture Behavoural of threeSecondLatch is
 	signal isActive : std_logic := '0';
-	signal count : natural range 0 to 3000;
+	signal count : natural range 0 to millisToLockFor;
 begin	
 	process (Clock)
 	begin
@@ -25,7 +28,7 @@ begin
 			count <= 0;
 			isActive <= '1';
 		elsif rising_edge(Clock) then
-			if Count = 3000 then
+			if count = millisToLockFor then
 				Outputs <= (others => '0');
 				Count <= 0;
 				isActive <= '0';
@@ -34,4 +37,6 @@ begin
 			end if;
 		end if;
 	end process;
+	
+	Ready <= not isActive;
 end;

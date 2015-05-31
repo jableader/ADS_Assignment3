@@ -18,6 +18,7 @@ Done...
 Checking expanded design ...
 WARNING:NgdBuild:452 - logical net 'icOnes<3>' has no driver
 WARNING:NgdBuild:452 - logical net 'icTens<3>' has no driver
+WARNING:NgdBuild:452 - logical net 'c1/readyForNewCoin' has no driver
 
 Partition Implementation Status
 -------------------------------
@@ -28,9 +29,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   2
+  Number of warnings:   3
 
-Total memory usage is 176488 kilobytes
+Total memory usage is 176496 kilobytes
 
 Writing NGD file "TopLevel.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec

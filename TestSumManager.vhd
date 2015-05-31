@@ -1,97 +1,71 @@
---------------------------------------------------------------------------------
--- Company: 
--- Engineer:
---
--- Create Date:   15:22:51 05/31/2015
--- Design Name:   
--- Module Name:   C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TestSumManager.vhd
--- Project Name:  ADS_Assignment_3
--- Target Device:  
--- Tool versions:  
--- Description:   
--- 
--- VHDL Test Bench Created by ISE for module: SumManager
--- 
--- Dependencies:
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
--- Notes: 
--- This testbench has been automatically generated using types std_logic and
--- std_logic_vector for the ports of the unit under test.  Xilinx recommends
--- that these types always be used for the top-level I/O of a design in order
--- to guarantee that the testbench will bind correctly to the post-implementation 
--- simulation model.
---------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
- 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
- 
+use IEEE.NUMERIC_STD.ALL;
+
 ENTITY TestSumManager IS
 END TestSumManager;
  
 ARCHITECTURE behavior OF TestSumManager IS 
  
-    -- Component Declaration for the Unit Under Test (UUT)
- 
-    COMPONENT SumManager
-    PORT(
-         reset : IN  std_logic;
-         addToSum : IN  std_logic;
-         amountToAdd : IN  std_logic_vector(3 downto 0);
-         total : OUT  std_logic_vector(3 downto 0)
-        );
-    END COMPONENT;
-    
-
    --Inputs
    signal reset : std_logic := '0';
    signal addToSum : std_logic := '0';
-   signal amountToAdd : std_logic_vector(3 downto 0) := (others => '0');
+   signal amountToAdd : unsigned(3 downto 0) := (others => '0');
 
  	--Outputs
-   signal total : std_logic_vector(3 downto 0);
-   -- No clocks detected in port list. Replace <clock> below with 
-   -- appropriate port name 
- 
-   constant <clock>_period : time := 10 ns;
+   signal total : unsigned(3 downto 0);
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: SumManager PORT MAP (
+   uut: entity work.SumManager PORT MAP (
           reset => reset,
           addToSum => addToSum,
           amountToAdd => amountToAdd,
           total => total
         );
 
-   -- Clock process definitions
-   <clock>_process :process
-   begin
-		<clock> <= '0';
-		wait for <clock>_period/2;
-		<clock> <= '1';
-		wait for <clock>_period/2;
-   end process;
- 
-
    -- Stimulus process
    stim_proc: process
    begin		
-      -- hold reset state for 100 ns.
-      wait for 100 ns;	
+      -- hold reset state for 1 ms.
+      wait for 1 ms;	
+		
+		amountToAdd <= "0001";
+		
+		for i in 0 to 3 loop
+			wait for 1 ms;
+			addToSum <= not addToSum;
+		end loop;
+		
+		wait for 1 ms;
 
-      wait for <clock>_period*10;
+		reset <= '1';
+		wait for 1 ms;
+		reset <= '0';
+		wait for 1 ms;
+		
+		amountToAdd <= "0000";
 
-      -- insert stimulus here 
-
-      wait;
+		addToSum <= '1';
+		wait for 1 ms;
+		
+		addToSum <= '0';
+		wait for 1 ms;
+		
+		amountToAdd <= "0011";
+		addToSum <= '1'; 
+		wait for 1 ms;
+		
+		addToSum <= '0';
+		wait for 1 ms;
+		
+		for i in 0 to 3 loop
+			addToSum <= not addToSum;
+			wait for 1 ms;
+		end loop;
+		
+		wait;
    end process;
 
 END;

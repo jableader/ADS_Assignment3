@@ -7,7 +7,7 @@ entity CoinAcceptor is
 	Port (
 		clock : in std_logic;
 		coins : in std_logic_vector(0 to 5);
-		coinIsInserted : out std_logic;
+		readyForNewCoin : out std_logic;
 		isAccepted : out std_logic;
 		tensValue, onesValue : out unsigned(3 downto 0);
 		isDollar : out std_logic
@@ -16,23 +16,29 @@ end CoinAcceptor;
 
 architecture Behavioral of CoinAcceptor is
 	signal debouncedCoins : std_logic_vector(0 to 5) := (others => '0');
+	
+	constant twoDollar	: integer := 0;
+	constant oneDollar	: integer := 1;
+	constant fiftyCent	: integer := 2;
+	constant twentyCent	: integer := 3;
+	constant tenCent		: integer := 4;
+	constant fiveCent		: integer := 5;
 begin
-	debouncers : entity work.threeSecondLatch generic map (5) port map (clock, not coins, debouncedCoins);
+	debouncers : entity work.threeSecondLatch generic map (5) port map (clock, coins, readyForNewCoin, debouncedCoins);
 	
-	isDollar <= debouncedCoins(0) or debouncedCoins(1);
-	isAccepted <= debouncedCoins(2) or debouncedCoins(3) or debouncedCoins(4);
-	coinIsInserted <= or_reduce(debouncedCoins);
+	isDollar <= debouncedCoins(twoDollar) or debouncedCoins(oneDollar);
+	isAccepted <= debouncedCoins(fiftyCent) or debouncedCoins(twentyCent) or debouncedCoins(tenCent);
 	
-	with debouncedCoins select tensValue <=
-		"0101" when "001000", -- 50c
-		"0010" when "000100", -- 20c
-		"0001" when "000010", -- 10c
-		"0000" when others;
-	 
-	 with debouncedCoins select onesValue <=
-		"0010" when "100000", -- $2
-		"0001" when "010000", -- $1
-		"0101" when "000001", --  5c
-		"0000" when others;
+	tensValue <= 
+				"0101" when debouncedCoins(fiftyCent) 	= '1' else
+				"0010" when debouncedCoins(twentyCent) = '1' else
+				"0001" when debouncedCoins(tenCent) 	= '1' else
+				"0000";
+	
+	onesValue <=
+				"0010" when debouncedCoins(twoDollar) = '1' else
+				"0001" when debouncedCoins(oneDollar) = '1' else
+				"0101" when debouncedCoins(fiveCent) = '1' else
+				"0000";
 end Behavioral;
 

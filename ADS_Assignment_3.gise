@@ -24,9 +24,17 @@
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="BCD_to_SSD_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CommonUnits_stx_beh.prj"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TestThreeSecondLatch_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="SumManager_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SumManager_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TestCoinAcceptor_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TestCoinAcceptor_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TestCoinAcceptor_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TestCoinAcceptor_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TestSumManager_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TestSumManager_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TestSumManager_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TestSumManager_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TestThreeSecondLatch_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TestThreeSecondLatch_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TestThreeSecondLatch_stx_beh.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="TopLevel.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="TopLevel.cmd_log"/>
@@ -69,6 +77,7 @@
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="threeSecondLatch_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
@@ -85,7 +94,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1433046000" xil_pn:in_ck="-2638799466528164331" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1433046000">
+    <transform xil_pn:end_ts="1433054902" xil_pn:in_ck="3082522329281572639" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1433054902">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -98,15 +107,17 @@
       <outfile xil_pn:name="MoneyManager.vhd"/>
       <outfile xil_pn:name="OneSecondClockDivider.vhd"/>
       <outfile xil_pn:name="SevenSegmentDisplayGroup.vhd"/>
+      <outfile xil_pn:name="TestCoinAcceptor.vhd"/>
+      <outfile xil_pn:name="TestSumManager.vhd"/>
       <outfile xil_pn:name="TestThreeSecondLatch.vhd"/>
       <outfile xil_pn:name="TopLevel.vhd"/>
       <outfile xil_pn:name="debounce.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1433045912" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5060368849372975878" xil_pn:start_ts="1433045912">
+    <transform xil_pn:end_ts="1433053787" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-4054782880424707584" xil_pn:start_ts="1433053787">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1433046002" xil_pn:in_ck="-2638799466528164331" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1433046002">
+    <transform xil_pn:end_ts="1433054906" xil_pn:in_ck="3082522329281572639" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1433054906">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -120,45 +131,49 @@
       <outfile xil_pn:name="MoneyManager.vhd"/>
       <outfile xil_pn:name="OneSecondClockDivider.vhd"/>
       <outfile xil_pn:name="SevenSegmentDisplayGroup.vhd"/>
+      <outfile xil_pn:name="TestCoinAcceptor.vhd"/>
+      <outfile xil_pn:name="TestSumManager.vhd"/>
       <outfile xil_pn:name="TestThreeSecondLatch.vhd"/>
       <outfile xil_pn:name="TopLevel.vhd"/>
       <outfile xil_pn:name="debounce.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1433046007" xil_pn:in_ck="-2638799466528164331" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-464186979248052406" xil_pn:start_ts="1433046002">
+    <transform xil_pn:end_ts="1433054909" xil_pn:in_ck="3082522329281572639" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4017516355026343618" xil_pn:start_ts="1433054906">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
-      <outfile xil_pn:name="TestThreeSecondLatch_beh.prj"/>
-      <outfile xil_pn:name="TestThreeSecondLatch_isim_beh.exe"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="TestCoinAcceptor_beh.prj"/>
+      <outfile xil_pn:name="TestCoinAcceptor_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1433046007" xil_pn:in_ck="-2708929654485927825" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6911153412629257593" xil_pn:start_ts="1433046007">
+    <transform xil_pn:end_ts="1433054909" xil_pn:in_ck="5830219365174510807" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8018767750942789477" xil_pn:start_ts="1433054909">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="TestThreeSecondLatch_isim_beh.wdb"/>
+      <outfile xil_pn:name="TestCoinAcceptor_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
     </transform>
-    <transform xil_pn:end_ts="1433049517" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1433049517">
+    <transform xil_pn:end_ts="1433055615" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1433055615">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1433049517" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-5791635263357154434" xil_pn:start_ts="1433049517">
+    <transform xil_pn:end_ts="1433055615" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-5791635263357154434" xil_pn:start_ts="1433055615">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1433049536" xil_pn:in_ck="6097096666617308549" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="-9094933833356982267" xil_pn:start_ts="1433049530">
+    <transform xil_pn:end_ts="1433056177" xil_pn:in_ck="6097096666617308549" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="-9094933833356982267" xil_pn:start_ts="1433056171">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="TopLevel.lso"/>
       <outfile xil_pn:name="TopLevel.ngc"/>
       <outfile xil_pn:name="TopLevel.ngr"/>
@@ -176,22 +191,20 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1433049541" xil_pn:in_ck="-1844089844075542616" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1433049536">
+    <transform xil_pn:end_ts="1433056186" xil_pn:in_ck="-1844089844075542616" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1433056181">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="TopLevel.bld"/>
       <outfile xil_pn:name="TopLevel.ngd"/>
       <outfile xil_pn:name="TopLevel_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1433049553" xil_pn:in_ck="4420851648763903090" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-6812696802293529380" xil_pn:start_ts="1433049541">
+    <transform xil_pn:end_ts="1433056196" xil_pn:in_ck="4420851648763903090" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-6812696802293529380" xil_pn:start_ts="1433056186">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="TopLevel.gyd"/>
       <outfile xil_pn:name="TopLevel.mfd"/>
       <outfile xil_pn:name="TopLevel.nga"/>
@@ -206,29 +219,24 @@
       <outfile xil_pn:name="TopLevel_html"/>
       <outfile xil_pn:name="TopLevel_pad.csv"/>
     </transform>
-    <transform xil_pn:end_ts="1433049555" xil_pn:in_ck="4420851648763911954" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1433049553">
+    <transform xil_pn:end_ts="1433056198" xil_pn:in_ck="4420851648763911954" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1433056196">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="TopLevel.jed"/>
     </transform>
-    <transform xil_pn:end_ts="1432963127" xil_pn:in_ck="4420851648763898668" xil_pn:name="TRAN_impactProgrammingTool_CPLD" xil_pn:prop_ck="-3598488201878296819" xil_pn:start_ts="1432963127">
+    <transform xil_pn:end_ts="1433055077" xil_pn:in_ck="4420851648763898668" xil_pn:name="TRAN_impactProgrammingTool_CPLD" xil_pn:prop_ck="-3598488201878296819" xil_pn:start_ts="1433055077">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_impact.cmd"/>
+      <outfile xil_pn:name="_impact.log"/>
     </transform>
-    <transform xil_pn:end_ts="1433049594" xil_pn:in_ck="4420851648763898668" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1433049593">
+    <transform xil_pn:end_ts="1433056228" xil_pn:in_ck="4420851648763898668" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1433056226">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_impact.cmd"/>
       <outfile xil_pn:name="_impact.log"/>
     </transform>
@@ -237,14 +245,12 @@
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1432955021" xil_pn:in_ck="-176200329122557655" xil_pn:name="TRAN_createTimingConstraints" xil_pn:start_ts="1432955021">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>

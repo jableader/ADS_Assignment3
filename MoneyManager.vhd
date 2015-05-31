@@ -6,19 +6,22 @@ entity SumManager is
 	port (
 		reset, addToSum : in std_logic;
 		amountToAdd : in unsigned(3 downto 0);
-		total : buffer unsigned(3 downto 0)
+		total : out unsigned(3 downto 0)
 	);
 end SumManager;
 
 architecture Behavioral of SumManager is
+	signal sum : unsigned(3 downto 0) := (others => '0');
 begin
 	process (addToSum, reset)
 	begin
 		if reset = '1' then
-			total <= "0000";
+			sum <= "0000";
 		elsif rising_edge(addToSum) then
-			total <= total + amountToAdd;
+			sum <= sum + amountToAdd;
 		end if;
 	end process;
+	
+	total <= sum;
 end Behavioral;
 

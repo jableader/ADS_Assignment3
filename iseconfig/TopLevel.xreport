@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-05-31T15:16:34</DateModified>
+  <DateModified>2015-05-31T16:35:07</DateModified>
   <ModuleName>TopLevel</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2015-05-31T16:10:18</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/iseconfig/TopLevel.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3\</ImplementationReportsDirectory>
   <DateInitialized>2015-05-30T12:38:36</DateInitialized>

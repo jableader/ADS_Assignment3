@@ -1,0 +1,4 @@
+vhdl work "CommonUnits.vhd"
+vhdl work "debounce.vhd"
+vhdl work "CoinAcceptor.vhd"
+vhdl work "TestCoinAcceptor.vhd"
