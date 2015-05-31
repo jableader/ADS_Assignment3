@@ -2,33 +2,36 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use work.CommonUnits.ALL;
 
-entity oneSecondLatch is
+entity threeSecondLatch is
 	generic (
-		latchSize : positive
+		latchSize : positive := 1
 	);
 	
 	port (
 		Clock : in std_logic;
 		Inputs : in std_logic_vector(0 to latchSize);
-		Outputs : out std_logic_vector(0 to latchSize);
+		Outputs : out std_logic_vector(0 to latchSize) := (others => '0')
 	);
 end entity;
 
-entity debounce is
-    Port ( Clock : in  STD_LOGIC;
-           Input : in  STD_LOGIC;
-           Output : out  STD_LOGIC);
-end debounce;
-
-architecture Behavioral of debounce is
-	signal inBuffer : std_logic_vector(2 downto 0) := (others => '0');
-begin
+architecture Behavoural of threeSecondLatch is
+	signal isActive : std_logic := '0';
+	signal count : natural range 0 to 3000;
+begin	
 	process (Clock)
 	begin
-		if rising_edge(Clock) then
-			inBuffer <= (inBuffer(1), inBuffer(0), Input);
+		if or_reduce(Inputs) /= '0' and isActive = '0' then
+			Outputs <= Inputs;
+			count <= 0;
+			isActive <= '1';
+		elsif rising_edge(Clock) then
+			if Count = 3000 then
+				Outputs <= (others => '0');
+				Count <= 0;
+				isActive <= '0';
+			else
+				Count <= Count + 1;
+			end if;
 		end if;
 	end process;
-	
-	Output <= inBuffer(2) and inBuffer(1) and inBuffer(0);
-end Behavioral;
+end;

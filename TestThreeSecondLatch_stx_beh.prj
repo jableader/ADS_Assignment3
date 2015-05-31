@@ -1,0 +1,3 @@
+vhdl isim_temp "CommonUnits.vhd"
+vhdl isim_temp "debounce.vhd"
+vhdl isim_temp "TestThreeSecondLatch.vhd"

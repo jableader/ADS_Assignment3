@@ -17,10 +17,7 @@ end CoinAcceptor;
 architecture Behavioral of CoinAcceptor is
 	signal debouncedCoins : std_logic_vector(0 to 5) := (others => '0');
 begin
-	debouncers: for i in coins'range generate
-		-- Invert the coins here to counter act the inverse issue
-		c1: entity debounce port map (Clock, not coins(i), debouncedCoins(i));
-	end generate;
+	debouncers : entity work.threeSecondLatch generic map (5) port map (clock, not coins, debouncedCoins);
 	
 	isDollar <= debouncedCoins(0) or debouncedCoins(1);
 	isAccepted <= debouncedCoins(2) or debouncedCoins(3) or debouncedCoins(4);

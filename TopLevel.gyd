@@ -28,21 +28,22 @@ ssdUnitSelect<5> S:PIN33
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 totalTensSoFar<0>/totalTensSoFar<0>_CLKF ssdSegmentSelect_4_OBUF c2/total_Madd__add0000_Mxor_Result<2>__xor0000/c2/total_Madd__add0000_Mxor_Result<2>__xor0000_D14_ c2/total_Madd__add0000_Mxor_Result<1>__xor0000/c2/total_Madd__add0000_Mxor_Result<1>__xor0000_D13_
-		 ssdSegmentSelect_5_OBUF ssdSegmentSelect_6_OBUF totalTensSoFar<0> ssdSegmentSelect_7_OBUF
-		 totalTensSoFar<3> totalTensSoFar<2> EXP6_ c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2
-		 EXP7_ c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2 c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 EXP8_
+PARTITION FB1_1 c3/itemToUse<0> ssdSegmentSelect_4_OBUF EXP6_ EXP7_
+		 ssdSegmentSelect_5_OBUF ssdSegmentSelect_6_OBUF EXP8_ ssdSegmentSelect_7_OBUF
 		
-
-PARTITION FB2_1 c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2 ssdUnitSelect_3_OBUF c1/debouncers[5].c1/inBuffer<1> c1/debouncers[1].c1/inBuffer<2>
-		 ssdUnitSelect_2_OBUF ssdUnitSelect_1_OBUF c1/debouncers[1].c1/inBuffer<1> ssdUnitSelect_0_OBUF
-		 c1/debouncers[0].c1/inBuffer<2> c1/debouncers[0].c1/inBuffer<1> ssdSegmentSelect_0_OBUF c1/debouncers[0].c1/inBuffer<0>
-		 c3/itemToUse<2> ssdSegmentSelect_1_OBUF ssdSegmentSelect_2_OBUF c3/itemToUse<1>
-		 ssdSegmentSelect_3_OBUF $OpTx$INV$64
-PARTITION FB3_17 c1/debouncers[5].c1/inBuffer<2> c1/debouncers[5].c1/inBuffer<0>
-PARTITION FB4_2 c3/itemToUse<0> c1/debouncers[4].c1/inBuffer<2> c1/debouncers[4].c1/inBuffer<1> c1/debouncers[4].c1/inBuffer<0>
-		 c1/debouncers[3].c1/inBuffer<2> c1/debouncers[3].c1/inBuffer<1> c1/debouncers[3].c1/inBuffer<0> c1/debouncers[2].c1/inBuffer<2>
-		 c1/debouncers[2].c1/inBuffer<1> c1/debouncers[2].c1/inBuffer<0> c1/debouncers[1].c1/inBuffer<0> c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2
-		 c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 ssdUnitSelect_5_OBUF $OpTx$FX_DC$68 ssdUnitSelect_4_OBUF
-		 totalTensSoFar<1>
+PARTITION FB1_10 c3/itemToUse<2> c3/itemToUse<1> c1/debouncers/count<2> c1/debouncers/count<1>
+		 totalTensSoFar<0> totalTensSoFar<1> totalTensSoFar<3> totalTensSoFar<2>
+		 c1/debouncers/count<6>
+PARTITION FB2_2 ssdUnitSelect_3_OBUF
+PARTITION FB2_5 ssdUnitSelect_2_OBUF ssdUnitSelect_1_OBUF
+PARTITION FB2_8 ssdUnitSelect_0_OBUF
+PARTITION FB2_11 ssdSegmentSelect_0_OBUF
+PARTITION FB2_14 ssdSegmentSelect_1_OBUF ssdSegmentSelect_2_OBUF
+PARTITION FB2_17 ssdSegmentSelect_3_OBUF c1/debouncers/count<10>
+PARTITION FB3_15 $OpTx$FX_DC$86__$INT c1/debouncedCoins<5> c1/debouncedCoins<4> c1/debouncedCoins<3>
+		
+PARTITION FB4_5 c1/debouncers/isActive c1/debouncers/count<0> c1/debouncers/count<9> c1/debouncers/count<8>
+		 c1/debouncers/count<7> c1/debouncers/count<5> c1/debouncers/count<4> c1/debouncers/count<3>
+		 c1/debouncers/count<11> c1/debouncedCoins<2> ssdUnitSelect_5_OBUF c1/debouncedCoins<1>
+		 ssdUnitSelect_4_OBUF c1/debouncedCoins<0>
 

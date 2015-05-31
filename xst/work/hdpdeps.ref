@@ -1,55 +1,55 @@
 V3 26
 FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/BCD_to_SSD.vhd 2015/05/30.14:54:15 P.58f
-EN work/BCD_to_SSD 1432964751 \
+EN work/BCD_to_SSD 1433049534 \
       FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/BCD_to_SSD.vhd \
       PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223 \
-      PB work/CommonUnits 1432964750
-AR work/BCD_to_SSD/Behavioral 1432964752 \
+      PB work/CommonUnits 1433049533
+AR work/BCD_to_SSD/Behavioral 1433049535 \
       FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/BCD_to_SSD.vhd \
-      EN work/BCD_to_SSD 1432964751
-FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/CoinAcceptor.vhd 2015/05/30.15:45:24 P.58f
-EN work/CoinAcceptor 1432964755 \
+      EN work/BCD_to_SSD 1433049534
+FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/CoinAcceptor.vhd 2015/05/31.14:23:15 P.58f
+EN work/CoinAcceptor 1433049538 \
       FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/CoinAcceptor.vhd \
       PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223 \
-      PB work/CommonUnits 1432964750
-AR work/CoinAcceptor/Behavioral 1432964756 \
+      PB work/CommonUnits 1433049533
+AR work/CoinAcceptor/Behavioral 1433049539 \
       FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/CoinAcceptor.vhd \
-      EN work/CoinAcceptor 1432964755 CP debounce
+      EN work/CoinAcceptor 1433049538 CP work/threeSecondLatch
 FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/CommonUnits.vhd 2015/05/30.12:55:08 P.58f
-PH work/CommonUnits 1432964749 \
+PH work/CommonUnits 1433049532 \
       FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/CommonUnits.vhd \
       PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223
-PB work/CommonUnits 1432964750 \
+PB work/CommonUnits 1433049533 \
       FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/CommonUnits.vhd \
-      PH work/CommonUnits 1432964749
-FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/debounce.vhd 2015/05/30.15:00:24 P.58f
-EN work/debounce 1432964753 \
+      PH work/CommonUnits 1433049532
+FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/debounce.vhd 2015/05/31.15:18:44 P.58f
+EN work/threeSecondLatch 1433049536 \
       FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/debounce.vhd \
-      PB ieee/std_logic_1164 1364358218 PB work/CommonUnits 1432964750
-AR work/debounce/Behavioral 1432964754 \
+      PB ieee/std_logic_1164 1364358218 PB work/CommonUnits 1433049533
+AR work/threeSecondLatch/Behavoural 1433049537 \
       FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/debounce.vhd \
-      EN work/debounce 1432964753
+      EN work/threeSecondLatch 1433049536
 FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/MoneyManager.vhd 2015/05/30.15:06:59 P.58f
-EN work/SumManager 1432964757 \
+EN work/SumManager 1433049540 \
       FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/MoneyManager.vhd \
       PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223
-AR work/SumManager/Behavioral 1432964758 \
+AR work/SumManager/Behavioral 1433049541 \
       FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/MoneyManager.vhd \
-      EN work/SumManager 1432964757
+      EN work/SumManager 1433049540
 FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/SevenSegmentDisplayGroup.vhd 2015/05/30.15:07:33 P.58f
-EN work/SevenSegmentDisplayGroup 1432964759 \
+EN work/SevenSegmentDisplayGroup 1433049542 \
       FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/SevenSegmentDisplayGroup.vhd \
       PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223 \
-      PB work/CommonUnits 1432964750
-AR work/SevenSegmentDisplayGroup/Behavioral 1432964760 \
+      PB work/CommonUnits 1433049533
+AR work/SevenSegmentDisplayGroup/Behavioral 1433049543 \
       FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/SevenSegmentDisplayGroup.vhd \
-      EN work/SevenSegmentDisplayGroup 1432964759 CP work/BCD_To_SSD
+      EN work/SevenSegmentDisplayGroup 1433049542 CP work/BCD_To_SSD
 FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.vhd 2015/05/30.15:44:31 P.58f
-EN work/TopLevel 1432964761 \
+EN work/TopLevel 1433049544 \
       FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.vhd \
       PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223 \
-      PB work/CommonUnits 1432964750
-AR work/TopLevel/Behavioral 1432964762 \
+      PB work/CommonUnits 1433049533
+AR work/TopLevel/Behavioral 1433049545 \
       FL C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.vhd \
-      EN work/TopLevel 1432964761 CP work/CoinAcceptor CP work/SumManager \
+      EN work/TopLevel 1433049544 CP work/CoinAcceptor CP work/SumManager \
       CP work/SevenSegmentDisplayGroup

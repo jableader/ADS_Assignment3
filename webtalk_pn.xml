@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Sat May 30 15:45:47 2015">
+<application name="pn" timeStamp="Sun May 31 15:18:51 2015">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="77E8BDFC5BFB431F82776B57EDA8F814" type="project"/>
 <property name="ProjectIteration" value="0" type="project"/>
@@ -17,6 +17,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_LastAppliedStrategy" value="Xilinx Default (unlocked)" type="design"/>
 <property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
 <property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
+<property name="PROP_SelectedInstanceHierarchicalPath" value="/TestThreeSecondLatch" type="process"/>
 <property name="PROP_Simulator" value="ISim (VHDL/Verilog)" type="design"/>
 <property name="PROP_SynthTopFile" value="changed" type="process"/>
 <property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
@@ -28,19 +29,19 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
-<property name="PROP_selectedSimRootSourceNode_behav" value="work.CommonUnits" type="process"/>
-<property name="PROP_xcpldFitTemplate" value="Optimize Density" type="process"/>
+<property name="PROP_selectedSimRootSourceNode_behav" value="work.TestThreeSecondLatch" type="process"/>
 <property name="PROP_xilxSynthMaxFanout" value="100000" type="process"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
 <property name="PROP_DevFamily" value="XC9500XL CPLDs" type="design"/>
 <property name="PROP_DevDevice" value="xc9572xl" type="design"/>
 <property name="PROP_DevFamilyPMName" value="xc9500xl" type="design"/>
+<property name="PROP_ISimSimulationRunTime_behav_tb" value="4000 ms" type="process"/>
 <property name="PROP_DevPackage" value="PC44" type="design"/>
 <property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
 <property name="PROP_DevSpeed" value="-5" type="design"/>
 <property name="PROP_PreferredLanguage" value="VHDL" type="design"/>
 <property name="FILE_UCF" value="1" type="source"/>
-<property name="FILE_VHDL" value="8" type="source"/>
+<property name="FILE_VHDL" value="9" type="source"/>
 </section>
 </application>
 </document>

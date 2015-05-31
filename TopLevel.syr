@@ -3,13 +3,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: TopLevel.prj
@@ -80,17 +80,16 @@ Architecture commonunits of Entity commonunits is up to date.
 Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/BCD_to_SSD.vhd" in Library work.
 Architecture behavioral of Entity bcd_to_ssd is up to date.
 Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/debounce.vhd" in Library work.
-Architecture behavioral of Entity debounce is up to date.
+Entity <threesecondlatch> compiled.
+Entity <threesecondlatch> (Architecture <behavoural>) compiled.
 Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/CoinAcceptor.vhd" in Library work.
-Entity <coinacceptor> compiled.
-Entity <coinacceptor> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity coinacceptor is up to date.
 Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/MoneyManager.vhd" in Library work.
 Architecture behavioral of Entity summanager is up to date.
 Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/SevenSegmentDisplayGroup.vhd" in Library work.
 Architecture behavioral of Entity sevensegmentdisplaygroup is up to date.
 Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.vhd" in Library work.
-Entity <toplevel> compiled.
-Entity <toplevel> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity toplevel is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -103,7 +102,8 @@ Analyzing hierarchy for entity <SumManager> in library <work> (architecture <Beh
 
 Analyzing hierarchy for entity <SevenSegmentDisplayGroup> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <debounce> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <threeSecondLatch> in library <work> (architecture <Behavoural>) with generics.
+	latchSize = 5
 
 Analyzing hierarchy for entity <BCD_to_SSD> in library <work> (architecture <Behavioral>).
 
@@ -118,8 +118,11 @@ Entity <TopLevel> analyzed. Unit <TopLevel> generated.
 Analyzing Entity <CoinAcceptor> in library <work> (Architecture <Behavioral>).
 Entity <CoinAcceptor> analyzed. Unit <CoinAcceptor> generated.
 
-Analyzing Entity <debounce> in library <work> (Architecture <Behavioral>).
-Entity <debounce> analyzed. Unit <debounce> generated.
+Analyzing generic Entity <threeSecondLatch> in library <work> (Architecture <Behavoural>).
+	latchSize = 5
+WARNING:Xst:819 - "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/debounce.vhd" line 21: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <Inputs>, <isActive>
+Entity <threeSecondLatch> analyzed. Unit <threeSecondLatch> generated.
 
 Analyzing Entity <SumManager> in library <work> (Architecture <Behavioral>).
 Entity <SumManager> analyzed. Unit <SumManager> generated.
@@ -145,10 +148,15 @@ Synthesizing Unit <SumManager>.
 Unit <SumManager> synthesized.
 
 
-Synthesizing Unit <debounce>.
+Synthesizing Unit <threeSecondLatch>.
     Related source file is "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/debounce.vhd".
-    Found 3-bit register for signal <inBuffer>.
-Unit <debounce> synthesized.
+    Found 6-bit register for signal <Outputs>.
+    Found 12-bit up counter for signal <count>.
+    Found 1-bit register for signal <isActive>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   7 D-type flip-flop(s).
+Unit <threeSecondLatch> synthesized.
 
 
 Synthesizing Unit <BCD_to_SSD>.
@@ -191,12 +199,13 @@ HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  16x7-bit ROM                                          : 1
-# Counters                                             : 1
+# Counters                                             : 2
+ 12-bit up counter                                     : 1
  3-bit up counter                                      : 1
 # Accumulators                                         : 1
  4-bit up accumulator                                  : 1
-# Registers                                            : 6
- 3-bit register                                        : 6
+# Registers                                            : 7
+ 1-bit register                                        : 7
 # Multiplexers                                         : 2
  1-bit 6-to-1 multiplexer                              : 2
 
@@ -213,10 +222,13 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  16x7-bit ROM                                          : 1
-# Counters                                             : 1
+# Counters                                             : 2
+ 12-bit up counter                                     : 1
  3-bit up counter                                      : 1
 # Accumulators                                         : 1
  4-bit up accumulator                                  : 1
+# Registers                                            : 7
+ Flip-Flops                                            : 7
 # Multiplexers                                         : 2
  1-bit 6-to-1 multiplexer                              : 2
 
@@ -230,12 +242,26 @@ Optimizing unit <TopLevel> ...
 
 Optimizing unit <BCD_to_SSD> ...
 
-Optimizing unit <debounce> ...
-  implementation constraint: INIT=r	 : inBuffer_2
-  implementation constraint: INIT=r	 : inBuffer_0
-  implementation constraint: INIT=r	 : inBuffer_1
-
-Optimizing unit <CoinAcceptor> ...
+Optimizing unit <threeSecondLatch> ...
+  implementation constraint: INIT=r	 : isActive
+  implementation constraint: INIT=r	 : Outputs_0
+  implementation constraint: INIT=r	 : Outputs_1
+  implementation constraint: INIT=r	 : Outputs_2
+  implementation constraint: INIT=r	 : Outputs_3
+  implementation constraint: INIT=r	 : Outputs_4
+  implementation constraint: INIT=r	 : Outputs_5
+  implementation constraint: INIT=r	 : count_11
+  implementation constraint: INIT=r	 : count_10
+  implementation constraint: INIT=r	 : count_9
+  implementation constraint: INIT=r	 : count_8
+  implementation constraint: INIT=r	 : count_7
+  implementation constraint: INIT=r	 : count_6
+  implementation constraint: INIT=r	 : count_5
+  implementation constraint: INIT=r	 : count_4
+  implementation constraint: INIT=r	 : count_3
+  implementation constraint: INIT=r	 : count_2
+  implementation constraint: INIT=r	 : count_1
+  implementation constraint: INIT=r	 : count_0
 
 Optimizing unit <SevenSegmentDisplayGroup> ...
   implementation constraint: INIT=r	 : itemToUse_0
@@ -243,6 +269,8 @@ Optimizing unit <SevenSegmentDisplayGroup> ...
   implementation constraint: INIT=r	 : itemToUse_1
 
 Optimizing unit <SumManager> ...
+
+Optimizing unit <CoinAcceptor> ...
 
 =========================================================================
 *                           Partition Report                            *
@@ -274,17 +302,22 @@ Design Statistics
 # IOs                              : 22
 
 Cell Usage :
-# BELS                             : 205
-#      AND2                        : 57
-#      AND3                        : 20
-#      INV                         : 82
+# BELS                             : 309
+#      AND2                        : 83
+#      AND3                        : 27
+#      AND4                        : 2
+#      AND6                        : 1
+#      GND                         : 1
+#      INV                         : 138
 #      OR2                         : 34
 #      OR3                         : 3
 #      OR4                         : 1
-#      XOR2                        : 8
-# FlipFlops/Latches                : 25
-#      FD                          : 21
-#      FDC                         : 4
+#      XOR2                        : 19
+# FlipFlops/Latches                : 26
+#      FD                          : 3
+#      FDC                         : 16
+#      FDCPE                       : 6
+#      FDPE                        : 1
 # IO Buffers                       : 22
 #      IBUF                        : 8
 #      OBUF                        : 14
@@ -292,13 +325,13 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.43 secs
+Total CPU time to Xst completion: 3.56 secs
  
 --> 
 
-Total memory usage is 228340 kilobytes
+Total memory usage is 232444 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

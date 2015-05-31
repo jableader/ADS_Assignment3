@@ -1,113 +1,448 @@
 MDF Database:  version 1.0
 MDF_INFO | TopLevel | XC9572XL-5-PC44
-MACROCELL | 3 | 17 | totalTensSoFar<1>
-ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 5 | 0 | 9 | 0 | 8 | 0 | 3 | 0 | 14 | 0 | 7
-INPUTS | 7 | c2/total_Madd__add0000_Mxor_Result<1>__xor0000/c2/total_Madd__add0000_Mxor_Result<1>__xor0000_D13_  | totalTensSoFar<0>  | c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2  | $OpTx$FX_DC$68  | c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2  | $OpTx$INV$64  | reset
-INPUTMC | 6 | 0 | 3 | 0 | 6 | 3 | 13 | 3 | 15 | 3 | 12 | 1 | 17
+MACROCELL | 3 | 15 | c1/debouncedCoins<1>
+ATTRIBUTES | 4359056 | 0
+OUTPUTMC | 18 | 3 | 15 | 0 | 14 | 0 | 16 | 0 | 13 | 0 | 15 | 0 | 5 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 7 | 0 | 0 | 0 | 2 | 0 | 3 | 0 | 6 | 0 | 17
+INPUTS | 16 | c1/debouncedCoins<1>  | c1/debouncers/count<0>  | c1/debouncers/count<10>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | c1/debouncers/count<11>  | buttons<1>  | c1/debouncers/isActive  | $OpTx$FX_DC$86__$INT
+INPUTMC | 15 | 3 | 15 | 3 | 5 | 1 | 17 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12 | 3 | 4 | 2 | 14
+INPUTP | 1 | 49
+EQ | 8 | 
+   c1/debouncedCoins<1>.T = c1/debouncedCoins<1> & !c1/debouncers/count<0> & 
+	!c1/debouncers/count<10> & !c1/debouncers/count<1> & !c1/debouncers/count<2> & 
+	c1/debouncers/count<3> & c1/debouncers/count<4> & c1/debouncers/count<5> & 
+	!c1/debouncers/count<6> & c1/debouncers/count<7> & c1/debouncers/count<8> & 
+	c1/debouncers/count<9> & c1/debouncers/count<11>;
+   c1/debouncedCoins<1>.CLK = clock;	// GCK
+   c1/debouncedCoins<1>.AP = !buttons<1> & !c1/debouncers/isActive;
+   c1/debouncedCoins<1>.AR = buttons<1> & !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 3 | 13 | c1/debouncedCoins<2>
+ATTRIBUTES | 4359056 | 0
+OUTPUTMC | 17 | 3 | 13 | 0 | 14 | 0 | 16 | 0 | 13 | 0 | 15 | 0 | 5 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 2 | 0 | 3 | 0 | 6 | 0 | 17
+INPUTS | 16 | c1/debouncedCoins<2>  | c1/debouncers/count<0>  | c1/debouncers/count<10>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | c1/debouncers/count<11>  | buttons<2>  | c1/debouncers/isActive  | $OpTx$FX_DC$86__$INT
+INPUTMC | 15 | 3 | 13 | 3 | 5 | 1 | 17 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12 | 3 | 4 | 2 | 14
+INPUTP | 1 | 50
+EQ | 8 | 
+   c1/debouncedCoins<2>.T = c1/debouncedCoins<2> & !c1/debouncers/count<0> & 
+	!c1/debouncers/count<10> & !c1/debouncers/count<1> & !c1/debouncers/count<2> & 
+	c1/debouncers/count<3> & c1/debouncers/count<4> & c1/debouncers/count<5> & 
+	!c1/debouncers/count<6> & c1/debouncers/count<7> & c1/debouncers/count<8> & 
+	c1/debouncers/count<9> & c1/debouncers/count<11>;
+   c1/debouncedCoins<2>.CLK = clock;	// GCK
+   c1/debouncedCoins<2>.AP = !buttons<2> & !c1/debouncers/isActive;
+   c1/debouncedCoins<2>.AR = buttons<2> & !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 2 | 17 | c1/debouncedCoins<3>
+ATTRIBUTES | 4359056 | 0
+OUTPUTMC | 17 | 2 | 17 | 0 | 14 | 0 | 16 | 0 | 13 | 0 | 15 | 0 | 5 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 2 | 0 | 3 | 0 | 6 | 0 | 17
+INPUTS | 16 | c1/debouncedCoins<3>  | c1/debouncers/count<0>  | c1/debouncers/count<10>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | c1/debouncers/count<11>  | buttons<3>  | c1/debouncers/isActive  | $OpTx$FX_DC$86__$INT
+INPUTMC | 15 | 2 | 17 | 3 | 5 | 1 | 17 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12 | 3 | 4 | 2 | 14
+INPUTP | 1 | 52
+EQ | 8 | 
+   c1/debouncedCoins<3>.T = c1/debouncedCoins<3> & !c1/debouncers/count<0> & 
+	!c1/debouncers/count<10> & !c1/debouncers/count<1> & !c1/debouncers/count<2> & 
+	c1/debouncers/count<3> & c1/debouncers/count<4> & c1/debouncers/count<5> & 
+	!c1/debouncers/count<6> & c1/debouncers/count<7> & c1/debouncers/count<8> & 
+	c1/debouncers/count<9> & c1/debouncers/count<11>;
+   c1/debouncedCoins<3>.CLK = clock;	// GCK
+   c1/debouncedCoins<3>.AP = !buttons<3> & !c1/debouncers/isActive;
+   c1/debouncedCoins<3>.AR = buttons<3> & !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 2 | 16 | c1/debouncedCoins<4>
+ATTRIBUTES | 4359056 | 0
+OUTPUTMC | 17 | 2 | 16 | 0 | 14 | 0 | 16 | 0 | 13 | 0 | 15 | 0 | 5 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 2 | 0 | 3 | 0 | 6 | 0 | 17
+INPUTS | 16 | c1/debouncedCoins<4>  | c1/debouncers/count<0>  | c1/debouncers/count<10>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | c1/debouncers/count<11>  | buttons<4>  | c1/debouncers/isActive  | $OpTx$FX_DC$86__$INT
+INPUTMC | 15 | 2 | 16 | 3 | 5 | 1 | 17 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12 | 3 | 4 | 2 | 14
+INPUTP | 1 | 59
+EQ | 8 | 
+   c1/debouncedCoins<4>.T = c1/debouncedCoins<4> & !c1/debouncers/count<0> & 
+	!c1/debouncers/count<10> & !c1/debouncers/count<1> & !c1/debouncers/count<2> & 
+	c1/debouncers/count<3> & c1/debouncers/count<4> & c1/debouncers/count<5> & 
+	!c1/debouncers/count<6> & c1/debouncers/count<7> & c1/debouncers/count<8> & 
+	c1/debouncers/count<9> & c1/debouncers/count<11>;
+   c1/debouncedCoins<4>.CLK = clock;	// GCK
+   c1/debouncedCoins<4>.AP = !buttons<4> & !c1/debouncers/isActive;
+   c1/debouncedCoins<4>.AR = buttons<4> & !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 3 | 17 | c1/debouncedCoins<0>
+ATTRIBUTES | 4359056 | 0
+OUTPUTMC | 18 | 3 | 17 | 0 | 14 | 0 | 16 | 0 | 13 | 0 | 15 | 0 | 5 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 7 | 0 | 0 | 0 | 2 | 0 | 3 | 0 | 6 | 0 | 17
+INPUTS | 16 | c1/debouncedCoins<0>  | c1/debouncers/count<0>  | c1/debouncers/count<10>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | c1/debouncers/count<11>  | buttons<0>  | c1/debouncers/isActive  | $OpTx$FX_DC$86__$INT
+INPUTMC | 15 | 3 | 17 | 3 | 5 | 1 | 17 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12 | 3 | 4 | 2 | 14
+INPUTP | 1 | 46
+EQ | 8 | 
+   c1/debouncedCoins<0>.T = c1/debouncedCoins<0> & !c1/debouncers/count<0> & 
+	!c1/debouncers/count<10> & !c1/debouncers/count<1> & !c1/debouncers/count<2> & 
+	c1/debouncers/count<3> & c1/debouncers/count<4> & c1/debouncers/count<5> & 
+	!c1/debouncers/count<6> & c1/debouncers/count<7> & c1/debouncers/count<8> & 
+	c1/debouncers/count<9> & c1/debouncers/count<11>;
+   c1/debouncedCoins<0>.CLK = clock;	// GCK
+   c1/debouncedCoins<0>.AP = !buttons<0> & !c1/debouncers/isActive;
+   c1/debouncedCoins<0>.AR = buttons<0> & !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 2 | 15 | c1/debouncedCoins<5>
+ATTRIBUTES | 4359056 | 0
+OUTPUTMC | 17 | 2 | 15 | 0 | 14 | 0 | 16 | 0 | 13 | 0 | 15 | 0 | 5 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 2 | 0 | 3 | 0 | 6 | 0 | 17
+INPUTS | 16 | c1/debouncedCoins<5>  | c1/debouncers/count<0>  | c1/debouncers/count<10>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | c1/debouncers/count<11>  | buttons<5>  | c1/debouncers/isActive  | $OpTx$FX_DC$86__$INT
+INPUTMC | 15 | 2 | 15 | 3 | 5 | 1 | 17 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12 | 3 | 4 | 2 | 14
+INPUTP | 1 | 62
+EQ | 8 | 
+   c1/debouncedCoins<5>.T = c1/debouncedCoins<5> & !c1/debouncers/count<0> & 
+	!c1/debouncers/count<10> & !c1/debouncers/count<1> & !c1/debouncers/count<2> & 
+	c1/debouncers/count<3> & c1/debouncers/count<4> & c1/debouncers/count<5> & 
+	!c1/debouncers/count<6> & c1/debouncers/count<7> & c1/debouncers/count<8> & 
+	c1/debouncers/count<9> & c1/debouncers/count<11>;
+   c1/debouncedCoins<5>.CLK = clock;	// GCK
+   c1/debouncedCoins<5>.AP = !buttons<5> & !c1/debouncers/isActive;
+   c1/debouncedCoins<5>.AR = buttons<5> & !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 3 | 4 | c1/debouncers/isActive
+ATTRIBUTES | 8553408 | 0
+OUTPUTMC | 7 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 2 | 14
+INPUTS | 13 | $OpTx$FX_DC$86__$INT  | c1/debouncers/count<0>  | c1/debouncers/count<10>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | c1/debouncers/count<11>
+INPUTMC | 13 | 2 | 14 | 3 | 5 | 1 | 17 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12
+EQ | 8 | 
+   c1/debouncers/isActive.D = Gnd;
+   c1/debouncers/isActive.CLK = clock;	// GCK
+   c1/debouncers/isActive.AP = !$OpTx$FX_DC$86__$INT;
+   c1/debouncers/isActive.CE = !c1/debouncers/count<0> & !c1/debouncers/count<10> & 
+	!c1/debouncers/count<1> & !c1/debouncers/count<2> & c1/debouncers/count<3> & 
+	c1/debouncers/count<4> & c1/debouncers/count<5> & !c1/debouncers/count<6> & 
+	c1/debouncers/count<7> & c1/debouncers/count<8> & c1/debouncers/count<9> & 
+	c1/debouncers/count<11>;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 0 | 14 | totalTensSoFar<1>
+ATTRIBUTES | 4326192 | 0
+OUTPUTMC | 10 | 0 | 16 | 0 | 15 | 0 | 5 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 17
+INPUTS | 8 | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>  | totalTensSoFar<0>  | reset
+INPUTMC | 7 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 0 | 13
 INPUTP | 1 | 63
-EQ | 11 | 
-   totalTensSoFar<1>.D = 
-	c2/total_Madd__add0000_Mxor_Result<1>__xor0000/c2/total_Madd__add0000_Mxor_Result<1>__xor0000_D13_
-	$ totalTensSoFar<0> & 
-	!c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & $OpTx$FX_DC$68 & 
-	!c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & !$OpTx$INV$64
-	# totalTensSoFar<0> & 
-	!c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & !$OpTx$FX_DC$68 & 
-	c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & !$OpTx$INV$64;
-   !totalTensSoFar<1>.CLK = !c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & 
-	!$OpTx$FX_DC$68 & !c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2;
+EQ | 12 | 
+   totalTensSoFar<1>.T = !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5>
+	# !c1/debouncedCoins<1> & c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & totalTensSoFar<0>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & totalTensSoFar<0>;
+   !totalTensSoFar<1>.CLK = !c1/debouncedCoins<2> & !c1/debouncedCoins<3> & 
+	!c1/debouncedCoins<4>;
    totalTensSoFar<1>.AR = !reset;
 
-MACROCELL | 0 | 9 | totalTensSoFar<2>
-ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 4 | 0 | 8 | 0 | 2 | 0 | 11 | 0 | 7
-INPUTS | 9 | c2/total_Madd__add0000_Mxor_Result<2>__xor0000/c2/total_Madd__add0000_Mxor_Result<2>__xor0000_D14_  | totalTensSoFar<1>  | c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2  | $OpTx$FX_DC$68  | c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2  | $OpTx$INV$64  | totalTensSoFar<0>  | reset  | totalTensSoFar<3>.EXP
-INPUTMC | 8 | 0 | 2 | 3 | 17 | 3 | 13 | 3 | 15 | 3 | 12 | 1 | 17 | 0 | 6 | 0 | 8
-INPUTP | 1 | 63
-IMPORTS | 1 | 0 | 8
-EQ | 15 | 
-   totalTensSoFar<2>.D = 
-	c2/total_Madd__add0000_Mxor_Result<2>__xor0000/c2/total_Madd__add0000_Mxor_Result<2>__xor0000_D14_
-	$ totalTensSoFar<1> & 
-	c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & !$OpTx$FX_DC$68 & 
-	!c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & !$OpTx$INV$64
-	# totalTensSoFar<1> & totalTensSoFar<0> & 
-	!c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & $OpTx$FX_DC$68 & 
-	!c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & !$OpTx$INV$64
-;Imported pterms FB1_9
-	# totalTensSoFar<1> & totalTensSoFar<0> & 
-	!c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & !$OpTx$FX_DC$68 & 
-	c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & !$OpTx$INV$64;
-   !totalTensSoFar<2>.CLK = !c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & 
-	!$OpTx$FX_DC$68 & !c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2;
-   totalTensSoFar<2>.AR = !reset;
-
-MACROCELL | 0 | 6 | totalTensSoFar<0>
+MACROCELL | 0 | 16 | totalTensSoFar<2>
 ATTRIBUTES | 4326192 | 0
-OUTPUTMC | 5 | 3 | 17 | 0 | 9 | 0 | 8 | 0 | 13 | 0 | 7
-INPUTS | 5 | c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2  | $OpTx$FX_DC$68  | c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2  | $OpTx$INV$64  | reset
-INPUTMC | 4 | 3 | 13 | 3 | 15 | 3 | 12 | 1 | 17
+OUTPUTMC | 9 | 0 | 15 | 0 | 5 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 16
+INPUTS | 11 | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>  | totalTensSoFar<1>  | totalTensSoFar<2>  | reset  | totalTensSoFar<0>  | c1/debouncers/count<6>.EXP
+INPUTMC | 10 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 0 | 14 | 0 | 16 | 0 | 13 | 0 | 17
+INPUTP | 1 | 63
+EXPORTS | 1 | 0 | 15
+IMPORTS | 1 | 0 | 17
+EQ | 20 | 
+   totalTensSoFar<2>.T = !c1/debouncedCoins<1> & c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !totalTensSoFar<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & totalTensSoFar<1>
+;Imported pterms FB1_18
+	# !c1/debouncedCoins<1> & c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !totalTensSoFar<0>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & totalTensSoFar<1> & totalTensSoFar<0>;
+   !totalTensSoFar<2>.CLK = !c1/debouncedCoins<2> & !c1/debouncedCoins<3> & 
+	!c1/debouncedCoins<4>;
+   totalTensSoFar<2>.AR = !reset;
+    totalTensSoFar<2>.EXP  =  !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & totalTensSoFar<1> & totalTensSoFar<2> & 
+	totalTensSoFar<0>
+
+MACROCELL | 3 | 5 | c1/debouncers/count<0>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 19 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 3 | 4 | 3 | 5 | 1 | 17 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12
+INPUTS | 13 | c1/debouncers/count<0>  | c1/debouncers/count<10>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | c1/debouncers/count<11>  | $OpTx$FX_DC$86__$INT
+INPUTMC | 13 | 3 | 5 | 1 | 17 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12 | 2 | 14
+EQ | 7 | 
+   !c1/debouncers/count<0>.T = !c1/debouncers/count<0> & !c1/debouncers/count<10> & 
+	!c1/debouncers/count<1> & !c1/debouncers/count<2> & c1/debouncers/count<3> & 
+	c1/debouncers/count<4> & c1/debouncers/count<5> & !c1/debouncers/count<6> & 
+	c1/debouncers/count<7> & c1/debouncers/count<8> & c1/debouncers/count<9> & 
+	c1/debouncers/count<11>;
+   c1/debouncers/count<0>.CLK = clock;	// GCK
+   c1/debouncers/count<0>.AR = !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 0 | 13 | totalTensSoFar<0>
+ATTRIBUTES | 4326192 | 0
+OUTPUTMC | 11 | 0 | 14 | 0 | 1 | 0 | 15 | 0 | 5 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 16 | 0 | 17
+INPUTS | 7 | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>  | reset
+INPUTMC | 6 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15
 INPUTP | 1 | 63
 EQ | 9 | 
-   totalTensSoFar<0>.T = !c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & 
-	$OpTx$FX_DC$68 & !c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & 
-	!$OpTx$INV$64
-	# !c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & 
-	!$OpTx$FX_DC$68 & c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & 
-	!$OpTx$INV$64;
-   !totalTensSoFar<0>.CLK = !c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & 
-	!$OpTx$FX_DC$68 & !c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2;
+   totalTensSoFar<0>.T = !c1/debouncedCoins<1> & c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5>;
+   !totalTensSoFar<0>.CLK = !c1/debouncedCoins<2> & !c1/debouncedCoins<3> & 
+	!c1/debouncedCoins<4>;
    totalTensSoFar<0>.AR = !reset;
 
-MACROCELL | 0 | 8 | totalTensSoFar<3>
+MACROCELL | 1 | 17 | c1/debouncers/count<10>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 15 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 3 | 4 | 3 | 5 | 3 | 11 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12
+INPUTS | 11 | c1/debouncers/count<0>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | $OpTx$FX_DC$86__$INT
+INPUTMC | 11 | 3 | 5 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 2 | 14
+EQ | 6 | 
+   c1/debouncers/count<10>.T = c1/debouncers/count<0> & c1/debouncers/count<1> & 
+	c1/debouncers/count<2> & c1/debouncers/count<3> & c1/debouncers/count<4> & 
+	c1/debouncers/count<5> & c1/debouncers/count<6> & c1/debouncers/count<7> & 
+	c1/debouncers/count<8> & c1/debouncers/count<9>;
+   c1/debouncers/count<10>.CLK = clock;	// GCK
+   c1/debouncers/count<10>.AR = !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 0 | 12 | c1/debouncers/count<1>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 18 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 3 | 4 | 3 | 5 | 1 | 17 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12
+INPUTS | 2 | c1/debouncers/count<0>  | $OpTx$FX_DC$86__$INT
+INPUTMC | 2 | 3 | 5 | 2 | 14
+EQ | 3 | 
+   c1/debouncers/count<1>.T = c1/debouncers/count<0>;
+   c1/debouncers/count<1>.CLK = clock;	// GCK
+   c1/debouncers/count<1>.AR = !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 0 | 11 | c1/debouncers/count<2>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 17 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 3 | 4 | 3 | 5 | 1 | 17 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12
+INPUTS | 3 | c1/debouncers/count<0>  | c1/debouncers/count<1>  | $OpTx$FX_DC$86__$INT
+INPUTMC | 3 | 3 | 5 | 0 | 12 | 2 | 14
+EQ | 3 | 
+   c1/debouncers/count<2>.T = c1/debouncers/count<0> & c1/debouncers/count<1>;
+   c1/debouncers/count<2>.CLK = clock;	// GCK
+   c1/debouncers/count<2>.AR = !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 3 | 11 | c1/debouncers/count<3>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 17 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 3 | 4 | 3 | 5 | 1 | 17 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12
+INPUTS | 13 | c1/debouncers/count<0>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<10>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | c1/debouncers/count<11>  | $OpTx$FX_DC$86__$INT
+INPUTMC | 13 | 3 | 5 | 0 | 12 | 0 | 11 | 1 | 17 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12 | 2 | 14
+EQ | 9 | 
+   c1/debouncers/count<3>.T = c1/debouncers/count<0> & c1/debouncers/count<1> & 
+	c1/debouncers/count<2>
+	# !c1/debouncers/count<0> & !c1/debouncers/count<10> & 
+	!c1/debouncers/count<1> & !c1/debouncers/count<2> & c1/debouncers/count<3> & 
+	c1/debouncers/count<4> & c1/debouncers/count<5> & !c1/debouncers/count<6> & 
+	c1/debouncers/count<7> & c1/debouncers/count<8> & c1/debouncers/count<9> & 
+	c1/debouncers/count<11>;
+   c1/debouncers/count<3>.CLK = clock;	// GCK
+   c1/debouncers/count<3>.AR = !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 3 | 10 | c1/debouncers/count<4>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 17 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 3 | 4 | 3 | 5 | 1 | 17 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12
+INPUTS | 13 | c1/debouncers/count<0>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<10>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | c1/debouncers/count<11>  | $OpTx$FX_DC$86__$INT
+INPUTMC | 13 | 3 | 5 | 0 | 12 | 0 | 11 | 3 | 11 | 1 | 17 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12 | 2 | 14
+EQ | 9 | 
+   c1/debouncers/count<4>.T = c1/debouncers/count<0> & c1/debouncers/count<1> & 
+	c1/debouncers/count<2> & c1/debouncers/count<3>
+	# !c1/debouncers/count<0> & !c1/debouncers/count<10> & 
+	!c1/debouncers/count<1> & !c1/debouncers/count<2> & c1/debouncers/count<3> & 
+	c1/debouncers/count<4> & c1/debouncers/count<5> & !c1/debouncers/count<6> & 
+	c1/debouncers/count<7> & c1/debouncers/count<8> & c1/debouncers/count<9> & 
+	c1/debouncers/count<11>;
+   c1/debouncers/count<4>.CLK = clock;	// GCK
+   c1/debouncers/count<4>.AR = !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 3 | 9 | c1/debouncers/count<5>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 17 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 3 | 4 | 3 | 5 | 1 | 17 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12
+INPUTS | 13 | c1/debouncers/count<0>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<10>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | c1/debouncers/count<11>  | $OpTx$FX_DC$86__$INT
+INPUTMC | 13 | 3 | 5 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 1 | 17 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12 | 2 | 14
+EQ | 9 | 
+   c1/debouncers/count<5>.T = c1/debouncers/count<0> & c1/debouncers/count<1> & 
+	c1/debouncers/count<2> & c1/debouncers/count<3> & c1/debouncers/count<4>
+	# !c1/debouncers/count<0> & !c1/debouncers/count<10> & 
+	!c1/debouncers/count<1> & !c1/debouncers/count<2> & c1/debouncers/count<3> & 
+	c1/debouncers/count<4> & c1/debouncers/count<5> & !c1/debouncers/count<6> & 
+	c1/debouncers/count<7> & c1/debouncers/count<8> & c1/debouncers/count<9> & 
+	c1/debouncers/count<11>;
+   c1/debouncers/count<5>.CLK = clock;	// GCK
+   c1/debouncers/count<5>.AR = !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 0 | 17 | c1/debouncers/count<6>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 17 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 3 | 4 | 3 | 5 | 1 | 17 | 3 | 11 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12 | 0 | 16
+INPUTS | 15 | c1/debouncers/count<0>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | $OpTx$FX_DC$86__$INT  | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>  | totalTensSoFar<0>  | totalTensSoFar<1>
+INPUTMC | 15 | 3 | 5 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 2 | 14 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 0 | 13 | 0 | 14
+EXPORTS | 1 | 0 | 16
+EQ | 11 | 
+   c1/debouncers/count<6>.T = c1/debouncers/count<0> & c1/debouncers/count<1> & 
+	c1/debouncers/count<2> & c1/debouncers/count<3> & c1/debouncers/count<4> & 
+	c1/debouncers/count<5>;
+   c1/debouncers/count<6>.CLK = clock;	// GCK
+   c1/debouncers/count<6>.AR = !$OpTx$FX_DC$86__$INT;
+    c1/debouncers/count<6>.EXP  =  !c1/debouncedCoins<1> & c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !totalTensSoFar<0>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & totalTensSoFar<1> & totalTensSoFar<0>
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 3 | 8 | c1/debouncers/count<7>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 16 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 3 | 4 | 3 | 5 | 1 | 17 | 3 | 11 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12
+INPUTS | 13 | c1/debouncers/count<0>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<10>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | c1/debouncers/count<11>  | $OpTx$FX_DC$86__$INT
+INPUTMC | 13 | 3 | 5 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 1 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12 | 2 | 14
+EQ | 10 | 
+   c1/debouncers/count<7>.T = c1/debouncers/count<0> & c1/debouncers/count<1> & 
+	c1/debouncers/count<2> & c1/debouncers/count<3> & c1/debouncers/count<4> & 
+	c1/debouncers/count<5> & c1/debouncers/count<6>
+	# !c1/debouncers/count<0> & !c1/debouncers/count<10> & 
+	!c1/debouncers/count<1> & !c1/debouncers/count<2> & c1/debouncers/count<3> & 
+	c1/debouncers/count<4> & c1/debouncers/count<5> & !c1/debouncers/count<6> & 
+	c1/debouncers/count<7> & c1/debouncers/count<8> & c1/debouncers/count<9> & 
+	c1/debouncers/count<11>;
+   c1/debouncers/count<7>.CLK = clock;	// GCK
+   c1/debouncers/count<7>.AR = !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 3 | 7 | c1/debouncers/count<8>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 16 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 3 | 4 | 3 | 5 | 1 | 17 | 3 | 11 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12
+INPUTS | 13 | c1/debouncers/count<0>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<10>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | c1/debouncers/count<11>  | $OpTx$FX_DC$86__$INT
+INPUTMC | 13 | 3 | 5 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 1 | 17 | 3 | 7 | 3 | 6 | 3 | 12 | 2 | 14
+EQ | 10 | 
+   c1/debouncers/count<8>.T = c1/debouncers/count<0> & c1/debouncers/count<1> & 
+	c1/debouncers/count<2> & c1/debouncers/count<3> & c1/debouncers/count<4> & 
+	c1/debouncers/count<5> & c1/debouncers/count<6> & c1/debouncers/count<7>
+	# !c1/debouncers/count<0> & !c1/debouncers/count<10> & 
+	!c1/debouncers/count<1> & !c1/debouncers/count<2> & c1/debouncers/count<3> & 
+	c1/debouncers/count<4> & c1/debouncers/count<5> & !c1/debouncers/count<6> & 
+	c1/debouncers/count<7> & c1/debouncers/count<8> & c1/debouncers/count<9> & 
+	c1/debouncers/count<11>;
+   c1/debouncers/count<8>.CLK = clock;	// GCK
+   c1/debouncers/count<8>.AR = !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 3 | 6 | c1/debouncers/count<9>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 16 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 3 | 4 | 3 | 5 | 1 | 17 | 3 | 11 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12
+INPUTS | 13 | c1/debouncers/count<0>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<10>  | c1/debouncers/count<9>  | c1/debouncers/count<11>  | $OpTx$FX_DC$86__$INT
+INPUTMC | 13 | 3 | 5 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 1 | 17 | 3 | 6 | 3 | 12 | 2 | 14
+EQ | 11 | 
+   c1/debouncers/count<9>.T = c1/debouncers/count<0> & c1/debouncers/count<1> & 
+	c1/debouncers/count<2> & c1/debouncers/count<3> & c1/debouncers/count<4> & 
+	c1/debouncers/count<5> & c1/debouncers/count<6> & c1/debouncers/count<7> & 
+	c1/debouncers/count<8>
+	# !c1/debouncers/count<0> & !c1/debouncers/count<10> & 
+	!c1/debouncers/count<1> & !c1/debouncers/count<2> & c1/debouncers/count<3> & 
+	c1/debouncers/count<4> & c1/debouncers/count<5> & !c1/debouncers/count<6> & 
+	c1/debouncers/count<7> & c1/debouncers/count<8> & c1/debouncers/count<9> & 
+	c1/debouncers/count<11>;
+   c1/debouncers/count<9>.CLK = clock;	// GCK
+   c1/debouncers/count<9>.AR = !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
+
+MACROCELL | 0 | 15 | totalTensSoFar<3>
 ATTRIBUTES | 4326192 | 0
-OUTPUTMC | 8 | 0 | 5 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 9
-INPUTS | 9 | totalTensSoFar<2>  | c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2  | $OpTx$FX_DC$68  | c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2  | $OpTx$INV$64  | totalTensSoFar<1>  | totalTensSoFar<0>  | reset  | ssdSegmentSelect_7_OBUF.EXP
-INPUTMC | 8 | 0 | 9 | 3 | 13 | 3 | 15 | 3 | 12 | 1 | 17 | 3 | 17 | 0 | 6 | 0 | 7
+OUTPUTMC | 7 | 0 | 5 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1
+INPUTS | 11 | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>  | totalTensSoFar<2>  | totalTensSoFar<1>  | totalTensSoFar<0>  | reset  | totalTensSoFar<2>.EXP
+INPUTMC | 10 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 0 | 16 | 0 | 14 | 0 | 13 | 0 | 16
 INPUTP | 1 | 63
-EXPORTS | 1 | 0 | 9
-IMPORTS | 1 | 0 | 7
-EQ | 20 | 
-   totalTensSoFar<3>.T = totalTensSoFar<2> & 
-	!c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & $OpTx$FX_DC$68 & 
-	!c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & !$OpTx$INV$64
-	# totalTensSoFar<1> & totalTensSoFar<0> & 
-	!c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & $OpTx$FX_DC$68 & 
-	!c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & !$OpTx$INV$64
-;Imported pterms FB1_8
-	# totalTensSoFar<1> & totalTensSoFar<2> & 
-	c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & !$OpTx$FX_DC$68 & 
-	!c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & !$OpTx$INV$64
-	# totalTensSoFar<1> & totalTensSoFar<2> & 
-	totalTensSoFar<0> & !c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & 
-	!$OpTx$FX_DC$68 & c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & 
-	!$OpTx$INV$64;
-   !totalTensSoFar<3>.CLK = !c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & 
-	!$OpTx$FX_DC$68 & !c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2;
+IMPORTS | 1 | 0 | 16
+EQ | 17 | 
+   totalTensSoFar<3>.T = !c1/debouncedCoins<1> & c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & totalTensSoFar<2>
+	# !c1/debouncedCoins<1> & c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & totalTensSoFar<1> & totalTensSoFar<0>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & totalTensSoFar<1> & totalTensSoFar<2>
+;Imported pterms FB1_17
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & totalTensSoFar<1> & totalTensSoFar<2> & 
+	totalTensSoFar<0>;
+   !totalTensSoFar<3>.CLK = !c1/debouncedCoins<2> & !c1/debouncedCoins<3> & 
+	!c1/debouncedCoins<4>;
    totalTensSoFar<3>.AR = !reset;
-    totalTensSoFar<3>.EXP  =  totalTensSoFar<1> & totalTensSoFar<0> & 
-	!c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & !$OpTx$FX_DC$68 & 
-	c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & !$OpTx$INV$64
+
+MACROCELL | 3 | 12 | c1/debouncers/count<11>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 15 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 3 | 4 | 3 | 5 | 3 | 11 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12
+INPUTS | 13 | c1/debouncers/count<0>  | c1/debouncers/count<10>  | c1/debouncers/count<1>  | c1/debouncers/count<2>  | c1/debouncers/count<3>  | c1/debouncers/count<4>  | c1/debouncers/count<5>  | c1/debouncers/count<6>  | c1/debouncers/count<7>  | c1/debouncers/count<8>  | c1/debouncers/count<9>  | c1/debouncers/count<11>  | $OpTx$FX_DC$86__$INT
+INPUTMC | 13 | 3 | 5 | 1 | 17 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12 | 2 | 14
+EQ | 11 | 
+   c1/debouncers/count<11>.T = c1/debouncers/count<0> & c1/debouncers/count<10> & 
+	c1/debouncers/count<1> & c1/debouncers/count<2> & c1/debouncers/count<3> & 
+	c1/debouncers/count<4> & c1/debouncers/count<5> & c1/debouncers/count<6> & 
+	c1/debouncers/count<7> & c1/debouncers/count<8> & c1/debouncers/count<9>
+	# !c1/debouncers/count<0> & !c1/debouncers/count<10> & 
+	!c1/debouncers/count<1> & !c1/debouncers/count<2> & c1/debouncers/count<3> & 
+	c1/debouncers/count<4> & c1/debouncers/count<5> & !c1/debouncers/count<6> & 
+	c1/debouncers/count<7> & c1/debouncers/count<8> & c1/debouncers/count<9> & 
+	c1/debouncers/count<11>;
+   c1/debouncers/count<11>.CLK = clock;	// GCK
+   c1/debouncers/count<11>.AR = !$OpTx$FX_DC$86__$INT;
+GLOBALS | 1 | 2 | clock
 
 MACROCELL | 0 | 5 | ssdSegmentSelect_6_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 7 | c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2  | c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2  | c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2  | totalTensSoFar<3>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
-INPUTMC | 7 | 0 | 14 | 0 | 11 | 0 | 13 | 0 | 8 | 3 | 1 | 1 | 12 | 1 | 15
-EQ | 8 | 
-   ssdSegmentSelect<6> = c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & 
-	c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2
-	# c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & 
-	c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-	# !c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & 
-	!c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2
-	# totalTensSoFar<3> & !c3/itemToUse<0> & 
-	!c3/itemToUse<2> & c3/itemToUse<1>;
+INPUTS | 14 | totalTensSoFar<3>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>  | totalTensSoFar<1>  | totalTensSoFar<2>  | totalTensSoFar<0>  | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>  | EXP8_.EXP
+INPUTMC | 14 | 0 | 15 | 0 | 0 | 0 | 9 | 0 | 10 | 0 | 14 | 0 | 16 | 0 | 13 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 0 | 6
+IMPORTS | 1 | 0 | 6
+EQ | 25 | 
+   ssdSegmentSelect<6> = totalTensSoFar<3> & !c3/itemToUse<0> & 
+	!c3/itemToUse<2> & c3/itemToUse<1>
+	# totalTensSoFar<1> & !totalTensSoFar<2> & 
+	!c3/itemToUse<0> & !c3/itemToUse<2> & c3/itemToUse<1>
+	# !totalTensSoFar<1> & totalTensSoFar<2> & 
+	!c3/itemToUse<0> & !c3/itemToUse<2> & c3/itemToUse<1>
+	# totalTensSoFar<2> & !totalTensSoFar<0> & 
+	!c3/itemToUse<0> & !c3/itemToUse<2> & c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	c1/debouncedCoins<5> & c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+;Imported pterms FB1_7
+	# !c1/debouncedCoins<1> & c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>;
 
 MACROCELL | 1 | 7 | ssdUnitSelect_0_OBUF
 ATTRIBUTES | 264962 | 0
 INPUTS | 3 | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
-INPUTMC | 3 | 3 | 1 | 1 | 12 | 1 | 15
+INPUTMC | 3 | 0 | 0 | 0 | 9 | 0 | 10
 EQ | 2 | 
    ssdUnitSelect<0> = !c3/itemToUse<0> & !c3/itemToUse<2> & 
 	!c3/itemToUse<1>;
@@ -115,7 +450,7 @@ EQ | 2 |
 MACROCELL | 1 | 5 | ssdUnitSelect_1_OBUF
 ATTRIBUTES | 264962 | 0
 INPUTS | 3 | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
-INPUTMC | 3 | 3 | 1 | 1 | 12 | 1 | 15
+INPUTMC | 3 | 0 | 0 | 0 | 9 | 0 | 10
 EQ | 2 | 
    ssdUnitSelect<1> = c3/itemToUse<0> & !c3/itemToUse<2> & 
 	!c3/itemToUse<1>;
@@ -123,7 +458,7 @@ EQ | 2 |
 MACROCELL | 1 | 4 | ssdUnitSelect_2_OBUF
 ATTRIBUTES | 264962 | 0
 INPUTS | 3 | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
-INPUTMC | 3 | 3 | 1 | 1 | 12 | 1 | 15
+INPUTMC | 3 | 0 | 0 | 0 | 9 | 0 | 10
 EQ | 2 | 
    ssdUnitSelect<2> = !c3/itemToUse<0> & !c3/itemToUse<2> & 
 	c3/itemToUse<1>;
@@ -131,25 +466,31 @@ EQ | 2 |
 MACROCELL | 3 | 16 | ssdUnitSelect_4_OBUF
 ATTRIBUTES | 264962 | 0
 INPUTS | 3 | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
-INPUTMC | 3 | 3 | 1 | 1 | 12 | 1 | 15
+INPUTMC | 3 | 0 | 0 | 0 | 9 | 0 | 10
 EQ | 2 | 
    ssdUnitSelect<4> = !c3/itemToUse<0> & c3/itemToUse<2> & 
 	!c3/itemToUse<1>;
 
-MACROCELL | 3 | 1 | c3/itemToUse<0>
+MACROCELL | 0 | 0 | c3/itemToUse<0>
 ATTRIBUTES | 4358912 | 0
-OUTPUTMC | 22 | 0 | 5 | 1 | 7 | 1 | 5 | 1 | 4 | 3 | 16 | 1 | 12 | 1 | 15 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 7 | 1 | 1 | 3 | 14 | 0 | 14 | 0 | 11 | 0 | 13 | 0 | 10 | 0 | 12 | 0 | 15
-INPUTS | 0
-EQ | 2 | 
+OUTPUTMC | 20 | 0 | 5 | 1 | 7 | 1 | 5 | 1 | 4 | 3 | 16 | 0 | 9 | 0 | 10 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 7 | 1 | 1 | 3 | 14 | 0 | 0 | 0 | 2 | 0 | 3 | 0 | 6
+INPUTS | 9 | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
+INPUTMC | 9 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 0 | 0 | 0 | 9 | 0 | 10
+EXPORTS | 1 | 0 | 1
+EQ | 6 | 
    c3/itemToUse<0>.T = Vcc;
    c3/itemToUse<0>.CLK = clock;	// GCK
+    c3/itemToUse<0>.EXP  =  !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 1 | 12 | c3/itemToUse<2>
+MACROCELL | 0 | 9 | c3/itemToUse<2>
 ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 20 | 0 | 5 | 1 | 7 | 1 | 5 | 1 | 4 | 3 | 16 | 1 | 12 | 1 | 15 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 7 | 1 | 1 | 3 | 14 | 0 | 14 | 0 | 11 | 0 | 13 | 0 | 15
+OUTPUTMC | 20 | 0 | 5 | 1 | 7 | 1 | 5 | 1 | 4 | 3 | 16 | 0 | 9 | 0 | 10 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 7 | 1 | 1 | 3 | 14 | 0 | 0 | 0 | 2 | 0 | 3 | 0 | 6
 INPUTS | 3 | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
-INPUTMC | 3 | 3 | 1 | 1 | 12 | 1 | 15
+INPUTMC | 3 | 0 | 0 | 0 | 9 | 0 | 10
 EQ | 4 | 
    c3/itemToUse<2>.D = !c3/itemToUse<0> & c3/itemToUse<2>
 	# c3/itemToUse<0> & !c3/itemToUse<2> & 
@@ -157,11 +498,11 @@ EQ | 4 |
    c3/itemToUse<2>.CLK = clock;	// GCK
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 1 | 15 | c3/itemToUse<1>
+MACROCELL | 0 | 10 | c3/itemToUse<1>
 ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 22 | 0 | 5 | 1 | 7 | 1 | 5 | 1 | 4 | 3 | 16 | 1 | 12 | 1 | 15 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 7 | 1 | 1 | 3 | 14 | 0 | 14 | 0 | 11 | 0 | 13 | 0 | 10 | 0 | 12 | 0 | 15
+OUTPUTMC | 20 | 0 | 5 | 1 | 7 | 1 | 5 | 1 | 4 | 3 | 16 | 0 | 9 | 0 | 10 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 7 | 1 | 1 | 3 | 14 | 0 | 0 | 0 | 2 | 0 | 3 | 0 | 6
 INPUTS | 3 | c3/itemToUse<0>  | c3/itemToUse<1>  | c3/itemToUse<2>
-INPUTMC | 3 | 3 | 1 | 1 | 15 | 1 | 12
+INPUTMC | 3 | 0 | 0 | 0 | 10 | 0 | 9
 EQ | 4 | 
    c3/itemToUse<1>.D = !c3/itemToUse<0> & c3/itemToUse<1>
 	# c3/itemToUse<0> & !c3/itemToUse<2> & 
@@ -169,297 +510,164 @@ EQ | 4 |
    c3/itemToUse<1>.CLK = clock;	// GCK
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 1 | 11 | c1/debouncers[0].c1/inBuffer<0>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 6 | 1 | 9 | 0 | 7 | 1 | 17 | 0 | 12 | 0 | 10 | 0 | 15
-INPUTS | 1 | buttons<0>
-INPUTP | 1 | 46
-EQ | 2 | 
-   c1/debouncers[0].c1/inBuffer<0>.D = !buttons<0>;
-   c1/debouncers[0].c1/inBuffer<0>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 1 | 9 | c1/debouncers[0].c1/inBuffer<1>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 6 | 1 | 8 | 0 | 7 | 1 | 17 | 0 | 12 | 0 | 10 | 0 | 15
-INPUTS | 1 | c1/debouncers[0].c1/inBuffer<0>
-INPUTMC | 1 | 1 | 11
-EQ | 2 | 
-   c1/debouncers[0].c1/inBuffer<1>.D = c1/debouncers[0].c1/inBuffer<0>;
-   c1/debouncers[0].c1/inBuffer<1>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 3 | 11 | c1/debouncers[1].c1/inBuffer<0>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 7 | 1 | 6 | 0 | 7 | 1 | 17 | 0 | 13 | 0 | 10 | 0 | 14 | 0 | 15
-INPUTS | 1 | buttons<1>
-INPUTP | 1 | 49
-EQ | 2 | 
-   c1/debouncers[1].c1/inBuffer<0>.D = !buttons<1>;
-   c1/debouncers[1].c1/inBuffer<0>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 1 | 6 | c1/debouncers[1].c1/inBuffer<1>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 7 | 1 | 3 | 0 | 7 | 1 | 17 | 0 | 12 | 0 | 10 | 0 | 14 | 0 | 15
-INPUTS | 1 | c1/debouncers[1].c1/inBuffer<0>
-INPUTMC | 1 | 3 | 11
-EQ | 2 | 
-   c1/debouncers[1].c1/inBuffer<1>.D = c1/debouncers[1].c1/inBuffer<0>;
-   c1/debouncers[1].c1/inBuffer<1>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 3 | 10 | c1/debouncers[2].c1/inBuffer<0>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 2 | 3 | 9 | 3 | 15
-INPUTS | 1 | buttons<2>
-INPUTP | 1 | 50
-EQ | 2 | 
-   c1/debouncers[2].c1/inBuffer<0>.D = !buttons<2>;
-   c1/debouncers[2].c1/inBuffer<0>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 3 | 9 | c1/debouncers[2].c1/inBuffer<1>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 2 | 3 | 8 | 3 | 15
-INPUTS | 1 | c1/debouncers[2].c1/inBuffer<0>
-INPUTMC | 1 | 3 | 10
-EQ | 2 | 
-   c1/debouncers[2].c1/inBuffer<1>.D = c1/debouncers[2].c1/inBuffer<0>;
-   c1/debouncers[2].c1/inBuffer<1>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 3 | 7 | c1/debouncers[3].c1/inBuffer<0>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 2 | 3 | 6 | 3 | 13
-INPUTS | 1 | buttons<3>
-INPUTP | 1 | 52
-EQ | 2 | 
-   c1/debouncers[3].c1/inBuffer<0>.D = !buttons<3>;
-   c1/debouncers[3].c1/inBuffer<0>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 3 | 6 | c1/debouncers[3].c1/inBuffer<1>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 2 | 3 | 5 | 3 | 13
-INPUTS | 1 | c1/debouncers[3].c1/inBuffer<0>
-INPUTMC | 1 | 3 | 7
-EQ | 2 | 
-   c1/debouncers[3].c1/inBuffer<1>.D = c1/debouncers[3].c1/inBuffer<0>;
-   c1/debouncers[3].c1/inBuffer<1>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 3 | 4 | c1/debouncers[4].c1/inBuffer<0>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 2 | 3 | 3 | 3 | 12
-INPUTS | 1 | buttons<4>
-INPUTP | 1 | 59
-EQ | 2 | 
-   c1/debouncers[4].c1/inBuffer<0>.D = !buttons<4>;
-   c1/debouncers[4].c1/inBuffer<0>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 3 | 3 | c1/debouncers[4].c1/inBuffer<1>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 2 | 3 | 2 | 3 | 12
-INPUTS | 1 | c1/debouncers[4].c1/inBuffer<0>
-INPUTMC | 1 | 3 | 4
-EQ | 2 | 
-   c1/debouncers[4].c1/inBuffer<1>.D = c1/debouncers[4].c1/inBuffer<0>;
-   c1/debouncers[4].c1/inBuffer<1>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 2 | 17 | c1/debouncers[5].c1/inBuffer<0>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 3 | 1 | 2 | 1 | 17 | 1 | 0
-INPUTS | 1 | buttons<5>
-INPUTP | 1 | 62
-EQ | 2 | 
-   c1/debouncers[5].c1/inBuffer<0>.D = !buttons<5>;
-   c1/debouncers[5].c1/inBuffer<0>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 1 | 2 | c1/debouncers[5].c1/inBuffer<1>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 3 | 2 | 16 | 1 | 17 | 1 | 0
-INPUTS | 1 | c1/debouncers[5].c1/inBuffer<0>
-INPUTMC | 1 | 2 | 17
-EQ | 2 | 
-   c1/debouncers[5].c1/inBuffer<1>.D = c1/debouncers[5].c1/inBuffer<0>;
-   c1/debouncers[5].c1/inBuffer<1>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 1 | 8 | c1/debouncers[0].c1/inBuffer<2>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 5 | 0 | 7 | 1 | 17 | 0 | 12 | 0 | 10 | 0 | 15
-INPUTS | 1 | c1/debouncers[0].c1/inBuffer<1>
-INPUTMC | 1 | 1 | 9
-EQ | 2 | 
-   c1/debouncers[0].c1/inBuffer<2>.D = c1/debouncers[0].c1/inBuffer<1>;
-   c1/debouncers[0].c1/inBuffer<2>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 1 | 3 | c1/debouncers[1].c1/inBuffer<2>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 6 | 0 | 7 | 1 | 17 | 0 | 12 | 0 | 10 | 0 | 14 | 0 | 15
-INPUTS | 1 | c1/debouncers[1].c1/inBuffer<1>
-INPUTMC | 1 | 1 | 6
-EQ | 2 | 
-   c1/debouncers[1].c1/inBuffer<2>.D = c1/debouncers[1].c1/inBuffer<1>;
-   c1/debouncers[1].c1/inBuffer<2>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 3 | 8 | c1/debouncers[2].c1/inBuffer<2>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 1 | 3 | 15
-INPUTS | 1 | c1/debouncers[2].c1/inBuffer<1>
-INPUTMC | 1 | 3 | 9
-EQ | 2 | 
-   c1/debouncers[2].c1/inBuffer<2>.D = c1/debouncers[2].c1/inBuffer<1>;
-   c1/debouncers[2].c1/inBuffer<2>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 3 | 5 | c1/debouncers[3].c1/inBuffer<2>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 1 | 3 | 13
-INPUTS | 1 | c1/debouncers[3].c1/inBuffer<1>
-INPUTMC | 1 | 3 | 6
-EQ | 2 | 
-   c1/debouncers[3].c1/inBuffer<2>.D = c1/debouncers[3].c1/inBuffer<1>;
-   c1/debouncers[3].c1/inBuffer<2>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 3 | 2 | c1/debouncers[4].c1/inBuffer<2>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 1 | 3 | 12
-INPUTS | 1 | c1/debouncers[4].c1/inBuffer<1>
-INPUTMC | 1 | 3 | 3
-EQ | 2 | 
-   c1/debouncers[4].c1/inBuffer<2>.D = c1/debouncers[4].c1/inBuffer<1>;
-   c1/debouncers[4].c1/inBuffer<2>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
-MACROCELL | 2 | 16 | c1/debouncers[5].c1/inBuffer<2>
-ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 2 | 1 | 17 | 1 | 0
-INPUTS | 1 | c1/debouncers[5].c1/inBuffer<1>
-INPUTMC | 1 | 1 | 2
-EQ | 2 | 
-   c1/debouncers[5].c1/inBuffer<2>.D = c1/debouncers[5].c1/inBuffer<1>;
-   c1/debouncers[5].c1/inBuffer<2>.CLK = clock;	// GCK
-GLOBALS | 1 | 2 | clock
-
 MACROCELL | 1 | 10 | ssdSegmentSelect_0_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 7 | c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2  | c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2  | c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2  | totalTensSoFar<3>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
-INPUTMC | 7 | 0 | 14 | 0 | 11 | 0 | 13 | 0 | 8 | 3 | 1 | 1 | 12 | 1 | 15
-EQ | 7 | 
-   ssdSegmentSelect<0> = c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2
-	# c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2 & 
-	c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-	# !c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2 & 
-	!c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-	# totalTensSoFar<3> & !c3/itemToUse<0> & 
-	!c3/itemToUse<2> & c3/itemToUse<1>;
+INPUTS | 13 | totalTensSoFar<1>  | totalTensSoFar<2>  | totalTensSoFar<0>  | totalTensSoFar<3>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>  | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>
+INPUTMC | 13 | 0 | 14 | 0 | 16 | 0 | 13 | 0 | 15 | 0 | 0 | 0 | 9 | 0 | 10 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15
+EQ | 14 | 
+   !ssdSegmentSelect<0> = !totalTensSoFar<1> & totalTensSoFar<2> & 
+	!totalTensSoFar<0> & !totalTensSoFar<3> & !c3/itemToUse<0> & 
+	!c3/itemToUse<2> & c3/itemToUse<1>
+	# !totalTensSoFar<1> & !totalTensSoFar<2> & 
+	totalTensSoFar<0> & !totalTensSoFar<3> & !c3/itemToUse<0> & 
+	!c3/itemToUse<2> & c3/itemToUse<1>
+	# c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>;
 
 MACROCELL | 1 | 13 | ssdSegmentSelect_1_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 7 | c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2  | c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2  | c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2  | totalTensSoFar<3>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
-INPUTMC | 7 | 0 | 11 | 0 | 14 | 0 | 13 | 0 | 8 | 3 | 1 | 1 | 12 | 1 | 15
-EQ | 7 | 
-   ssdSegmentSelect<1> = c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2
-	# c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & 
-	!c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-	# !c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & 
-	c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-	# totalTensSoFar<3> & !c3/itemToUse<0> & 
-	!c3/itemToUse<2> & c3/itemToUse<1>;
+INPUTS | 13 | totalTensSoFar<1>  | totalTensSoFar<2>  | totalTensSoFar<0>  | totalTensSoFar<3>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>  | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>
+INPUTMC | 13 | 0 | 14 | 0 | 16 | 0 | 13 | 0 | 15 | 0 | 0 | 0 | 9 | 0 | 10 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15
+EQ | 14 | 
+   !ssdSegmentSelect<1> = totalTensSoFar<1> & totalTensSoFar<2> & 
+	!totalTensSoFar<0> & !totalTensSoFar<3> & !c3/itemToUse<0> & 
+	!c3/itemToUse<2> & c3/itemToUse<1>
+	# !totalTensSoFar<1> & totalTensSoFar<2> & 
+	totalTensSoFar<0> & !totalTensSoFar<3> & !c3/itemToUse<0> & 
+	!c3/itemToUse<2> & c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	c1/debouncedCoins<5> & c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>;
 
 MACROCELL | 1 | 14 | ssdSegmentSelect_2_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 7 | c3/itemToUse<2>  | c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2  | c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2  | c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2  | totalTensSoFar<3>  | c3/itemToUse<0>  | c3/itemToUse<1>
-INPUTMC | 7 | 1 | 12 | 0 | 14 | 0 | 11 | 0 | 13 | 0 | 8 | 3 | 1 | 1 | 15
-EQ | 12 | 
-   !ssdSegmentSelect<2> = !totalTensSoFar<3> & 
-	c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2 & 
-	c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-	# c3/itemToUse<0> & 
-	c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2 & 
-	c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-	# c3/itemToUse<2> & 
-	c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2 & 
-	c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-	# !c3/itemToUse<1> & 
-	c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2 & 
-	c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2;
+INPUTS | 13 | totalTensSoFar<1>  | totalTensSoFar<2>  | totalTensSoFar<0>  | totalTensSoFar<3>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>  | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>
+INPUTMC | 13 | 0 | 14 | 0 | 16 | 0 | 13 | 0 | 15 | 0 | 0 | 0 | 9 | 0 | 10 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15
+EQ | 11 | 
+   !ssdSegmentSelect<2> = totalTensSoFar<1> & !totalTensSoFar<2> & 
+	!totalTensSoFar<0> & !totalTensSoFar<3> & !c3/itemToUse<0> & 
+	!c3/itemToUse<2> & c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>;
 
 MACROCELL | 1 | 16 | ssdSegmentSelect_3_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 7 | c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2  | c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2  | c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2  | totalTensSoFar<3>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
-INPUTMC | 7 | 0 | 11 | 0 | 13 | 0 | 14 | 0 | 8 | 3 | 1 | 1 | 12 | 1 | 15
-EQ | 10 | 
-   ssdSegmentSelect<3> = c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & 
-	c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2
-	# c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & 
-	c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-	# c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2 & 
-	c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-	# !c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & 
-	!c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2 & !c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-	# totalTensSoFar<3> & !c3/itemToUse<0> & 
-	!c3/itemToUse<2> & c3/itemToUse<1>;
+INPUTS | 13 | totalTensSoFar<1>  | totalTensSoFar<2>  | totalTensSoFar<0>  | totalTensSoFar<3>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>  | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>
+INPUTMC | 13 | 0 | 14 | 0 | 16 | 0 | 13 | 0 | 15 | 0 | 0 | 0 | 9 | 0 | 10 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15
+EQ | 17 | 
+   !ssdSegmentSelect<3> = totalTensSoFar<1> & totalTensSoFar<2> & 
+	totalTensSoFar<0> & !totalTensSoFar<3> & !c3/itemToUse<0> & 
+	!c3/itemToUse<2> & c3/itemToUse<1>
+	# !totalTensSoFar<1> & totalTensSoFar<2> & 
+	!totalTensSoFar<0> & !totalTensSoFar<3> & !c3/itemToUse<0> & 
+	!c3/itemToUse<2> & c3/itemToUse<1>
+	# !totalTensSoFar<1> & !totalTensSoFar<2> & 
+	totalTensSoFar<0> & !totalTensSoFar<3> & !c3/itemToUse<0> & 
+	!c3/itemToUse<2> & c3/itemToUse<1>
+	# c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>;
 
 MACROCELL | 0 | 4 | ssdSegmentSelect_5_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 7 | c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2  | c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2  | c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2  | totalTensSoFar<3>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
-INPUTMC | 7 | 0 | 14 | 0 | 13 | 0 | 11 | 0 | 8 | 3 | 1 | 1 | 12 | 1 | 15
-EQ | 8 | 
-   ssdSegmentSelect<5> = !c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & 
-	!c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2
-	# !c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & 
-	c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-	# !c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2 & 
-	c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-	# totalTensSoFar<3> & !c3/itemToUse<0> & 
-	!c3/itemToUse<2> & c3/itemToUse<1>;
+INPUTS | 14 | totalTensSoFar<1>  | totalTensSoFar<2>  | totalTensSoFar<3>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>  | totalTensSoFar<0>  | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>  | EXP7_.EXP
+INPUTMC | 14 | 0 | 14 | 0 | 16 | 0 | 15 | 0 | 0 | 0 | 9 | 0 | 10 | 0 | 13 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 0 | 3
+IMPORTS | 1 | 0 | 3
+EQ | 26 | 
+   !ssdSegmentSelect<5> = totalTensSoFar<1> & !totalTensSoFar<2> & 
+	!totalTensSoFar<3> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	c3/itemToUse<1>
+	# totalTensSoFar<1> & totalTensSoFar<0> & 
+	!totalTensSoFar<3> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	c3/itemToUse<1>
+	# !totalTensSoFar<2> & totalTensSoFar<0> & 
+	!totalTensSoFar<3> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	c3/itemToUse<1>
+	# c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+;Imported pterms FB1_4
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>;
 
 MACROCELL | 0 | 1 | ssdSegmentSelect_4_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 7 | c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2  | c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2  | c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2  | totalTensSoFar<3>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
-INPUTMC | 7 | 0 | 13 | 0 | 14 | 0 | 11 | 0 | 8 | 3 | 1 | 1 | 12 | 1 | 15
-EQ | 6 | 
-   !ssdSegmentSelect<4> = !c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-	# !c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 & 
-	!c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2
-	# totalTensSoFar<3> & !c3/itemToUse<0> & 
-	!c3/itemToUse<2> & c3/itemToUse<1> & 
-	c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2;
+INPUTS | 15 | totalTensSoFar<0>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>  | totalTensSoFar<1>  | totalTensSoFar<3>  | totalTensSoFar<2>  | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>  | c3/itemToUse<0>.EXP  | EXP6_.EXP
+INPUTMC | 15 | 0 | 13 | 0 | 0 | 0 | 9 | 0 | 10 | 0 | 14 | 0 | 15 | 0 | 16 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 0 | 0 | 0 | 2
+IMPORTS | 2 | 0 | 0 | 0 | 2
+EQ | 24 | 
+   !ssdSegmentSelect<4> = totalTensSoFar<0> & !c3/itemToUse<0> & 
+	!c3/itemToUse<2> & c3/itemToUse<1>
+	# totalTensSoFar<1> & totalTensSoFar<3> & 
+	!c3/itemToUse<0> & !c3/itemToUse<2> & c3/itemToUse<1>
+	# !totalTensSoFar<1> & totalTensSoFar<2> & 
+	!c3/itemToUse<0> & !c3/itemToUse<2> & c3/itemToUse<1>
+	# c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	c1/debouncedCoins<5> & c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+;Imported pterms FB1_1
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+;Imported pterms FB1_3
+	# !c1/debouncedCoins<1> & c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>;
 
 MACROCELL | 0 | 7 | ssdSegmentSelect_7_OBUF
 ATTRIBUTES | 264962 | 0
-OUTPUTMC | 1 | 0 | 8
-INPUTS | 16 | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>  | c1/debouncers[1].c1/inBuffer<0>  | c1/debouncers[1].c1/inBuffer<1>  | c1/debouncers[1].c1/inBuffer<2>  | c1/debouncers[0].c1/inBuffer<0>  | c1/debouncers[0].c1/inBuffer<1>  | c1/debouncers[0].c1/inBuffer<2>  | totalTensSoFar<1>  | totalTensSoFar<2>  | c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2  | $OpTx$FX_DC$68  | c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2  | $OpTx$INV$64  | totalTensSoFar<0>
-INPUTMC | 16 | 3 | 1 | 1 | 12 | 1 | 15 | 3 | 11 | 1 | 6 | 1 | 3 | 1 | 11 | 1 | 9 | 1 | 8 | 3 | 17 | 0 | 9 | 3 | 13 | 3 | 15 | 3 | 12 | 1 | 17 | 0 | 6
-EXPORTS | 1 | 0 | 8
-EQ | 13 | 
-   ssdSegmentSelect<7> = c3/itemToUse<0> & !c3/itemToUse<2> & 
-	!c3/itemToUse<1> & c1/debouncers[0].c1/inBuffer<0> & 
-	c1/debouncers[0].c1/inBuffer<1> & c1/debouncers[0].c1/inBuffer<2>
-	# c3/itemToUse<0> & !c3/itemToUse<2> & 
-	!c3/itemToUse<1> & c1/debouncers[1].c1/inBuffer<0> & 
-	c1/debouncers[1].c1/inBuffer<1> & c1/debouncers[1].c1/inBuffer<2>;
-    ssdSegmentSelect_7_OBUF.EXP  =  totalTensSoFar<1> & totalTensSoFar<2> & 
-	c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & !$OpTx$FX_DC$68 & 
-	!c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & !$OpTx$INV$64
-	# totalTensSoFar<1> & totalTensSoFar<2> & 
-	totalTensSoFar<0> & !c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & 
-	!$OpTx$FX_DC$68 & c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & 
-	!$OpTx$INV$64
+INPUTS | 5 | c1/debouncedCoins<0>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>  | c1/debouncedCoins<1>
+INPUTMC | 5 | 3 | 17 | 0 | 0 | 0 | 9 | 0 | 10 | 3 | 15
+EQ | 4 | 
+   ssdSegmentSelect<7> = c1/debouncedCoins<1> & c3/itemToUse<0> & 
+	!c3/itemToUse<2> & !c3/itemToUse<1>
+	# c1/debouncedCoins<0> & c3/itemToUse<0> & 
+	!c3/itemToUse<2> & !c3/itemToUse<1>;
 
 MACROCELL | 1 | 1 | ssdUnitSelect_3_OBUF
 ATTRIBUTES | 264962 | 0
 INPUTS | 3 | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
-INPUTMC | 3 | 3 | 1 | 1 | 12 | 1 | 15
+INPUTMC | 3 | 0 | 0 | 0 | 9 | 0 | 10
 EQ | 2 | 
    ssdUnitSelect<3> = c3/itemToUse<0> & !c3/itemToUse<2> & 
 	c3/itemToUse<1>;
@@ -467,254 +675,78 @@ EQ | 2 |
 MACROCELL | 3 | 14 | ssdUnitSelect_5_OBUF
 ATTRIBUTES | 264962 | 0
 INPUTS | 3 | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
-INPUTMC | 3 | 3 | 1 | 1 | 12 | 1 | 15
+INPUTMC | 3 | 0 | 0 | 0 | 9 | 0 | 10
 EQ | 2 | 
    ssdUnitSelect<5> = c3/itemToUse<0> & c3/itemToUse<2>
 	# c3/itemToUse<2> & c3/itemToUse<1>;
 
-MACROCELL | 3 | 13 | c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2
+MACROCELL | 2 | 14 | $OpTx$FX_DC$86__$INT
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 10 | 3 | 17 | 0 | 9 | 0 | 6 | 0 | 8 | 0 | 0 | 0 | 2 | 1 | 0 | 0 | 11 | 0 | 12 | 0 | 7
-INPUTS | 3 | c1/debouncers[3].c1/inBuffer<0>  | c1/debouncers[3].c1/inBuffer<1>  | c1/debouncers[3].c1/inBuffer<2>
-INPUTMC | 3 | 3 | 7 | 3 | 6 | 3 | 5
-EQ | 2 | 
-   c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 = c1/debouncers[3].c1/inBuffer<0> & 
-	c1/debouncers[3].c1/inBuffer<1> & c1/debouncers[3].c1/inBuffer<2>;
+OUTPUTMC | 19 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 3 | 4 | 3 | 5 | 1 | 17 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12
+INPUTS | 7 | c1/debouncers/isActive  | buttons<5>  | buttons<4>  | buttons<3>  | buttons<2>  | buttons<1>  | buttons<0>
+INPUTMC | 1 | 3 | 4
+INPUTP | 6 | 62 | 59 | 52 | 50 | 49 | 46
+EQ | 3 | 
+   $OpTx$FX_DC$86__$INT = c1/debouncers/isActive
+	# buttons<5> & buttons<4> & buttons<3> & 
+	buttons<2> & buttons<1> & buttons<0>;
 
-MACROCELL | 3 | 15 | $OpTx$FX_DC$68
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 11 | 3 | 17 | 0 | 9 | 0 | 6 | 0 | 8 | 0 | 3 | 0 | 0 | 0 | 2 | 0 | 14 | 1 | 0 | 0 | 10 | 0 | 7
-INPUTS | 3 | c1/debouncers[2].c1/inBuffer<0>  | c1/debouncers[2].c1/inBuffer<1>  | c1/debouncers[2].c1/inBuffer<2>
-INPUTMC | 3 | 3 | 10 | 3 | 9 | 3 | 8
-EQ | 2 | 
-   $OpTx$FX_DC$68 = c1/debouncers[2].c1/inBuffer<0> & 
-	c1/debouncers[2].c1/inBuffer<1> & c1/debouncers[2].c1/inBuffer<2>;
-
-MACROCELL | 3 | 12 | c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 11 | 3 | 17 | 0 | 9 | 0 | 6 | 0 | 8 | 0 | 3 | 0 | 0 | 0 | 2 | 0 | 14 | 1 | 0 | 0 | 10 | 0 | 7
-INPUTS | 3 | c1/debouncers[4].c1/inBuffer<0>  | c1/debouncers[4].c1/inBuffer<1>  | c1/debouncers[4].c1/inBuffer<2>
-INPUTMC | 3 | 3 | 4 | 3 | 3 | 3 | 2
-EQ | 2 | 
-   c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 = c1/debouncers[4].c1/inBuffer<0> & 
-	c1/debouncers[4].c1/inBuffer<1> & c1/debouncers[4].c1/inBuffer<2>;
-
-MACROCELL | 0 | 3 | c2/total_Madd__add0000_Mxor_Result<1>__xor0000/c2/total_Madd__add0000_Mxor_Result<1>__xor0000_D13_
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 3 | 17
-INPUTS | 5 | $OpTx$FX_DC$68  | c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2  | $OpTx$INV$64  | totalTensSoFar<0>/totalTensSoFar<0>_CLKF  | totalTensSoFar<1>
-INPUTMC | 5 | 3 | 15 | 3 | 12 | 1 | 17 | 0 | 0 | 3 | 17
-EQ | 4 | 
-   c2/total_Madd__add0000_Mxor_Result<1>__xor0000/c2/total_Madd__add0000_Mxor_Result<1>__xor0000_D13_ = !$OpTx$FX_DC$68 & 
-	!c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & !$OpTx$INV$64 & 
-	!totalTensSoFar<0>/totalTensSoFar<0>_CLKF
-	$ totalTensSoFar<1>;
-
-MACROCELL | 1 | 17 | $OpTx$INV$64
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 10 | 3 | 17 | 0 | 9 | 0 | 6 | 0 | 8 | 0 | 3 | 0 | 2 | 0 | 14 | 0 | 10 | 0 | 12 | 0 | 7
-INPUTS | 9 | c1/debouncers[5].c1/inBuffer<0>  | c1/debouncers[5].c1/inBuffer<1>  | c1/debouncers[5].c1/inBuffer<2>  | c1/debouncers[1].c1/inBuffer<0>  | c1/debouncers[1].c1/inBuffer<1>  | c1/debouncers[1].c1/inBuffer<2>  | c1/debouncers[0].c1/inBuffer<0>  | c1/debouncers[0].c1/inBuffer<1>  | c1/debouncers[0].c1/inBuffer<2>
-INPUTMC | 9 | 2 | 17 | 1 | 2 | 2 | 16 | 3 | 11 | 1 | 6 | 1 | 3 | 1 | 11 | 1 | 9 | 1 | 8
-EQ | 6 | 
-   $OpTx$INV$64 = c1/debouncers[0].c1/inBuffer<0> & 
-	c1/debouncers[0].c1/inBuffer<1> & c1/debouncers[0].c1/inBuffer<2>
-	# c1/debouncers[1].c1/inBuffer<0> & 
-	c1/debouncers[1].c1/inBuffer<1> & c1/debouncers[1].c1/inBuffer<2>
-	# c1/debouncers[5].c1/inBuffer<0> & 
-	c1/debouncers[5].c1/inBuffer<1> & c1/debouncers[5].c1/inBuffer<2>;
-
-MACROCELL | 0 | 0 | totalTensSoFar<0>/totalTensSoFar<0>_CLKF
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 4 | 0 | 3 | 0 | 14 | 0 | 13 | 0 | 15
-INPUTS | 3 | c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2  | $OpTx$FX_DC$68  | c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2
-INPUTMC | 3 | 3 | 13 | 3 | 15 | 3 | 12
-EQ | 2 | 
-   totalTensSoFar<0>/totalTensSoFar<0>_CLKF = !c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & 
-	!$OpTx$FX_DC$68 & !c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2;
-
-MACROCELL | 0 | 2 | c2/total_Madd__add0000_Mxor_Result<2>__xor0000/c2/total_Madd__add0000_Mxor_Result<2>__xor0000_D14_
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 0 | 9
-INPUTS | 5 | c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2  | $OpTx$FX_DC$68  | c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2  | $OpTx$INV$64  | totalTensSoFar<2>
-INPUTMC | 5 | 3 | 13 | 3 | 15 | 3 | 12 | 1 | 17 | 0 | 9
-EQ | 4 | 
-   c2/total_Madd__add0000_Mxor_Result<2>__xor0000/c2/total_Madd__add0000_Mxor_Result<2>__xor0000_D14_ = !c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & 
-	$OpTx$FX_DC$68 & !c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & 
-	!$OpTx$INV$64
-	$ totalTensSoFar<2>;
-
-MACROCELL | 0 | 14 | c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 8 | 0 | 5 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1 | 0 | 13
-INPUTS | 13 | totalTensSoFar<1>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>  | $OpTx$FX_DC$68  | c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2  | $OpTx$INV$64  | totalTensSoFar<0>/totalTensSoFar<0>_CLKF  | c1/debouncers[1].c1/inBuffer<0>  | c1/debouncers[1].c1/inBuffer<1>  | c1/debouncers[1].c1/inBuffer<2>  | c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2  | EXP8_.EXP
-INPUTMC | 13 | 3 | 17 | 3 | 1 | 1 | 12 | 1 | 15 | 3 | 15 | 3 | 12 | 1 | 17 | 0 | 0 | 3 | 11 | 1 | 6 | 1 | 3 | 1 | 0 | 0 | 15
-EXPORTS | 1 | 0 | 13
-IMPORTS | 1 | 0 | 15
-EQ | 29 | 
-   c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2 = totalTensSoFar<1> & !c3/itemToUse<0> & 
-	!c3/itemToUse<2> & c3/itemToUse<1>
-	# !c3/itemToUse<0> & !c3/itemToUse<2> & 
-	!c3/itemToUse<1> & !$OpTx$FX_DC$68 & 
-	!c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2 & !$OpTx$INV$64 & 
-	!totalTensSoFar<0>/totalTensSoFar<0>_CLKF
-;Imported pterms FB1_16
-	# c3/itemToUse<0> & !c3/itemToUse<2> & 
-	!c3/itemToUse<1> & c1/debouncers[0].c1/inBuffer<0> & 
-	c1/debouncers[0].c1/inBuffer<1> & !c1/debouncers[1].c1/inBuffer<0> & 
-	c1/debouncers[0].c1/inBuffer<2> & totalTensSoFar<0>/totalTensSoFar<0>_CLKF & 
-	!c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2
-	# c3/itemToUse<0> & !c3/itemToUse<2> & 
-	!c3/itemToUse<1> & c1/debouncers[0].c1/inBuffer<0> & 
-	c1/debouncers[0].c1/inBuffer<1> & !c1/debouncers[1].c1/inBuffer<1> & 
-	c1/debouncers[0].c1/inBuffer<2> & totalTensSoFar<0>/totalTensSoFar<0>_CLKF & 
-	!c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2
-	# c3/itemToUse<0> & !c3/itemToUse<2> & 
-	!c3/itemToUse<1> & c1/debouncers[0].c1/inBuffer<0> & 
-	c1/debouncers[0].c1/inBuffer<1> & c1/debouncers[0].c1/inBuffer<2> & 
-	!c1/debouncers[1].c1/inBuffer<2> & totalTensSoFar<0>/totalTensSoFar<0>_CLKF & 
-	!c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2;
-    c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2.EXP  =  !c3/itemToUse<0> & !c3/itemToUse<1> & 
-	$OpTx$FX_DC$68 & c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2
-	# !c3/itemToUse<0> & !c3/itemToUse<1> & 
-	!$OpTx$FX_DC$68 & totalTensSoFar<0>/totalTensSoFar<0>_CLKF
-	# c3/itemToUse<0> & c1/debouncers[1].c1/inBuffer<0> & 
-	c1/debouncers[1].c1/inBuffer<1> & c1/debouncers[1].c1/inBuffer<2> & 
-	c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2
-
-MACROCELL | 1 | 0 | c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 5 | 0 | 12 | 0 | 11 | 0 | 13 | 0 | 14 | 0 | 15
-INPUTS | 6 | c1/debouncers[5].c1/inBuffer<0>  | c1/debouncers[5].c1/inBuffer<1>  | c1/debouncers[5].c1/inBuffer<2>  | c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2  | $OpTx$FX_DC$68  | c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2
-INPUTMC | 6 | 2 | 17 | 1 | 2 | 2 | 16 | 3 | 13 | 3 | 15 | 3 | 12
-EQ | 4 | 
-   c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2 = c1/debouncers[5].c1/inBuffer<0> & 
-	c1/debouncers[5].c1/inBuffer<1> & c1/debouncers[5].c1/inBuffer<2> & 
-	!c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2 & !$OpTx$FX_DC$68 & 
-	!c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2;
-
-MACROCELL | 0 | 11 | c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 7 | 0 | 5 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1
-INPUTS | 7 | c3/itemToUse<2>  | c3/itemToUse<0>  | c3/itemToUse<1>  | c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2  | totalTensSoFar<2>  | c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2  | EXP6_.EXP
-INPUTMC | 7 | 1 | 12 | 3 | 1 | 1 | 15 | 1 | 0 | 0 | 9 | 3 | 13 | 0 | 10
-IMPORTS | 1 | 0 | 10
-EQ | 17 | 
-   c3/display_bcdValue<2>/c3/display_bcdValue<2>_D2 = c3/itemToUse<2>
-	# !totalTensSoFar<2> & c3/itemToUse<1>
-	# c3/itemToUse<0> & c3/itemToUse<1>
-	# c3/itemToUse<0> & 
-	!c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2
-	# !c3/itemToUse<0> & !c3/itemToUse<1> & 
-	c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2
-;Imported pterms FB1_11
-	# !c3/itemToUse<0> & !c3/itemToUse<1> & 
-	!$OpTx$FX_DC$68
-	# !c3/itemToUse<0> & !c3/itemToUse<1> & 
-	c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2
-	# !c3/itemToUse<0> & !c3/itemToUse<1> & $OpTx$INV$64
-	# c3/itemToUse<0> & c1/debouncers[0].c1/inBuffer<0> & 
-	c1/debouncers[0].c1/inBuffer<1> & c1/debouncers[0].c1/inBuffer<2>
-	# c3/itemToUse<0> & c1/debouncers[1].c1/inBuffer<0> & 
-	c1/debouncers[1].c1/inBuffer<1> & c1/debouncers[1].c1/inBuffer<2>;
-
-MACROCELL | 0 | 13 | c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 7 | 0 | 5 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 16 | 0 | 4 | 0 | 1
-INPUTS | 9 | c3/itemToUse<2>  | c3/itemToUse<0>  | c3/itemToUse<1>  | totalTensSoFar<0>  | totalTensSoFar<0>/totalTensSoFar<0>_CLKF  | c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2  | c1/debouncers[1].c1/inBuffer<0>  | EXP7_.EXP  | c3/display_bcdValue<1>/c3/display_bcdValue<1>_D2.EXP
-INPUTMC | 9 | 1 | 12 | 3 | 1 | 1 | 15 | 0 | 6 | 0 | 0 | 1 | 0 | 3 | 11 | 0 | 12 | 0 | 14
-IMPORTS | 2 | 0 | 12 | 0 | 14
-EQ | 25 | 
-   c3/display_bcdValue<0>/c3/display_bcdValue<0>_D2 = c3/itemToUse<2>
-	# !totalTensSoFar<0> & c3/itemToUse<1>
-	# c3/itemToUse<0> & c3/itemToUse<1>
-	# c3/itemToUse<0> & !c1/debouncers[1].c1/inBuffer<0> & 
-	!c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2
-	# c3/itemToUse<0> & 
-	!totalTensSoFar<0>/totalTensSoFar<0>_CLKF & !c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2
-;Imported pterms FB1_13
-	# c3/itemToUse<0> & !c1/debouncers[1].c1/inBuffer<1> & 
-	!c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2
-	# c3/itemToUse<0> & !c1/debouncers[1].c1/inBuffer<2> & 
-	!c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2
-	# !c3/itemToUse<0> & !c3/itemToUse<1> & 
-	c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2
-	# !c3/itemToUse<0> & !c3/itemToUse<1> & $OpTx$INV$64
-	# c3/itemToUse<0> & c1/debouncers[0].c1/inBuffer<0> & 
-	c1/debouncers[0].c1/inBuffer<1> & c1/debouncers[0].c1/inBuffer<2>
-;Imported pterms FB1_15
-	# !c3/itemToUse<0> & !c3/itemToUse<1> & 
-	$OpTx$FX_DC$68 & c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2
-	# !c3/itemToUse<0> & !c3/itemToUse<1> & 
-	!$OpTx$FX_DC$68 & totalTensSoFar<0>/totalTensSoFar<0>_CLKF
-	# c3/itemToUse<0> & c1/debouncers[1].c1/inBuffer<0> & 
-	c1/debouncers[1].c1/inBuffer<1> & c1/debouncers[1].c1/inBuffer<2> & 
-	c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2;
-
-MACROCELL | 0 | 10 | EXP6_
+MACROCELL | 0 | 2 | EXP6_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 0 | 11
-INPUTS | 11 | c3/itemToUse<0>  | c3/itemToUse<1>  | $OpTx$FX_DC$68  | c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2  | $OpTx$INV$64  | c1/debouncers[0].c1/inBuffer<0>  | c1/debouncers[0].c1/inBuffer<1>  | c1/debouncers[0].c1/inBuffer<2>  | c1/debouncers[1].c1/inBuffer<0>  | c1/debouncers[1].c1/inBuffer<1>  | c1/debouncers[1].c1/inBuffer<2>
-INPUTMC | 11 | 3 | 1 | 1 | 15 | 3 | 15 | 3 | 12 | 1 | 17 | 1 | 11 | 1 | 9 | 1 | 8 | 3 | 11 | 1 | 6 | 1 | 3
-EXPORTS | 1 | 0 | 11
-EQ | 9 | 
-       EXP6_.EXP  =  !c3/itemToUse<0> & !c3/itemToUse<1> & 
-	!$OpTx$FX_DC$68
-	# !c3/itemToUse<0> & !c3/itemToUse<1> & 
-	c1/debouncedCoins<4>/c1/debouncedCoins<4>_D2
-	# !c3/itemToUse<0> & !c3/itemToUse<1> & $OpTx$INV$64
-	# c3/itemToUse<0> & c1/debouncers[0].c1/inBuffer<0> & 
-	c1/debouncers[0].c1/inBuffer<1> & c1/debouncers[0].c1/inBuffer<2>
-	# c3/itemToUse<0> & c1/debouncers[1].c1/inBuffer<0> & 
-	c1/debouncers[1].c1/inBuffer<1> & c1/debouncers[1].c1/inBuffer<2>
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 9 | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
+INPUTMC | 9 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 0 | 0 | 0 | 9 | 0 | 10
+EXPORTS | 1 | 0 | 1
+EQ | 4 | 
+       EXP6_.EXP  =  !c1/debouncedCoins<1> & c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
 
-MACROCELL | 0 | 12 | EXP7_
+MACROCELL | 0 | 3 | EXP7_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 0 | 13
-INPUTS | 10 | c3/itemToUse<0>  | c1/debouncers[1].c1/inBuffer<1>  | c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2  | c1/debouncers[1].c1/inBuffer<2>  | c3/itemToUse<1>  | c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2  | $OpTx$INV$64  | c1/debouncers[0].c1/inBuffer<0>  | c1/debouncers[0].c1/inBuffer<1>  | c1/debouncers[0].c1/inBuffer<2>
-INPUTMC | 10 | 3 | 1 | 1 | 6 | 1 | 0 | 1 | 3 | 1 | 15 | 3 | 13 | 1 | 17 | 1 | 11 | 1 | 9 | 1 | 8
-EXPORTS | 1 | 0 | 13
-EQ | 9 | 
-       EXP7_.EXP  =  c3/itemToUse<0> & !c1/debouncers[1].c1/inBuffer<1> & 
-	!c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2
-	# c3/itemToUse<0> & !c1/debouncers[1].c1/inBuffer<2> & 
-	!c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2
-	# !c3/itemToUse<0> & !c3/itemToUse<1> & 
-	c1/debouncedCoins<3>/c1/debouncedCoins<3>_D2
-	# !c3/itemToUse<0> & !c3/itemToUse<1> & $OpTx$INV$64
-	# c3/itemToUse<0> & c1/debouncers[0].c1/inBuffer<0> & 
-	c1/debouncers[0].c1/inBuffer<1> & c1/debouncers[0].c1/inBuffer<2>
+OUTPUTMC | 1 | 0 | 4
+INPUTS | 9 | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
+INPUTMC | 9 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 0 | 0 | 0 | 9 | 0 | 10
+EXPORTS | 1 | 0 | 4
+EQ | 8 | 
+       EXP7_.EXP  =  !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
 
-MACROCELL | 0 | 15 | EXP8_
+MACROCELL | 0 | 6 | EXP8_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 0 | 14
-INPUTS | 11 | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>  | c1/debouncers[0].c1/inBuffer<0>  | c1/debouncers[0].c1/inBuffer<1>  | c1/debouncers[1].c1/inBuffer<0>  | c1/debouncers[0].c1/inBuffer<2>  | totalTensSoFar<0>/totalTensSoFar<0>_CLKF  | c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2  | c1/debouncers[1].c1/inBuffer<1>  | c1/debouncers[1].c1/inBuffer<2>
-INPUTMC | 11 | 3 | 1 | 1 | 12 | 1 | 15 | 1 | 11 | 1 | 9 | 3 | 11 | 1 | 8 | 0 | 0 | 1 | 0 | 1 | 6 | 1 | 3
-EXPORTS | 1 | 0 | 14
-EQ | 15 | 
-       EXP8_.EXP  =  c3/itemToUse<0> & !c3/itemToUse<2> & 
-	!c3/itemToUse<1> & c1/debouncers[0].c1/inBuffer<0> & 
-	c1/debouncers[0].c1/inBuffer<1> & !c1/debouncers[1].c1/inBuffer<0> & 
-	c1/debouncers[0].c1/inBuffer<2> & totalTensSoFar<0>/totalTensSoFar<0>_CLKF & 
-	!c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2
-	# c3/itemToUse<0> & !c3/itemToUse<2> & 
-	!c3/itemToUse<1> & c1/debouncers[0].c1/inBuffer<0> & 
-	c1/debouncers[0].c1/inBuffer<1> & !c1/debouncers[1].c1/inBuffer<1> & 
-	c1/debouncers[0].c1/inBuffer<2> & totalTensSoFar<0>/totalTensSoFar<0>_CLKF & 
-	!c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2
-	# c3/itemToUse<0> & !c3/itemToUse<2> & 
-	!c3/itemToUse<1> & c1/debouncers[0].c1/inBuffer<0> & 
-	c1/debouncers[0].c1/inBuffer<1> & c1/debouncers[0].c1/inBuffer<2> & 
-	!c1/debouncers[1].c1/inBuffer<2> & totalTensSoFar<0>/totalTensSoFar<0>_CLKF & 
-	!c1/onesValue<0>_bdd1/c1/onesValue<0>_bdd1_D2
+OUTPUTMC | 1 | 0 | 5
+INPUTS | 9 | c1/debouncedCoins<1>  | c1/debouncedCoins<2>  | c1/debouncedCoins<3>  | c1/debouncedCoins<4>  | c1/debouncedCoins<0>  | c1/debouncedCoins<5>  | c3/itemToUse<0>  | c3/itemToUse<2>  | c3/itemToUse<1>
+INPUTMC | 9 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 0 | 0 | 0 | 9 | 0 | 10
+EXPORTS | 1 | 0 | 5
+EQ | 12 | 
+       EXP8_.EXP  =  !c1/debouncedCoins<1> & c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	c1/debouncedCoins<3> & !c1/debouncedCoins<4> & !c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & !c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
+	# !c1/debouncedCoins<1> & !c1/debouncedCoins<2> & 
+	!c1/debouncedCoins<3> & !c1/debouncedCoins<4> & c1/debouncedCoins<0> & 
+	!c1/debouncedCoins<5> & c3/itemToUse<0> & !c3/itemToUse<2> & 
+	!c3/itemToUse<1>
 
-PIN | reset | 64 | 0 | N/A | 63 | 4 | 3 | 17 | 0 | 9 | 0 | 6 | 0 | 8
-PIN | clock | 4096 | 0 | N/A | 20 | 21 | 3 | 1 | 1 | 12 | 1 | 15 | 1 | 11 | 1 | 9 | 3 | 11 | 1 | 6 | 3 | 10 | 3 | 9 | 3 | 7 | 3 | 6 | 3 | 4 | 3 | 3 | 2 | 17 | 1 | 2 | 1 | 8 | 1 | 3 | 3 | 8 | 3 | 5 | 3 | 2 | 2 | 16
-PIN | buttons<0> | 64 | 0 | N/A | 46 | 1 | 1 | 11
-PIN | buttons<1> | 64 | 0 | N/A | 49 | 1 | 3 | 11
-PIN | buttons<2> | 64 | 0 | N/A | 50 | 1 | 3 | 10
-PIN | buttons<3> | 64 | 0 | N/A | 52 | 1 | 3 | 7
-PIN | buttons<4> | 64 | 0 | N/A | 59 | 1 | 3 | 4
-PIN | buttons<5> | 64 | 0 | N/A | 62 | 1 | 2 | 17
+PIN | buttons<5> | 64 | 0 | N/A | 62 | 2 | 2 | 15 | 2 | 14
+PIN | buttons<4> | 64 | 0 | N/A | 59 | 2 | 2 | 16 | 2 | 14
+PIN | buttons<3> | 64 | 0 | N/A | 52 | 2 | 2 | 17 | 2 | 14
+PIN | buttons<2> | 64 | 0 | N/A | 50 | 2 | 3 | 13 | 2 | 14
+PIN | buttons<1> | 64 | 0 | N/A | 49 | 2 | 3 | 15 | 2 | 14
+PIN | buttons<0> | 64 | 0 | N/A | 46 | 2 | 3 | 17 | 2 | 14
+PIN | clock | 4096 | 0 | N/A | 20 | 22 | 3 | 15 | 3 | 13 | 2 | 17 | 2 | 16 | 3 | 17 | 2 | 15 | 3 | 4 | 3 | 5 | 1 | 17 | 0 | 12 | 0 | 11 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 17 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 12 | 0 | 0 | 0 | 9 | 0 | 10
+PIN | reset | 64 | 0 | N/A | 63 | 4 | 0 | 14 | 0 | 16 | 0 | 13 | 0 | 15
 PIN | ssdSegmentSelect<6> | 536871040 | 0 | N/A | 13
 PIN | ssdUnitSelect<0> | 536871040 | 0 | N/A | 90
 PIN | ssdUnitSelect<1> | 536871040 | 0 | N/A | 89

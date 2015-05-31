@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TestThreeSecondLatch_isim_beh.exe" -prj "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TestThreeSecondLatch_beh.prj" "work.TestThreeSecondLatch" 

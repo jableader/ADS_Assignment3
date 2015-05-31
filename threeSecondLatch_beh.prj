@@ -1,0 +1,2 @@
+vhdl work "CommonUnits.vhd"
+vhdl work "debounce.vhd"
