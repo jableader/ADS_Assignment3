@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="TopLevel">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2015-5-30T3:3:20</timestamp>
+    <pin polarity="Input" x="0" y="-96" name="clock" />
+    <pin polarity="Input" x="0" y="-32" name="buttons(0:5)" />
+    <pin polarity="Output" x="512" y="-96" name="ssdSegmentSelect(0:7)" />
+    <pin polarity="Output" x="512" y="-32" name="ssdUnitSelect(0:5)" />
+    <graph>
+        <rect width="384" x="64" y="-128" height="128" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="256" y="-136" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin clock" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin buttons(0:5)" />
+        <rect width="64" x="0" y="-44" height="24" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-96" type="pin ssdSegmentSelect(0:7)" />
+        <rect width="64" x="448" y="-108" height="24" />
+        <line x2="512" y1="-96" y2="-96" x1="448" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-32" type="pin ssdUnitSelect(0:5)" />
+        <rect width="64" x="448" y="-44" height="24" />
+        <line x2="512" y1="-32" y2="-32" x1="448" />
+    </graph>
+</symbol>

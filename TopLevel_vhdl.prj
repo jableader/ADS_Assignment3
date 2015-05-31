@@ -1,0 +1,7 @@
+vhdl work "C:\Users\Jableader\Documents\Xilinx\ADS_Assignment_3\CommonUnits.vhd"
+vhdl work "C:\Users\Jableader\Documents\Xilinx\ADS_Assignment_3\debounce.vhd"
+vhdl work "C:\Users\Jableader\Documents\Xilinx\ADS_Assignment_3\BCD_to_SSD.vhd"
+vhdl work "C:\Users\Jableader\Documents\Xilinx\ADS_Assignment_3\SevenSegmentDisplayGroup.vhd"
+vhdl work "C:\Users\Jableader\Documents\Xilinx\ADS_Assignment_3\MoneyManager.vhd"
+vhdl work "C:\Users\Jableader\Documents\Xilinx\ADS_Assignment_3\CoinAcceptor.vhd"
+vhdl work "C:\Users\Jableader\Documents\Xilinx\ADS_Assignment_3\TopLevel.vhd"

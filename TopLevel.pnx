@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE ibis [
+<!ELEMENT ibis (part, pin+)>
+<!ELEMENT part EMPTY>
+<!ELEMENT pin EMPTY>
+<!ATTLIST part
+  arch   CDATA #REQUIRED
+  device CDATA #REQUIRED
+  spg    CDATA #REQUIRED
+  pkg    CDATA #REQUIRED>
+<!ATTLIST pin
+  nm     CDATA #REQUIRED
+  no     CDATA #REQUIRED
+  iostd  (TTL|LVTTL|LVCMOS2|NA) "NA"
+  sr     (SLOW|FAST|slow|fast) "SLOW"
+  dir    (BIDIR|bidir|INPUT|input|OUTPUT|output) "BIDIR">
+]>
+<ibis><part arch="xc9500xl" device="XC9572XL" pkg="PC44" spg="-5"/><pin dir="input" nm="reset" no="26"/><pin dir="input" nm="clock" no="5"/><pin dir="input" nm="buttons&lt;0&gt;" no="18"/><pin dir="input" nm="buttons&lt;1&gt;" no="19"/><pin dir="input" nm="buttons&lt;2&gt;" no="20"/><pin dir="input" nm="buttons&lt;3&gt;" no="22"/><pin dir="input" nm="buttons&lt;4&gt;" no="24"/><pin dir="input" nm="buttons&lt;5&gt;" no="25"/><pin dir="output" nm="ssdSegmentSelect&lt;6&gt;" no="3" sr="fast"/><pin dir="output" nm="ssdUnitSelect&lt;0&gt;" no="38" sr="fast"/><pin dir="output" nm="ssdUnitSelect&lt;1&gt;" no="37" sr="fast"/><pin dir="output" nm="ssdUnitSelect&lt;2&gt;" no="36" sr="fast"/><pin dir="output" nm="ssdUnitSelect&lt;4&gt;" no="34" sr="fast"/><pin dir="output" nm="ssdSegmentSelect&lt;0&gt;" no="40" sr="fast"/><pin dir="output" nm="ssdSegmentSelect&lt;1&gt;" no="42" sr="fast"/><pin dir="output" nm="ssdSegmentSelect&lt;2&gt;" no="43" sr="fast"/><pin dir="output" nm="ssdSegmentSelect&lt;3&gt;" no="44" sr="fast"/><pin dir="output" nm="ssdSegmentSelect&lt;5&gt;" no="2" sr="fast"/><pin dir="output" nm="ssdSegmentSelect&lt;4&gt;" no="1" sr="fast"/><pin dir="output" nm="ssdSegmentSelect&lt;7&gt;" no="4" sr="fast"/><pin dir="output" nm="ssdUnitSelect&lt;3&gt;" no="35" sr="fast"/><pin dir="output" nm="ssdUnitSelect&lt;5&gt;" no="33" sr="fast"/></ibis>

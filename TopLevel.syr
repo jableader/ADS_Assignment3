@@ -1,0 +1,304 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: TopLevel.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopLevel.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopLevel"
+Output Format                      : NGC
+Target Device                      : XC9500XL CPLDs
+
+---- Source Options
+Top Module Name                    : TopLevel
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/CommonUnits.vhd" in Library work.
+Architecture commonunits of Entity commonunits is up to date.
+Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/BCD_to_SSD.vhd" in Library work.
+Architecture behavioral of Entity bcd_to_ssd is up to date.
+Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/debounce.vhd" in Library work.
+Architecture behavioral of Entity debounce is up to date.
+Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/CoinAcceptor.vhd" in Library work.
+Entity <coinacceptor> compiled.
+Entity <coinacceptor> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/MoneyManager.vhd" in Library work.
+Architecture behavioral of Entity summanager is up to date.
+Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/SevenSegmentDisplayGroup.vhd" in Library work.
+Architecture behavioral of Entity sevensegmentdisplaygroup is up to date.
+Compiling vhdl file "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.vhd" in Library work.
+Entity <toplevel> compiled.
+Entity <toplevel> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TopLevel> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <CoinAcceptor> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <SumManager> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <SevenSegmentDisplayGroup> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <debounce> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <BCD_to_SSD> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TopLevel> in library <work> (Architecture <behavioral>).
+INFO:Xst:1739 - HDL ADVISOR - "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.vhd" line 9: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+Entity <TopLevel> analyzed. Unit <TopLevel> generated.
+
+Analyzing Entity <CoinAcceptor> in library <work> (Architecture <Behavioral>).
+Entity <CoinAcceptor> analyzed. Unit <CoinAcceptor> generated.
+
+Analyzing Entity <debounce> in library <work> (Architecture <Behavioral>).
+Entity <debounce> analyzed. Unit <debounce> generated.
+
+Analyzing Entity <SumManager> in library <work> (Architecture <Behavioral>).
+Entity <SumManager> analyzed. Unit <SumManager> generated.
+
+Analyzing Entity <SevenSegmentDisplayGroup> in library <work> (Architecture <Behavioral>).
+Entity <SevenSegmentDisplayGroup> analyzed. Unit <SevenSegmentDisplayGroup> generated.
+
+Analyzing Entity <BCD_to_SSD> in library <work> (Architecture <Behavioral>).
+Entity <BCD_to_SSD> analyzed. Unit <BCD_to_SSD> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <SumManager>.
+    Related source file is "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/MoneyManager.vhd".
+    Found 4-bit up accumulator for signal <total>.
+    Summary:
+	inferred   1 Accumulator(s).
+Unit <SumManager> synthesized.
+
+
+Synthesizing Unit <debounce>.
+    Related source file is "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/debounce.vhd".
+    Found 3-bit register for signal <inBuffer>.
+Unit <debounce> synthesized.
+
+
+Synthesizing Unit <BCD_to_SSD>.
+    Related source file is "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/BCD_to_SSD.vhd".
+    Found 16x7-bit ROM for signal <outputSegments>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <BCD_to_SSD> synthesized.
+
+
+Synthesizing Unit <CoinAcceptor>.
+    Related source file is "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/CoinAcceptor.vhd".
+Unit <CoinAcceptor> synthesized.
+
+
+Synthesizing Unit <SevenSegmentDisplayGroup>.
+    Related source file is "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/SevenSegmentDisplayGroup.vhd".
+    Found 1-bit 6-to-1 multiplexer for signal <display.bcdValue<0>>.
+    Found 1-bit 6-to-1 multiplexer for signal <display.decimalPoint>.
+    Found 3-bit up counter for signal <itemToUse>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <SevenSegmentDisplayGroup> synthesized.
+
+
+Synthesizing Unit <TopLevel>.
+    Related source file is "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.vhd".
+WARNING:Xst:1780 - Signal <remainingTens> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <display<5>.decimalPoint> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <display<5>.bcdValue> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+WARNING:Xst:653 - Signal <display<4>.decimalPoint> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <display<4>.bcdValue> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+WARNING:Xst:646 - Signal <coinWasAdded> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <TopLevel> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 1
+ 3-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 4-bit up accumulator                                  : 1
+# Registers                                            : 6
+ 3-bit register                                        : 6
+# Multiplexers                                         : 2
+ 1-bit 6-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 1
+ 3-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 4-bit up accumulator                                  : 1
+# Multiplexers                                         : 2
+ 1-bit 6-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TopLevel> ...
+
+Optimizing unit <BCD_to_SSD> ...
+
+Optimizing unit <debounce> ...
+  implementation constraint: INIT=r	 : inBuffer_2
+  implementation constraint: INIT=r	 : inBuffer_0
+  implementation constraint: INIT=r	 : inBuffer_1
+
+Optimizing unit <CoinAcceptor> ...
+
+Optimizing unit <SevenSegmentDisplayGroup> ...
+  implementation constraint: INIT=r	 : itemToUse_0
+  implementation constraint: INIT=r	 : itemToUse_2
+  implementation constraint: INIT=r	 : itemToUse_1
+
+Optimizing unit <SumManager> ...
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TopLevel.ngr
+Top Level Output File Name         : TopLevel
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : XC9500XL CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 22
+
+Cell Usage :
+# BELS                             : 205
+#      AND2                        : 57
+#      AND3                        : 20
+#      INV                         : 82
+#      OR2                         : 34
+#      OR3                         : 3
+#      OR4                         : 1
+#      XOR2                        : 8
+# FlipFlops/Latches                : 25
+#      FD                          : 21
+#      FDC                         : 4
+# IO Buffers                       : 22
+#      IBUF                        : 8
+#      OBUF                        : 14
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.43 secs
+ 
+--> 
+
+Total memory usage is 228340 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

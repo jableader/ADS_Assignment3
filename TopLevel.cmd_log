@@ -1,0 +1,137 @@
+vhdtdtfi -lib work CommonUnits.vhd -lib work debounce.vhd -lib work CoinAcceptor.vhd -lib work TopLevel.vhd -prj ADS_Assignment_3 -o TopLevel.spl -module TopLevel -template D:/Program/Xilinx/14.5/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl TopLevel.spl C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.sym 
+vhdtdtfi -prj ADS_Assignment_3 -o C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.vhi -module TopLevel -template D:/Program/Xilinx/14.5/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work CommonUnits.vhd -lib work debounce.vhd -lib work CoinAcceptor.vhd -lib work TopLevel.vhd 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+tsim -intstyle ise TopLevel TopLevel.nga 
+taengine -intstyle ise -f TopLevel -w --format html1 -l TopLevel_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n TopLevel -i TopLevel 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+tsim -intstyle ise TopLevel TopLevel.nga 
+hprep6 -s IEEE1149 -n TopLevel -i TopLevel 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+tsim -intstyle ise TopLevel TopLevel.nga 
+hprep6 -s IEEE1149 -n TopLevel -i TopLevel 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+tsim -intstyle ise TopLevel TopLevel.nga 
+hprep6 -s IEEE1149 -n TopLevel -i TopLevel 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+tsim -intstyle ise TopLevel TopLevel.nga 
+hprep6 -s IEEE1149 -n TopLevel -i TopLevel 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+tsim -intstyle ise TopLevel TopLevel.nga 
+hprep6 -s IEEE1149 -n TopLevel -i TopLevel 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+tsim -intstyle ise TopLevel TopLevel.nga 
+hprep6 -s IEEE1149 -n TopLevel -i TopLevel 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+tsim -intstyle ise TopLevel TopLevel.nga 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+tsim -intstyle ise TopLevel TopLevel.nga 
+hprep6 -s IEEE1149 -n TopLevel -i TopLevel 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+tsim -intstyle ise TopLevel TopLevel.nga 
+hprep6 -s IEEE1149 -n TopLevel -i TopLevel 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+tsim -intstyle ise TopLevel TopLevel.nga 
+hprep6 -s IEEE1149 -n TopLevel -i TopLevel 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+tsim -intstyle ise TopLevel TopLevel.nga 
+hprep6 -s IEEE1149 -n TopLevel -i TopLevel 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+xst -intstyle ise -ifn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.xst" -ofn "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TopLevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc TopLevel.ucf -p xc9572xl-PC44-5 TopLevel.ngc TopLevel.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper TopLevel.ngd 
+XSLTProcess TopLevel_build.xml 
+tsim -intstyle ise TopLevel TopLevel.nga 
+hprep6 -s IEEE1149 -n TopLevel -i TopLevel 

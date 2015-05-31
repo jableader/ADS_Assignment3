@@ -1,0 +1,341 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$FX_DC$68 <= (c1/debouncers[2].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[2].c1/inBuffer(1) AND c1/debouncers[2].c1/inBuffer(2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$INV$64 <= ((c1/debouncers[0].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[0].c1/inBuffer(1) AND c1/debouncers[0].c1/inBuffer(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c1/debouncers[1].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[1].c1/inBuffer(1) AND c1/debouncers[1].c1/inBuffer(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c1/debouncers[5].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[5].c1/inBuffer(1) AND c1/debouncers[5].c1/inBuffer(2)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 <= (c1/debouncers[3].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[3].c1/inBuffer(1) AND c1/debouncers[3].c1/inBuffer(2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 <= (c1/debouncers[4].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[4].c1/inBuffer(1) AND c1/debouncers[4].c1/inBuffer(2));
+</td></tr><tr><td>
+FDCPE_c1/debouncers[0].c1/inBuffer0: FDCPE port map (c1/debouncers[0].c1/inBuffer(0),NOT buttons(0),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[0].c1/inBuffer1: FDCPE port map (c1/debouncers[0].c1/inBuffer(1),c1/debouncers[0].c1/inBuffer(0),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[0].c1/inBuffer2: FDCPE port map (c1/debouncers[0].c1/inBuffer(2),c1/debouncers[0].c1/inBuffer(1),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[1].c1/inBuffer0: FDCPE port map (c1/debouncers[1].c1/inBuffer(0),NOT buttons(1),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[1].c1/inBuffer1: FDCPE port map (c1/debouncers[1].c1/inBuffer(1),c1/debouncers[1].c1/inBuffer(0),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[1].c1/inBuffer2: FDCPE port map (c1/debouncers[1].c1/inBuffer(2),c1/debouncers[1].c1/inBuffer(1),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[2].c1/inBuffer0: FDCPE port map (c1/debouncers[2].c1/inBuffer(0),NOT buttons(2),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[2].c1/inBuffer1: FDCPE port map (c1/debouncers[2].c1/inBuffer(1),c1/debouncers[2].c1/inBuffer(0),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[2].c1/inBuffer2: FDCPE port map (c1/debouncers[2].c1/inBuffer(2),c1/debouncers[2].c1/inBuffer(1),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[3].c1/inBuffer0: FDCPE port map (c1/debouncers[3].c1/inBuffer(0),NOT buttons(3),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[3].c1/inBuffer1: FDCPE port map (c1/debouncers[3].c1/inBuffer(1),c1/debouncers[3].c1/inBuffer(0),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[3].c1/inBuffer2: FDCPE port map (c1/debouncers[3].c1/inBuffer(2),c1/debouncers[3].c1/inBuffer(1),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[4].c1/inBuffer0: FDCPE port map (c1/debouncers[4].c1/inBuffer(0),NOT buttons(4),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[4].c1/inBuffer1: FDCPE port map (c1/debouncers[4].c1/inBuffer(1),c1/debouncers[4].c1/inBuffer(0),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[4].c1/inBuffer2: FDCPE port map (c1/debouncers[4].c1/inBuffer(2),c1/debouncers[4].c1/inBuffer(1),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[5].c1/inBuffer0: FDCPE port map (c1/debouncers[5].c1/inBuffer(0),NOT buttons(5),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[5].c1/inBuffer1: FDCPE port map (c1/debouncers[5].c1/inBuffer(1),c1/debouncers[5].c1/inBuffer(0),clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c1/debouncers[5].c1/inBuffer2: FDCPE port map (c1/debouncers[5].c1/inBuffer(2),c1/debouncers[5].c1/inBuffer(1),clock,'0','0');
+</td></tr><tr><td>
+</td></tr><tr><td>
+c1/onesValue(0)_bdd1/c1/onesValue(0)_bdd1_D2 <= (c1/debouncers[5].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[5].c1/inBuffer(1) AND c1/debouncers[5].c1/inBuffer(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND NOT $OpTx$FX_DC$68 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+c2/total_Madd__add0000_Mxor_Result(1)__xor0000/c2/total_Madd__add0000_Mxor_Result(1)__xor0000_D13_ <= (NOT $OpTx$FX_DC$68 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 AND NOT $OpTx$INV$64 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT totalTensSoFar(0)/totalTensSoFar(0)_CLKF)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c2/total_Madd__add0000_Mxor_Result(1)__xor0000/c2/total_Madd__add0000_Mxor_Result(1)__xor0000_D13_ <= totalTensSoFar(1);
+</td></tr><tr><td>
+</td></tr><tr><td>
+c2/total_Madd__add0000_Mxor_Result(2)__xor0000/c2/total_Madd__add0000_Mxor_Result(2)__xor0000_D14_ <= (NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_DC$68 AND NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$INV$64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c2/total_Madd__add0000_Mxor_Result(2)__xor0000/c2/total_Madd__add0000_Mxor_Result(2)__xor0000_D14_ <= totalTensSoFar(2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2 <= ((c3/itemToUse(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND NOT c1/debouncers[1].c1/inBuffer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/onesValue(0)_bdd1/c1/onesValue(0)_bdd1_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND NOT c1/debouncers[1].c1/inBuffer(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/onesValue(0)_bdd1/c1/onesValue(0)_bdd1_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/itemToUse(0) AND NOT c3/itemToUse(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/itemToUse(0) AND NOT c3/itemToUse(1) AND $OpTx$INV$64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND c1/debouncers[0].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[0].c1/inBuffer(1) AND c1/debouncers[0].c1/inBuffer(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/itemToUse(0) AND NOT c3/itemToUse(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_DC$68 AND c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/itemToUse(0) AND NOT c3/itemToUse(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_DC$68 AND totalTensSoFar(0)/totalTensSoFar(0)_CLKF)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND c1/debouncers[1].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[1].c1/inBuffer(1) AND c1/debouncers[1].c1/inBuffer(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/onesValue(0)_bdd1/c1/onesValue(0)_bdd1_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT totalTensSoFar(0) AND c3/itemToUse(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND c3/itemToUse(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND NOT c1/debouncers[1].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/onesValue(0)_bdd1/c1/onesValue(0)_bdd1_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT totalTensSoFar(0)/totalTensSoFar(0)_CLKF AND NOT c1/onesValue(0)_bdd1/c1/onesValue(0)_bdd1_D2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 <= ((c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(1) AND c1/debouncers[0].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[0].c1/inBuffer(1) AND NOT c1/debouncers[1].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[0].c1/inBuffer(2) AND totalTensSoFar(0)/totalTensSoFar(0)_CLKF AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/onesValue(0)_bdd1/c1/onesValue(0)_bdd1_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(1) AND c1/debouncers[0].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[0].c1/inBuffer(1) AND NOT c1/debouncers[1].c1/inBuffer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[0].c1/inBuffer(2) AND totalTensSoFar(0)/totalTensSoFar(0)_CLKF AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/onesValue(0)_bdd1/c1/onesValue(0)_bdd1_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(1) AND c1/debouncers[0].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[0].c1/inBuffer(1) AND c1/debouncers[0].c1/inBuffer(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncers[1].c1/inBuffer(2) AND totalTensSoFar(0)/totalTensSoFar(0)_CLKF AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/onesValue(0)_bdd1/c1/onesValue(0)_bdd1_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (totalTensSoFar(1) AND NOT c3/itemToUse(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(2) AND c3/itemToUse(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(1) AND NOT $OpTx$FX_DC$68 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 AND NOT $OpTx$INV$64 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT totalTensSoFar(0)/totalTensSoFar(0)_CLKF));
+</td></tr><tr><td>
+</td></tr><tr><td>
+c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2 <= ((c3/itemToUse(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/itemToUse(0) AND NOT c3/itemToUse(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_DC$68)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/itemToUse(0) AND NOT c3/itemToUse(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/itemToUse(0) AND NOT c3/itemToUse(1) AND $OpTx$INV$64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND c1/debouncers[0].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[0].c1/inBuffer(1) AND c1/debouncers[0].c1/inBuffer(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND c1/debouncers[1].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[1].c1/inBuffer(1) AND c1/debouncers[1].c1/inBuffer(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT totalTensSoFar(2) AND c3/itemToUse(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND c3/itemToUse(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/onesValue(0)_bdd1/c1/onesValue(0)_bdd1_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/itemToUse(0) AND NOT c3/itemToUse(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2));
+</td></tr><tr><td>
+FTCPE_c3/itemToUse0: FTCPE port map (c3/itemToUse(0),'1',clock,'0','0');
+</td></tr><tr><td>
+FDCPE_c3/itemToUse1: FDCPE port map (c3/itemToUse(1),c3/itemToUse_D(1),clock,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c3/itemToUse_D(1) <= ((NOT c3/itemToUse(0) AND c3/itemToUse(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(1)));
+</td></tr><tr><td>
+FDCPE_c3/itemToUse2: FDCPE port map (c3/itemToUse(2),c3/itemToUse_D(2),clock,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c3/itemToUse_D(2) <= ((NOT c3/itemToUse(0) AND c3/itemToUse(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/itemToUse(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ssdSegmentSelect(0) <= ((c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(2) AND c3/itemToUse(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ssdSegmentSelect(1) <= ((c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(2) AND c3/itemToUse(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ssdSegmentSelect(2) <= NOT (((NOT totalTensSoFar(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/itemToUse(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ssdSegmentSelect(3) <= ((c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2 AND NOT c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(2) AND c3/itemToUse(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ssdSegmentSelect(4) <= NOT (((NOT c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(2) AND c3/itemToUse(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ssdSegmentSelect(5) <= ((NOT c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(2) AND c3/itemToUse(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ssdSegmentSelect(6) <= ((c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/display_bcdValue(0)/c3/display_bcdValue(0)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c3/display_bcdValue(1)/c3/display_bcdValue(1)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/display_bcdValue(2)/c3/display_bcdValue(2)_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (totalTensSoFar(3) AND NOT c3/itemToUse(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(2) AND c3/itemToUse(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ssdSegmentSelect(7) <= ((c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(1) AND c1/debouncers[0].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[0].c1/inBuffer(1) AND c1/debouncers[0].c1/inBuffer(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(1) AND c1/debouncers[1].c1/inBuffer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncers[1].c1/inBuffer(1) AND c1/debouncers[1].c1/inBuffer(2)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ssdUnitSelect(0) <= (NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ssdUnitSelect(1) <= (c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ssdUnitSelect(2) <= (NOT c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/itemToUse(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ssdUnitSelect(3) <= (c3/itemToUse(0) AND NOT c3/itemToUse(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c3/itemToUse(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ssdUnitSelect(4) <= (NOT c3/itemToUse(0) AND c3/itemToUse(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c3/itemToUse(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ssdUnitSelect(5) <= ((c3/itemToUse(0) AND c3/itemToUse(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (c3/itemToUse(2) AND c3/itemToUse(1)));
+</td></tr><tr><td>
+FTCPE_totalTensSoFar0: FTCPE port map (totalTensSoFar(0),totalTensSoFar_T(0),totalTensSoFar_C(0),NOT reset,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalTensSoFar_T(0) <= ((NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_DC$68 AND NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$INV$64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_DC$68 AND c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$INV$64));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalTensSoFar_C(0) <= NOT ((NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_DC$68 AND NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+totalTensSoFar(0)/totalTensSoFar(0)_CLKF <= (NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_DC$68 AND NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2);
+</td></tr><tr><td>
+FDCPE_totalTensSoFar1: FDCPE port map (totalTensSoFar(1),totalTensSoFar_D(1),totalTensSoFar_C(1),NOT reset,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalTensSoFar_D(1) <= c2/total_Madd__add0000_Mxor_Result(1)__xor0000/c2/total_Madd__add0000_Mxor_Result(1)__xor0000_D13_
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalTensSoFar_D(1) <= ((totalTensSoFar(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND $OpTx$FX_DC$68 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 AND NOT $OpTx$INV$64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (totalTensSoFar(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND NOT $OpTx$FX_DC$68 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 AND NOT $OpTx$INV$64));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalTensSoFar_C(1) <= NOT ((NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_DC$68 AND NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2));
+</td></tr><tr><td>
+FDCPE_totalTensSoFar2: FDCPE port map (totalTensSoFar(2),totalTensSoFar_D(2),totalTensSoFar_C(2),NOT reset,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalTensSoFar_D(2) <= c2/total_Madd__add0000_Mxor_Result(2)__xor0000/c2/total_Madd__add0000_Mxor_Result(2)__xor0000_D14_
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalTensSoFar_D(2) <= ((totalTensSoFar(1) AND totalTensSoFar(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND NOT $OpTx$FX_DC$68 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 AND NOT $OpTx$INV$64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (totalTensSoFar(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND NOT $OpTx$FX_DC$68 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 AND NOT $OpTx$INV$64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (totalTensSoFar(1) AND totalTensSoFar(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND $OpTx$FX_DC$68 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 AND NOT $OpTx$INV$64));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalTensSoFar_C(2) <= NOT ((NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_DC$68 AND NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2));
+</td></tr><tr><td>
+FTCPE_totalTensSoFar3: FTCPE port map (totalTensSoFar(3),totalTensSoFar_T(3),totalTensSoFar_C(3),NOT reset,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalTensSoFar_T(3) <= ((totalTensSoFar(1) AND totalTensSoFar(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND NOT $OpTx$FX_DC$68 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 AND NOT $OpTx$INV$64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (totalTensSoFar(1) AND totalTensSoFar(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	totalTensSoFar(0) AND NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_DC$68 AND c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$INV$64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (totalTensSoFar(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND $OpTx$FX_DC$68 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 AND NOT $OpTx$INV$64)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (totalTensSoFar(1) AND totalTensSoFar(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND $OpTx$FX_DC$68 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2 AND NOT $OpTx$INV$64));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalTensSoFar_C(3) <= NOT ((NOT c1/debouncedCoins(3)/c1/debouncedCoins(3)_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_DC$68 AND NOT c1/debouncedCoins(4)/c1/debouncedCoins(4)_D2));
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>
