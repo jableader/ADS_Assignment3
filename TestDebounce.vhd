@@ -1,34 +1,44 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
-ENTITY TestThreeSecondLatch IS
-END TestThreeSecondLatch;
+ENTITY TestDebounce IS
+END TestDebounce;
  
-ARCHITECTURE behavior OF TestThreeSecondLatch IS 
+ARCHITECTURE behavior OF TestDebounce IS 
  
+    COMPONENT threeSecondLatch
+    PORT(
+         Clock : IN  std_logic;
+         Reset : IN  std_logic;
+         Inputs : IN  std_logic_vector(0 to 1);
+         Ready : OUT  std_logic;
+         Outputs : OUT  std_logic_vector(0 to 1)
+        );
+    END COMPONENT;
+    
    --Inputs
    signal Clock : std_logic := '0';
    signal Reset : std_logic := '0';
    signal Inputs : std_logic_vector(0 to 1) := (others => '0');
 
  	--Outputs
+   signal Ready : std_logic;
    signal Outputs : std_logic_vector(0 to 1);
-   signal ready : std_logic;
-	
+
    -- Clock period definitions
    constant Clock_period : time := 1 ms;
+ 
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: entity work.threeSecondLatch generic map (1) PORT MAP (
-			Clock => Clock, 
-			Reset => Reset,
-			Inputs => Inputs,
-			Ready => ready,
-			Outputs => Outputs
+   uut: threeSecondLatch PORT MAP (
+          Clock => Clock,
+          Reset => Reset,
+          Inputs => Inputs,
+          Ready => Ready,
+          Outputs => Outputs
         );
 
-   -- Clock process definitions
    Clock_process :process
    begin
 		Clock <= '0';
@@ -37,23 +47,12 @@ BEGIN
 		wait for Clock_period/2;
    end process;
  
-
-   -- Stimulus process
    stim_proc: process
    begin		
-      -- hold reset state for 100 ns.
-      wait for 1000 ms;	
+      wait for 100 ns;	
 		
-      wait for Clock_period*10;
+		
 
-      -- insert stimulus here 
-		
-		Inputs(0) <= '1';
-		
-		wait for 10 ms;
-		
-		Inputs <= (others => '0');
-		
       wait;
    end process;
 

@@ -14,7 +14,7 @@ ARCHITECTURE behavior OF TestTopLevel IS
  	--Outputs
    signal ssdSegmentSelect : std_logic_vector(0 to 7);
    signal ssdUnitSelect : std_logic_vector(0 to 5);
-	signal ready : std_logic;
+	signal ready, wasOverflow, moreNeeded : std_logic;
 	
    -- Clock period definitions
    constant clock_period : time := 1 ms;
@@ -28,7 +28,9 @@ BEGIN
 			 readyForInput => ready,
           buttons => buttons,
           ssdSegmentSelect => ssdSegmentSelect,
-          ssdUnitSelect => ssdUnitSelect
+          ssdUnitSelect => ssdUnitSelect,
+			 wasOverflow => wasOverflow,
+			 moreNeeded => moreNeeded
         );
 
    -- Clock process definitions

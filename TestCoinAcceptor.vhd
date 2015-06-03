@@ -11,7 +11,7 @@ END TestCoinAcceptor;
  
 ARCHITECTURE behavior OF TestCoinAcceptor IS 
    --Inputs
-   signal clock : std_logic := '0';
+   signal clock, reset : std_logic := '0';
    signal coins : std_logic_vector(0 to 5) := "100000";
 
  	--Outputs
@@ -29,6 +29,7 @@ BEGIN
 	-- Instantiate the Unit Under Test (UUT) 
    uut: entity work.CoinAcceptor PORT MAP (
           clock => clock,
+			 reset => reset,
           coins => coins,
           readyForNewCoin => readyForNewCoin,
           isAccepted => isAccepted,

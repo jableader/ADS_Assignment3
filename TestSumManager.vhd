@@ -8,17 +8,28 @@ END TestSumManager;
 ARCHITECTURE behavior OF TestSumManager IS 
  
    --Inputs
-   signal reset : std_logic := '0';
+   signal reset, clock : std_logic := '0';
    signal addToSum : std_logic := '0';
    signal amountToAdd : unsigned(3 downto 0) := (others => '0');
 
  	--Outputs
    signal total : unsigned(3 downto 0);
  
+   constant clock_period : time := 100 ns;
 BEGIN
+	 -- Clock process definitions
+   clock_process :process
+   begin
+		clock <= '0';
+		wait for clock_period/2;
+		clock <= '1';
+		wait for clock_period/2;
+   end process;
+ 
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: entity work.SumManager PORT MAP (
+			 clock => clock,
           reset => reset,
           addToSum => addToSum,
           amountToAdd => amountToAdd,
