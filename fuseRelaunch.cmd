@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -o "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TestCoinAcceptor_isim_beh.exe" -prj "C:/Users/Jableader/Documents/Xilinx/ADS_Assignment_3/TestCoinAcceptor_beh.prj" "work.TestCoinAcceptor" 

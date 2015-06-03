@@ -1,7 +1,0 @@
-[Inputs]
-clock
-=buttons[0:5]=
-[Outputs]
-=ssdSegmentSelect[0:7]=
-=ssdUnitSelect[0:5]=
-[BiDir]

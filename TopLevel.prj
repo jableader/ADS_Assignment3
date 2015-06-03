@@ -1,7 +1,0 @@
-vhdl work "CommonUnits.vhd"
-vhdl work "debounce.vhd"
-vhdl work "BCD_to_SSD.vhd"
-vhdl work "SevenSegmentDisplayGroup.vhd"
-vhdl work "MoneyManager.vhd"
-vhdl work "CoinAcceptor.vhd"
-vhdl work "TopLevel.vhd"

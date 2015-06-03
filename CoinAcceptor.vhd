@@ -5,11 +5,11 @@ use work.CommonUnits.ALL;
 
 entity CoinAcceptor is
 	Port (
-		clock : in std_logic;
+		clock, reset : in std_logic;
 		coins : in std_logic_vector(0 to 5);
 		readyForNewCoin : out std_logic;
 		isAccepted : out std_logic;
-		tensValue, onesValue : out unsigned(3 downto 0);
+		tensValue, onesValue : out unsigned(3 downto 0) := (others => '0');
 		isDollar : out std_logic
 	);
 end CoinAcceptor;
@@ -24,7 +24,7 @@ architecture Behavioral of CoinAcceptor is
 	constant tenCent		: integer := 4;
 	constant fiveCent		: integer := 5;
 begin
-	debouncers : entity work.threeSecondLatch generic map (5) port map (clock, coins, readyForNewCoin, debouncedCoins);
+	debouncers : entity work.threeSecondLatch generic map (5) port map (clock, reset, coins, readyForNewCoin, debouncedCoins);
 	
 	isDollar <= debouncedCoins(twoDollar) or debouncedCoins(oneDollar);
 	isAccepted <= debouncedCoins(fiftyCent) or debouncedCoins(twentyCent) or debouncedCoins(tenCent);

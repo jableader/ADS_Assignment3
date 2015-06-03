@@ -1,2 +1,0 @@
-vhdl isim_temp "CommonUnits.vhd"
-vhdl isim_temp "BCD_to_SSD.vhd"

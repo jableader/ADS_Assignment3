@@ -28,7 +28,8 @@ begin
 	end process;
 	
 	display <= values(itemToUse);
-	c1: entity work.BCD_To_SSD port map (display, segmentSelect);
+	
+	bcdToSSD: entity work.BCD_To_SSD port map (display, segmentSelect);
 	
 	with itemToUse select unitSelect <=
 		"100000" when 0,
